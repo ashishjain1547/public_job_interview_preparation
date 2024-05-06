@@ -1,0 +1,183 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+</head>
+
+<a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Job Interviews Preparation</a>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgV15mTjt9pylwO71AdM2wjdRIn6Ep5DyYgs2UG_6iR3-Qj6t_72CroBZCJGdz51VIgTYMVuZc2Vx5IMx_73M94cyhLoUNq3H2qL67V2RPj2fGHFoRPmcp1q6ridD86JJP_pmzong8O1A53PZnuGtiD2FLNsPabFrRvESa6YH91sJRSiyRPoOji2XjscGU9/s1300/Gemini.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="731" data-original-width="1300" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgV15mTjt9pylwO71AdM2wjdRIn6Ep5DyYgs2UG_6iR3-Qj6t_72CroBZCJGdz51VIgTYMVuZc2Vx5IMx_73M94cyhLoUNq3H2qL67V2RPj2fGHFoRPmcp1q6ridD86JJP_pmzong8O1A53PZnuGtiD2FLNsPabFrRvESa6YH91sJRSiyRPoOji2XjscGU9/s600/Gemini.jpg"/></a></div>
+
+<pre>
+<h3>What is normalization, standardization and scaling?</h3>
+
+<!----><!----><skeleton-loader _ngcontent-ng-c3929770657="" class="skeleton-loader-container ng-tns-c3988950701-85 ng-tns-c3929770657-26 ng-star-inserted" _nghost-ng-c3988950701=""><!----></skeleton-loader><!----><!----><!----><div _ngcontent-ng-c1953073918="" class="response-content ng-tns-c3929770657-26 ng-animate-disabled"><!----><!----><message-content _ngcontent-ng-c1953073918="" class="model-response-text ng-star-inserted" _nghost-ng-c3133301266="" id="message-content-id-r_f1f081a09c8bc725" style="height: auto;"><div _ngcontent-ng-c3133301266="" class="markdown markdown-main-panel" style="--animation-duration: 600ms; --fade-animation-function: linear; --first-token-animation-duration: 600ms;" dir="ltr"><p data-sourcepos="1:1-1:310">Normalization, standardization, and scaling are all techniques used in data preprocessing to transform your data into a common scale. This is important for many machine learning algorithms because they can be sensitive to the ranges of the features (columns) in your data. Here's a breakdown of each technique:</p><p data-sourcepos="3:1-3:18"><strong>Normalization:</strong></p><ul data-sourcepos="5:1-8:0">
+<li data-sourcepos="5:1-5:96"><strong>Goal:</strong> Normalize data points to a specific range, typically between 0 and 1 (or -1 and 1).</li>
+<li data-sourcepos="6:1-6:233"><strong>Method:</strong> It applies a linear transformation to each feature independently. This means it subtracts the minimum value of the feature from each data point and then divides by the difference between the maximum and minimum values.</li>
+<li data-sourcepos="7:1-8:0"><strong>Use Case:</strong> Normalization is useful when you want all features to contribute equally to the model, regardless of their original units. It's also helpful when the data contains outliers that might significantly affect other techniques.</li>
+</ul><p data-sourcepos="9:1-9:20"><strong>Standardization:</strong></p><ul data-sourcepos="11:1-14:0">
+<li data-sourcepos="11:1-11:153"><strong>Goal:</strong> Transform data to have a standard normal distribution (also known as a Gaussian distribution) with a mean of 0 and a standard deviation of 1.</li>
+<li data-sourcepos="12:1-12:219"><strong>Method:</strong> Similar to normalization, it subtracts the mean of the feature from each data point and then divides by the standard deviation. This centers the data around 0 and scales it based on the spread of the data.</li>
+<li data-sourcepos="13:1-14:0"><strong>Use Case:</strong> Standardization is often preferred when the features in your data have different scales and the distribution of the data is important for the machine learning algorithm.  For example, some algorithms like Support Vector Machines (SVMs) rely on distances between data points, and standardization ensures these distances are comparable across features.</li>
+</ul><p data-sourcepos="15:1-15:12"><strong>Scaling:</strong></p><ul data-sourcepos="17:1-18:0">
+<li data-sourcepos="17:1-18:0"><strong>General Term:</strong> Scaling is a broader term that encompasses both normalization and standardization. It refers to any technique that transforms features to a common scale.</li>
+</ul><p data-sourcepos="19:1-19:47">Here's a table summarizing the key differences:</p><div class="horizontal-scroll-wrapper">
+<div class="table-block-component"><table-block _nghost-ng-c202709666="" ng-version="0.0.0-PLACEHOLDER"><div _ngcontent-ng-c202709666="" class="table-block"><div _ngcontent-ng-c202709666="" class="table-content"><table data-sourcepos="21:1-25:116"><tbody><tr data-sourcepos="21:1-21:52"><th data-sourcepos="21:1-21:16">Feature</th><th data-sourcepos="21:18-21:32">Normalization</th><th data-sourcepos="21:34-21:50">Standardization</th></tr><tr data-sourcepos="23:1-23:102"><td data-sourcepos="23:1-23:16">Goal</td><td data-sourcepos="23:18-23:53">Specific range (often 0-1 or -1-1)</td><td data-sourcepos="23:55-23:100">Standard normal distribution (mean 0, std 1)</td></tr><tr data-sourcepos="24:1-24:89"><td data-sourcepos="24:1-24:17">Method</td><td data-sourcepos="24:19-24:41">Linear transformation</td><td data-sourcepos="24:43-24:87">Subtract mean, divide by standard deviation</td></tr><tr data-sourcepos="25:1-25:116"><td data-sourcepos="25:1-25:17">Use Case</td><td data-sourcepos="25:19-25:59">Features with different units, outliers</td><td data-sourcepos="25:61-25:114">Features with different scales, distribution matters</td></tr></tbody></table></div><div _ngcontent-ng-c202709666="" hide-from-message-actions="" class="table-footer hide-from-message-actions ng-star-inserted"><button _ngcontent-ng-c202709666="" mat-button="" class="export-sheets-button-wrapper mdc-button mat-mdc-button gmat-mdc-button-with-prefix mat-unthemed mat-mdc-button-base gmat-mdc-button" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" jslog="184701;track:generic_click,impression;BardVeMetadataKey:[[&quot;r_f1f081a09c8bc725&quot;,&quot;c_e48fbd92ef0bdbc5&quot;,null,null,null,null,null,null,null,null,null,null,0]]"><span class="mat-mdc-button-persistent-ripple mdc-button__ripple"></span><span class="mdc-button__label"><span _ngcontent-ng-c202709666="" class="export-sheets-button"><span _ngcontent-ng-c202709666="" class="export-sheets-icon"><mat-icon _ngcontent-ng-c202709666="" role="img" class="mat-icon notranslate google-symbols mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">drive_spreadsheet</mat-icon></span><span _ngcontent-ng-c202709666="">Export to Sheets</span></span></span><span class="mat-mdc-focus-indicator"></span><span class="mat-mdc-button-touch-target"></span></button></div><!----></div></table-block></div>
+</div><p data-sourcepos="27:1-27:33"><strong>Choosing the Right Technique:</strong></p><p data-sourcepos="29:1-29:165">The choice between normalization and standardization depends on your specific data and the machine learning algorithm you're using. Here are some general guidelines:</p><ul data-sourcepos="31:1-34:0">
+<li data-sourcepos="31:1-31:108">Use normalization if you want all features to have equal weight and the presence of outliers is a concern.</li>
+<li data-sourcepos="32:1-32:121">Use standardization if the distribution of your data is important for the algorithm and features have different scales.</li>
+<li data-sourcepos="33:1-34:0">If you're unsure, standardization is often a good default choice.</li>
+</ul><p data-sourcepos="35:1-35:220">Remember, the goal is to transform your data into a format that allows your machine learning algorithm to learn effectively. Experiment with different scaling techniques and see what works best for your specific problem.</p></div><!----></message-content><!----><!----><!----><!----><div _ngcontent-ng-c1953073918="" class="response-footer complete gap"><!----><!----><!----><!----><!----><sources-list _ngcontent-ng-c1953073918="" class="sources-list ng-star-inserted" _nghost-ng-c1663118579="" style=""><!----><!----><div _ngcontent-ng-c1663118579="" class="sources-list-container ng-star-inserted"><!----></div><!----><!----><!----><!----><!----></sources-list><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></div></div><!----><!----><!----><!---->
+
+<h3>Share some complex scenario based questions on the concept of normalization and stardartdization.</h3>
+
+<h2 data-sourcepos="1:1-1:73">Complex Scenario-Based Questions on Normalization and Standardization:</h2><ol data-sourcepos="3:1-4:0">
+<li data-sourcepos="3:1-4:0"><strong>Mixed Feature Types and Scaling:</strong></li>
+</ol><ul data-sourcepos="5:1-7:0">
+<li data-sourcepos="5:1-5:279"><strong>Context:</strong> You're building a machine learning model to predict housing prices. Your data includes features like square footage (numerical), number of bedrooms (categorical), and zip code (categorical). How would you approach normalization or standardization in this scenario?</li>
+<li data-sourcepos="6:1-7:0"><strong>Question:</strong> Discuss the challenges of applying normalization or standardization to a dataset with mixed feature types (numerical and categorical). Propose potential strategies to address these challenges.</li>
+</ul><p data-sourcepos="8:1-8:34"><strong>Answer:</strong> Discuss the following:</p><ul data-sourcepos="10:1-15:0">
+<li data-sourcepos="10:1-10:144"><strong>Challenges:</strong> Normalization and standardization are typically applied to numerical features. Categorical features require separate handling.</li>
+<li data-sourcepos="11:1-15:0"><strong>Strategies:</strong>
+<ul data-sourcepos="12:5-15:0">
+<li data-sourcepos="12:5-12:215"><strong>One-Hot Encoding:</strong> Convert categorical features into binary dummy variables before normalization/standardization. This creates new numerical features, but the number of features will increase significantly.</li>
+<li data-sourcepos="13:5-13:204"><strong>Feature Scaling for Numerical Features:</strong> Apply normalization or standardization only to the numerical features (e.g., square footage). Leave categorical features encoded (e.g., one-hot encoding).</li>
+<li data-sourcepos="14:5-15:0"><strong>Min-Max Scaling for All Features (Consider with Caution):</strong> This technique scales all features (including categorical after encoding) to a specific range (e.g., 0-1). However, it might not be suitable for all machine learning algorithms and can lose information about the inherent ordering of categorical data.</li>
+</ul>
+</li>
+</ul><ol data-sourcepos="16:1-17:0" start="2">
+<li data-sourcepos="16:1-17:0"><strong>Impact of Outliers and Normalization/Standardization:</strong></li>
+</ol><ul data-sourcepos="18:1-20:0">
+<li data-sourcepos="18:1-18:243"><strong>Context:</strong> You're building a model to predict customer churn for a telecommunications company. Your data includes a feature representing a customer's monthly bill amount. This feature has a few extreme outliers with very high bill amounts.</li>
+<li data-sourcepos="19:1-20:0"><strong>Question:</strong> How can outliers affect the effectiveness of normalization and standardization? Discuss potential strategies for handling outliers in this context.</li>
+</ul><p data-sourcepos="21:1-21:34"><strong>Answer:</strong> Discuss the following:</p><ul data-sourcepos="23:1-28:0">
+<li data-sourcepos="23:1-23:334"><strong>Impact of Outliers:</strong> Outliers can significantly affect the calculation of mean and standard deviation in standardization, potentially causing the scaled data to lose information about the true distribution. In normalization, outliers might dominate the range, making it difficult for other data points to contribute meaningfully.</li>
+<li data-sourcepos="24:1-28:0"><strong>Strategies:</strong>
+<ul data-sourcepos="25:5-28:0">
+<li data-sourcepos="25:5-25:222"><strong>Outlier Detection and Removal:</strong> Identify and remove extreme outliers before applying normalization/standardization. However, use this approach cautiously as removing valid data points can affect model performance.</li>
+<li data-sourcepos="26:5-26:203"><strong>Winsorization:</strong> Cap the values of outliers to a specific threshold instead of removing them completely. This preserves some information about the outliers while reducing their impact on scaling.</li>
+<li data-sourcepos="27:5-28:0"><strong>Robust Scaling Techniques:</strong> Consider alternative scaling methods less sensitive to outliers, such as interquartile range (IQR) scaling.</li>
+</ul>
+</li>
+</ul><ol data-sourcepos="29:1-30:0" start="3">
+<li data-sourcepos="29:1-30:0"><strong>Normalization vs. Standardization for Specific Algorithms:</strong></li>
+</ol><ul data-sourcepos="31:1-33:0">
+<li data-sourcepos="31:1-31:182"><strong>Context:</strong> You're building a k-Nearest Neighbors (kNN) algorithm for image classification. You're unsure whether to use normalization or standardization for the image pixel data.</li>
+<li data-sourcepos="32:1-33:0"><strong>Question:</strong> Discuss the factors to consider when choosing between normalization and standardization for specific machine learning algorithms. Explain why one approach might be preferred over the other for kNN.</li>
+</ul><p data-sourcepos="34:1-34:34"><strong>Answer:</strong> Discuss the following:</p><ul data-sourcepos="36:1-40:0">
+<li data-sourcepos="36:1-38:186"><strong>Factors to Consider:</strong>
+<ul data-sourcepos="37:5-38:186">
+<li data-sourcepos="37:5-37:247"><strong>Algorithm Requirements:</strong> Some algorithms (like kNN) rely on distance calculations between data points. Standardization might be preferred in such cases as it ensures features contribute proportionally based on their inherent variability.</li>
+<li data-sourcepos="38:5-38:186"><strong>Data Distribution:</strong> If the data distribution is highly skewed or has outliers, normalization might be preferable to avoid these extremes dominating distance calculations in kNN.</li>
+</ul>
+</li>
+<li data-sourcepos="39:1-40:0"><strong>kNN and Standardization:</strong>  For kNN, where distances between data points are crucial for finding nearest neighbors, standardization can be beneficial. Features with larger scales wouldn't dominate the distance calculations, ensuring all features contribute more equally.</li>
+</ul><ol data-sourcepos="41:1-42:0" start="4">
+<li data-sourcepos="41:1-42:0"><strong>Scaling Strategies for Time Series Data:</strong></li>
+</ol><ul data-sourcepos="43:1-45:0">
+<li data-sourcepos="43:1-43:145"><strong>Context:</strong> You're building a model to forecast stock prices using time series data. The data includes historical closing prices for each day.</li>
+<li data-sourcepos="44:1-45:0"><strong>Question:</strong> How would you approach normalization or standardization for time series data? Discuss potential limitations of these techniques in this context.</li>
+</ul><p data-sourcepos="46:1-46:34"><strong>Answer:</strong> Discuss the following:</p><ul data-sourcepos="48:1-52:0">
+<li data-sourcepos="48:1-48:209"><strong>Challenges:</strong> Normalization and standardization can be problematic for time series data because they remove the inherent trend and seasonality present in the data, which might be important for forecasting.</li>
+<li data-sourcepos="49:1-52:0"><strong>Alternatives:</strong> Consider alternative scaling techniques specifically designed for time series data, such as:
+<ul data-sourcepos="50:5-52:0">
+<li data-sourcepos="50:5-50:168"><strong>Differencing:</strong> This technique removes the trend component by subtracting the previous value from each data point. It can help capture stationarity in the data.</li>
+<li data-sourcepos="51:5-52:0"><strong>Scaling by Rolling Statistics:</strong> Calculate statistics (e.g., mean, standard deviation) over a rolling window and use them to scale the data point. This preserves the local trend and seasonality while addressing scaling issues.</li>
+</ul>
+</li>
+</ul><p data-sourcepos="53:1-53:212">By considering these complex scenarios, you can demonstrate a deeper understanding of the nuances of normalization and standardization and how to apply them effectively in different data preprocessing situations.</p>
+
+<h3>Can share code for IQR scaling for 1D time series data?</h3>
+
+<!----><!----><skeleton-loader _ngcontent-ng-c3929770657="" class="skeleton-loader-container ng-tns-c3988950701-105 ng-tns-c3929770657-104 ng-star-inserted" _nghost-ng-c3988950701=""><!----></skeleton-loader><!----><!----><!----><div _ngcontent-ng-c1953073918="" class="response-content ng-tns-c3929770657-104"><!----><!----><message-content _ngcontent-ng-c1953073918="" class="model-response-text ng-star-inserted" _nghost-ng-c3133301266="" id="message-content-id-r_d5811a378cc00ed2" style="height: auto;"><div _ngcontent-ng-c3133301266="" class="markdown markdown-main-panel" style="--animation-duration: 600ms; --fade-animation-function: linear; --first-token-animation-duration: 600ms;" dir="ltr"><p data-sourcepos="1:1-1:83"><span class="first-token">Here's an example code snippet using Python for IQR scaling on 1D time series data:</span></p><span>
+</span><div class="dynamic-element-wrapper"><code-block _nghost-ng-c2243288168="" ng-version="0.0.0-PLACEHOLDER"><!----><!----><!----><div _ngcontent-ng-c2243288168="" class="code-block ng-star-inserted"><div _ngcontent-ng-c2243288168="" class="code-block-decoration header gmat-subtitle-1 ng-star-inserted"><span _ngcontent-ng-c2243288168="">Python</span></div><!----><div _ngcontent-ng-c2243288168="" class="code-block-internal-container"><pre _ngcontent-ng-c2243288168=""><code _ngcontent-ng-c2243288168="" role="text" data-test-id="code-content" class="code-container" data-sourcepos="3:1-32:54"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">iqr_scaling</span>(<span class="hljs-params">data</span>):</span>
+    <span class="hljs-string">"""
+    Scales time series data using Interquartile Range (IQR) scaling.
+
+    Args:
+        data (np.array): 1D time series data.
+
+    Returns:
+        np.array: Scaled time series data.
+    """</span>
+    q1 = np.percentile(data, <span class="hljs-number">25</span>)  <span class="hljs-comment"># Lower quartile</span>
+    q3 = np.percentile(data, <span class="hljs-number">75</span>)  <span class="hljs-comment"># Upper quartile</span>
+    iqr = q3 - q1  <span class="hljs-comment"># Interquartile range</span>
+
+    <span class="hljs-comment"># Handle potential zero IQR (all values the same)</span>
+    <span class="hljs-keyword">if</span> iqr == <span class="hljs-number">0</span>:
+    <span class="hljs-keyword">return</span> data  <span class="hljs-comment"># No scaling needed</span>
+
+    scaled_data = (data - q1) / iqr
+    <span class="hljs-keyword">return</span> scaled_data
+
+<span class="hljs-comment"># Example usage</span>
+your_time_series_data = ...  <span class="hljs-comment"># Replace with your actual data</span>
+scaled_data = iqr_scaling(your_time_series_data)
+
+<span class="hljs-comment"># Use the scaled_data for further analysis or modeling</span>
+</code></pre><!----><!----><!----></div><div _ngcontent-ng-c2243288168="" hide-from-message-actions="" class="code-block-decoration footer gmat-overline hide-from-message-actions ng-star-inserted"><div _ngcontent-ng-c2243288168=""><span _ngcontent-ng-c2243288168=""> Use code <a _ngcontent-ng-c2243288168="" href="/faq#coding" target="_blank" rel="noopener noreferrer" aria-label="with caution (opens in a new window)" class="disclaimer-suffix">with caution.</a></span></div><div _ngcontent-ng-c2243288168="" class="buttons"><!----><!----><!----><!----><!----><!----><button _ngcontent-ng-c2243288168="" aria-label="Copy code" mat-icon-button="" mattooltip="Copy code" class="mat-mdc-tooltip-trigger copy-button mdc-icon-button mat-mdc-icon-button gmat-mdc-button-with-prefix mat-unthemed mat-mdc-button-base gmat-mdc-button" mat-ripple-loader-uninitialized="" mat-ripple-loader-class-name="mat-mdc-button-ripple" mat-ripple-loader-centered="" jslog="179062;track:generic_click,impression;BardVeMetadataKey:[[null,null,null,&quot;rc_ddc282cf4cb841e2&quot;,null,null,&quot;en&quot;,null,null,null,null,1,0]];mutable:true"><span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span><mat-icon _ngcontent-ng-c2243288168="" role="img" class="mat-icon notranslate google-symbols mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">content_copy</mat-icon><span class="mat-mdc-focus-indicator"></span><span class="mat-mdc-button-touch-target"></span></button><!----></div></div><!----></div><!----></code-block></div><span>
+</span><p data-sourcepos="34:1-34:16"><strong>Explanation:</strong></p><span>
+</span><ol data-sourcepos="36:1-42:36"><span>
+</span><li data-sourcepos="36:1-36:109"><span>We define a function </span><code class="">iqr_scaling</code><span> that takes a 1D NumPy array representing the time series data as input.</span></li><span>
+</span><li data-sourcepos="37:1-37:109"><span>The function calculates the lower quartile (q1) and upper quartile (q3) of the data using </span><code class="">np.percentile</code><span>.</span></li><span>
+</span><li data-sourcepos="38:1-38:76"><span>It then computes the interquartile range (IQR) by subtracting q1 from q3.</span></li><span>
+</span><li data-sourcepos="39:1-39:123"><span>We handle the case where IQR might be zero (all values are the same) by returning the original data (no scaling needed).</span></li><span>
+</span><li data-sourcepos="40:1-40:147"><span>For non-zero IQR,</span><span> the function subtracts q1 from each data point and then divides by IQR.</span><span> This scales the data between 0 and 1 based on the IQR.</span></li><span>
+</span><li data-sourcepos="41:1-41:52"><span>The function returns the scaled time series data.</span></li><span>
+</span><li data-sourcepos="42:1-42:36"><span>In the example usage,</span><span> you replace the placeholder with your actual time series data and call the </span><code>iqr_scaling</code><span> function to obtain the scaled data.</span></li><span>
+</span></ol><span>
+</span><p data-sourcepos="44:1-44:20"><strong>Important Notes:</strong></p><span>
+</span><ul data-sourcepos="46:1-48:108"><span>
+</span><li data-sourcepos="46:1-46:62"><span>This code assumes your time series data is a 1D NumPy array.</span></li><span>
+</span><li data-sourcepos="47:1-47:120"><span>IQR scaling removes the median and IQR from the data,</span><span> preserving the relative positions of data points within the IQR.</span></li><span>
+</span><li data-sourcepos="48:1-48:108"><span>Consider additional steps like centering the data around the median if needed for your specific analysis.</span></li><span>
+</span></ul><span>
+</span></div><!----></message-content><!----><!----><!----><!----><div _ngcontent-ng-c1953073918="" class="response-footer gap complete"><!----><!----><!----><!----><!----><sources-list _ngcontent-ng-c1953073918="" class="sources-list ng-star-inserted" _nghost-ng-c1663118579=""><!----><!----><div _ngcontent-ng-c1663118579="" class="sources-list-container ng-star-inserted"><!----></div><!----><!----><!----><!----><!----></sources-list><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></div></div><!----><!----><!----><!---->
+
+</pre>
+<span style="display: none;">Tags: Interview Preparation,Machine Learning,</span>
