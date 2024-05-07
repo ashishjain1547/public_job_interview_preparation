@@ -10,6 +10,27 @@
             enable_page_level_ads: true
         });
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span> 
+                            <img alt="" border="0" data-original-height="830" data-original-width="3566"
+                                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJYjNjeZYo-i37vdHGVRlml-8aiuouEZ2yTD_fpg7pW_Vq144S1EDh3GeiCaLY-0lnBd8rfIUBP2KeP3-uK7hYC-_THn12-RXdTGH0hGzjywh9JzHk9rW7J1ympZwY5zv4EtP8BHrvkeNZDpM8VWLUAESFjo1CaBY8XGdfZ1-6_hrhEJYm_9RSoDGYTntZ/s600/whatsapp%20logo.png" /></a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+
     <style>
         pre {
             white-space: pre-wrap;
@@ -71,9 +92,39 @@
             text-decoration: none;
         }
     </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
 </head>
 <!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
 
+<div id="customWhatsAppGroupLinkWrapper"></div>
+<br>
 <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjL52yCYxQBXz_yX9f4I63JVmrXCBVlT6V1EzHF9sKxP8WB45UiEUEX5S0hK_qam2NWFEIPnhd1cM_behCKTwwj3IuQxATzgV-QvJogEEGvalgHu5FR2pQOr9Uy7BM_GPz0J4K7sJDMV2X7JuXbMLHYX57e0YHd-Lv0dhu8ZCoTF8_HtDrfYbQNnzXU8PTy/s2000/interview.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="1250" data-original-width="2000" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjL52yCYxQBXz_yX9f4I63JVmrXCBVlT6V1EzHF9sKxP8WB45UiEUEX5S0hK_qam2NWFEIPnhd1cM_behCKTwwj3IuQxATzgV-QvJogEEGvalgHu5FR2pQOr9Uy7BM_GPz0J4K7sJDMV2X7JuXbMLHYX57e0YHd-Lv0dhu8ZCoTF8_HtDrfYbQNnzXU8PTy/s600/interview.png"/></a></div>
 
 <span class="customLink toggleBtn">Toggle All Sections</span>
@@ -220,6 +271,12 @@
         <li>
             <a href="http://survival8.blogspot.com/2024/05/day-8-scenario-based-questions-on.html" target="_blank">
                 Day 8: Scenario Based Questions on Normalization and Standardization 
+            </a>
+        </li>
+
+        <li>
+            <a href="http://survival8.blogspot.com/2024/05/day-9-mcqs-and-scenario-based-questions.html" target="_blank">
+                Day 9: MCQs and Scenario Based Questions on 'Support Vector Machines' 
             </a>
         </li>
     </ol>
