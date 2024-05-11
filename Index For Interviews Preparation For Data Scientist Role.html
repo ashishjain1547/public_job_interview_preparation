@@ -339,6 +339,25 @@
     </ol>
 </div>
 
+<h3 class="customExplainProjectHeader">
+    <span class="arrow up"></span> Explain Your Last Project
+</h3>
+
+<div id="customExplainProject">
+    <ol>
+        <li>
+            <a href="http://survival8.blogspot.com/2024/05/mdm-project-with-tyson-foods-2023.html" target="_blank">
+                Master Data Management (MDM) Project With Tyson Foods (2023) 
+            </a>
+        </li>
+
+        <li>
+            <a href="http://survival8.blogspot.com/2024/05/bot-detection-on-twitter-jul-2022.html" target="_blank">
+                Bot Detection on Twitter (Jul 2022) 
+            </a>
+        </li>
+    </ol>
+</div>
 <script>
     $('h3.customTheoreticalQuestionsOnDataScienceHeader').click(function () {
         $("div#customTheoreticalQuestionsOnDataScience").fadeToggle();
@@ -371,6 +390,14 @@
         $("div#customStatisticsQuestionsFromKhanAcademy").fadeToggle();
         $("h3.customStatisticsQuestionsFromKhanAcademyHeader > .arrow").toggleClass('up').toggleClass('down');
     });
+
+
+    $('h3.customExplainProjectHeader').click(function () {
+        $("div#customExplainProject").fadeToggle();
+        $("h3.customExplainProjectHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
+
+    
 
     var sectionClosedFlag = false;
     $(".customLink.toggleBtn").click(function () {

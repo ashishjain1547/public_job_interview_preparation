@@ -1,0 +1,139 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span> 
+                            <img alt="" border="0" data-original-height="830" data-original-width="3566"
+                                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJYjNjeZYo-i37vdHGVRlml-8aiuouEZ2yTD_fpg7pW_Vq144S1EDh3GeiCaLY-0lnBd8rfIUBP2KeP3-uK7hYC-_THn12-RXdTGH0hGzjywh9JzHk9rW7J1ympZwY5zv4EtP8BHrvkeNZDpM8VWLUAESFjo1CaBY8XGdfZ1-6_hrhEJYm_9RSoDGYTntZ/s600/whatsapp%20logo.png" /></a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+<a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Job Interviews Preparation</a>
+
+<pre><i><h2>Need a writeup explaining this previous project to my current client:
+
+Bot Detection on Twitter using Sentiment Analysis
+Underlying Theory: Humans are more opinionated than bots. And, humans flip flop in terms of their sentiment more than
+bots do.</h2></i>
+
+<b>Context (1-2 sentences):</b>
+
+Digital Marketing and Analytics team at wanted to discover for it's clients if the response and traffic generated in response to it's digital marketing effort was by bots or by humans on Twitter. It was in the second half of 2022.
+
+<b>Project Goal (1-2 sentences):
+
+State the specific challenge or business need your project at Infosys addressed.</b>
+
+So the goal was to detect bots on Twitter to be able to track users who responded to Infosys' digital marketing efforts.
+
+<b>Focus on Client Value (2-3 sentences):
+
+Explain how your project improved data quality and delivered value to Infosys's client. Quantify the impact if possible (e.g., reduced costs, improved efficiency, enhanced customer satisfaction).</b>
+
+Being able to know if user responding to Infosys' advert is a bot or human helps Infosys tracks and manage it's leads on the social media platform. 
+This activity answered questions like:
+1. How much response we are getting is by valid users?
+2. How much leads we are getting that can result in valid business?
+
+<b>Technical Details (2-3 sentences, optional):
+
+If relevant to your client's needs, you can mention the type of solution implemented and any specific tools or technologies used.</b>
+
+The training data that I used for this project came from Kaggle. It was a dataset that listed some already identified human users and bots.
+Then I used Twitter API to pull the tweets for those users.
+
+The project was written using Python.
+
+And the secret to measuring the flip-flops in a user's sentiment was through the simple formula of variance in the sentiment in the captured data.
+</pre>
+<span style="display: none;">Tags: Interview Preparation,</span>
