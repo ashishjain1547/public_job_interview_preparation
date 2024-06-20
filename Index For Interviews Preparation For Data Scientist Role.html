@@ -370,6 +370,27 @@
         </li>
     </ol>
 </div>
+
+<h3 class="customMiscellaneousHeader">
+    <span class="arrow up"></span> Miscellaneous / Others
+</h3>
+
+<div id="customMiscellaneous">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2024/06/interview-questions-for-big-data.html" target="_blank">
+                Interview Questions For Big Data Engineer (2 Years of Experience)
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2024/06/10-interview-questions-on-cypher.html" target="_blank">
+                10 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist Role) - Jun 2024
+            </a>
+        </li>
+    </ol>
+</div>
+
 <script>
     $('h3.customTheoreticalQuestionsOnDataScienceHeader').click(function () {
         $("div#customTheoreticalQuestionsOnDataScience").fadeToggle();
@@ -410,6 +431,11 @@
     });
 
     
+    $('h3.customMiscellaneousHeader').click(function () {
+        $("div#customMiscellaneous").fadeToggle();
+        $("h3.customMiscellaneousHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
+
 
     var sectionClosedFlag = false;
     $(".customLink.toggleBtn").click(function () {
