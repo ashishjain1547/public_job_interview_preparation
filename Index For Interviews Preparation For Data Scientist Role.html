@@ -352,6 +352,26 @@
     </ol>
 </div>
 
+<h3 class="customGraphDatabasesHeader">
+    <span class="arrow up"></span> Questions For Graph Databases Like Neo4j And Apache Gremlin
+</h3>
+<div id="customGraphDatabases">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2024/06/10-interview-questions-on-cypher.html" target="_blank">
+                Round (1) - 10 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist Role) - Jun
+                2024
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2024/07/round-2-18-interview-questions-on.html" target="_blank">
+                Round (2) - 18 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist Role) - Jul 2024
+            </a>
+        </li>
+    </ol>
+</div>
+
 <h3 class="customStatisticsQuestionsFromKhanAcademyHeader">
     <span class="arrow up"></span> Questions For Statistics From Khan Academy
 </h3>
@@ -408,13 +428,6 @@
                 Interview Questions For Big Data Engineer (2 Years of Experience)
             </a>
         </li>
-
-        <li>
-            <a href="https://survival8.blogspot.com/2024/06/10-interview-questions-on-cypher.html" target="_blank">
-                10 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist Role) - Jun
-                2024
-            </a>
-        </li>
     </ol>
 </div>
 
@@ -452,6 +465,12 @@
         $("h3.customVariousMachineLearningModelsHeader > .arrow").toggleClass('up').toggleClass('down');
     });
 
+    
+
+    $('h3.customGraphDatabasesHeader').click(function () {
+        $("div#customGraphDatabases").fadeToggle();
+        $("h3.customGraphDatabasesHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
 
 
     $('h3.customStatisticsQuestionsFromKhanAcademyHeader').click(function () {
@@ -464,7 +483,6 @@
         $("div#customExplainProject").fadeToggle();
         $("h3.customExplainProjectHeader > .arrow").toggleClass('up').toggleClass('down');
     });
-
 
     $('h3.customMiscellaneousHeader').click(function () {
         $("div#customMiscellaneous").fadeToggle();
@@ -484,4 +502,4 @@
         $("h3[class$='Header']").click();
     }); 
 </script>
-<span style="display: none;">Tags: Interview Preparation,Technology,Natural Language Processing,Machine Learning,Generative AI,Large Language Models,</span>
+<span style="display: none;">Tags: Interview Preparation,Generative AI,Technology,Natural Language Processing,Machine Learning,Large Language Models,Database,</span>
