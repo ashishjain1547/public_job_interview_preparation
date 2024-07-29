@@ -20,9 +20,9 @@
                     $("#customWhatsAppGroupLinkWrapper").html(
                         `
                         <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
-                            <span>Join us on:</span> 
-                            <img alt="" border="0" data-original-height="830" data-original-width="3566"
-                                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJYjNjeZYo-i37vdHGVRlml-8aiuouEZ2yTD_fpg7pW_Vq144S1EDh3GeiCaLY-0lnBd8rfIUBP2KeP3-uK7hYC-_THn12-RXdTGH0hGzjywh9JzHk9rW7J1ympZwY5zv4EtP8BHrvkeNZDpM8VWLUAESFjo1CaBY8XGdfZ1-6_hrhEJYm_9RSoDGYTntZ/s600/whatsapp%20logo.png" /></a>
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
                         </h2>
                         `
                     );
@@ -31,6 +31,8 @@
         });
     </script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         pre {
             white-space: pre-wrap;
@@ -38,6 +40,78 @@
             white-space: -pre-wrap;
             white-space: -o-pre-wrap;
             word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+    </style>
+
+    <style>
+        i.ir {
+            color: red;
+        }
+
+        p.pb {
+            color: blue;
         }
 
         .dot {
@@ -74,56 +148,12 @@
             transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
         }
-
-        .customLink {
-            background-color: #4CAF50;
-            border: none;
-            color: white !important;
-            padding: 8px 13px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .customLink:hover {
-            text-decoration: none;
-        }
     </style>
 
-    <style>
-        .custom_link_h2 a {
-            color: black;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .custom_link_h2 a:hover {
-            color: black;
-        }
-
-        .custom_link_h2 a:active {
-            color: black;
-        }
-
-        .custom_link_h2 span {
-            translate: 0px -5px;
-            display: inline-block;
-        }
-
-        .custom_link_h2 img {
-            width: 100px;
-            padding: 0px;
-            border: none;
-            box-shadow: none;
-        }
-    </style>
 </head>
-<!-- End of 'Personal Posts Menu Template For Copy-Paste'. It started from the top of the page from <HEAD> tag. -->
 
 <div id="customWhatsAppGroupLinkWrapper"></div>
+
 <br>
 <div class="separator" style="clear: both;"><a
         href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjL52yCYxQBXz_yX9f4I63JVmrXCBVlT6V1EzHF9sKxP8WB45UiEUEX5S0hK_qam2NWFEIPnhd1cM_behCKTwwj3IuQxATzgV-QvJogEEGvalgHu5FR2pQOr9Uy7BM_GPz0J4K7sJDMV2X7JuXbMLHYX57e0YHd-Lv0dhu8ZCoTF8_HtDrfYbQNnzXU8PTy/s2000/interview.png"
@@ -167,6 +197,13 @@
 
 <div id="customQuestionsFromInterviewsDataScientist">
     <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2024/07/interview-at-nagarro-for-data-scientist.html"
+                target="_blank">
+                Interview at Nagarro for Data Scientist Role (Jul 27, 2024)
+            </a>
+        </li>
+        
         <li>
             <a href="https://survival8.blogspot.com/2024/04/interview-for-data-scientist-role-at.html" target="_blank">
                 Interview for Data Scientist Role at Cognizant (Questions With Answers From Gemini - 18 Apr 2024)
@@ -365,14 +402,16 @@
     <ol>
         <li>
             <a href="https://survival8.blogspot.com/2024/06/10-interview-questions-on-cypher.html" target="_blank">
-                Round (1) - 10 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist Role) - Jun
+                Round (1) - 10 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist
+                Role) - Jun
                 2024
             </a>
         </li>
 
         <li>
             <a href="https://survival8.blogspot.com/2024/07/round-2-18-interview-questions-on.html" target="_blank">
-                Round (2) - 18 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist Role) - Jul 2024
+                Round (2) - 18 Interview Questions on Cypher Queries and Knowledge Graph Using Neo4j (For Data Scientist
+                Role) - Jul 2024
             </a>
         </li>
     </ol>
@@ -471,7 +510,7 @@
         $("h3.customVariousMachineLearningModelsHeader > .arrow").toggleClass('up').toggleClass('down');
     });
 
-    
+
 
     $('h3.customGraphDatabasesHeader').click(function () {
         $("div#customGraphDatabases").fadeToggle();
@@ -508,4 +547,5 @@
         $("h3[class$='Header']").click();
     }); 
 </script>
-<span style="display: none;">Tags: Interview Preparation,Generative AI,Technology,Natural Language Processing,Machine Learning,Large Language Models,Database,</span>
+<span style="display: none;">Tags: Interview Preparation,Generative AI,Technology,Natural Language Processing,Machine
+    Learning,Large Language Models,Database,</span>
