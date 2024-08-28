@@ -1,0 +1,868 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ 
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json",
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `
+                    );
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+    </style>
+
+    <style>
+        i.ir {
+            color: red;
+        }
+
+        p.pb {
+            color: blue;
+        }
+    </style>
+
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+Find out more: <a class="customLink"
+    href="https://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html"
+    target="_blank">Index For Interviews Preparation For Data Scientist Role
+</a>
+<br>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMi-iOELSDNyNRu3SJjepT5y8F5t6zs3RZl0377Uja5RvCIwoMTKgneiTYBJNpWBYKmWeA-JvQUOxu1YcExNQCDk5tj_E2g1ZdeE082vKKqP7AuSe1efgp_b6C2VknIypr2nVJE3PdJ623IyLwyI7syrYJnFo6DdHpxHKUWssQoKDehWTvuDG2LX_6BlTx/s880/capgemini-logo.jpg" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="500" data-original-width="880" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMi-iOELSDNyNRu3SJjepT5y8F5t6zs3RZl0377Uja5RvCIwoMTKgneiTYBJNpWBYKmWeA-JvQUOxu1YcExNQCDk5tj_E2g1ZdeE082vKKqP7AuSe1efgp_b6C2VknIypr2nVJE3PdJ623IyLwyI7syrYJnFo6DdHpxHKUWssQoKDehWTvuDG2LX_6BlTx/s600/capgemini-logo.jpg"/></a></div>
+<pre>
+Q1. Tell about yourself In 1-2 minutes.
+
+Q2. What challenges, problems or difficulties did you face in Anomaly Detection project?
+
+<span>Answer:
+
+Implementing an anomaly detection project can be challenging due to various factors that can affect the accuracy, efficiency, and practicality of the solutions. Here are some common challenges and difficulties one might face in an anomaly detection project:
+
+1. Data Quality and Quantity
+Insufficient Anomalous Data: Anomalies are, by definition, rare events. There might be insufficient examples of anomalies in the training data, making it difficult for models to learn effectively.
+Imbalanced Data: The dataset is often heavily imbalanced, with a large number of normal instances and very few anomalous instances, which can skew the model's performance.
+Noisy Data: Real-world data can be noisy and contain errors, making it hard to distinguish between noise and true anomalies.
+Missing Data: Missing values in the dataset can complicate the detection process, especially if the missingness pattern is not random.
+
+2. Definition of Anomaly
+Subjectivity: What constitutes an anomaly can be subjective and domain-specific, making it challenging to define and identify anomalies.
+Dynamic Nature: Anomalies can change over time, requiring models to adapt continuously to new patterns and distributions.
+
+3. Model Selection and Evaluation
+Choice of Model: Selecting the appropriate model for anomaly detection (e.g., statistical methods, machine learning algorithms, or deep learning techniques) depends on the nature of the data and the specific requirements of the project.
+Evaluation Metrics: Traditional evaluation metrics like accuracy are not suitable for imbalanced datasets. Metrics like precision, recall, F1 score, and area under the ROC curve (AUC-ROC) are more appropriate but can be harder to interpret.
+
+4. Computational Complexity
+Scalability: Some anomaly detection algorithms may not scale well with large datasets, requiring significant computational resources and time.
+Real-time Processing: Implementing real-time anomaly detection systems requires efficient algorithms and optimized infrastructure to handle streaming data.
+
+5. Feature Engineering
+Feature Selection: Identifying and selecting the right features that capture the underlying patterns of normal and anomalous behavior is crucial and can be challenging.
+Feature Transformation: Transforming and normalizing features to make them suitable for the detection algorithms can be complex and domain-specific.
+
+6. Interpretability
+Black-box Models: Many advanced anomaly detection models (e.g., neural networks) can act as black boxes, providing limited insight into why a particular instance is classified as an anomaly.
+Explanation of Anomalies: Providing meaningful explanations for detected anomalies is often required, especially in critical applications like fraud detection or system monitoring.
+
+7. Adaptability and Maintenance
+Model Drift: Models may become less effective over time as the underlying data distribution changes, requiring continuous monitoring and retraining.
+System Integration: Integrating the anomaly detection system with existing processes and workflows can be technically challenging and may require significant customization.
+
+8. Domain-specific Challenges
+Context Awareness: In many applications, context is important for correctly identifying anomalies (e.g., seasonal trends in time-series data).
+Expert Knowledge: Domain expertise is often required to validate detected anomalies and to fine-tune the models.
+Practical Steps to Mitigate Challenges
+Data Augmentation: Use techniques like synthetic data generation to augment the training set with more examples of anomalies.
+Hybrid Models: Combine different approaches (e.g., statistical and machine learning models) to leverage the strengths of each method.
+Active Learning: Implement active learning strategies to involve domain experts in labeling and validating anomalies iteratively.
+Robust Evaluation: Use multiple evaluation metrics and cross-validation techniques to robustly assess model performance.
+Model Explainability: Incorporate explainability methods (e.g., SHAP, LIME) to make black-box models more interpretable.
+Continuous Monitoring: Set up automated monitoring and alerting systems to track model performance and detect drift.
+
+By addressing these challenges systematically, one can improve the effectiveness and reliability of anomaly detection systems.
+</span>
+
+Q3: How did you decide on what models to try and which model to select in Anomaly Detection project?
+
+<span>Answer:
+
+Deciding which models to try and ultimately select for an anomaly detection project involves several steps, including understanding the problem, exploring the data, evaluating different models, and considering practical constraints. Here's a structured approach to guide you through this process:
+
+1. Understand the Problem and Requirements
+Define Anomalies: Clearly define what constitutes an anomaly in your context. This can vary greatly between domains (e.g., fraud detection vs. network security).
+Business Requirements: Understand the business context and requirements, such as the acceptable false positive rate, the importance of interpretability, and the need for real-time detection.
+Data Characteristics: Assess the nature of your data, including the type (e.g., time-series, categorical, continuous), volume, and quality.
+
+2. Exploratory Data Analysis (EDA)
+Data Distribution: Examine the distribution of your data, including any apparent patterns, trends, and outliers.
+Imbalance: Assess the imbalance between normal and anomalous instances.
+Feature Analysis: Identify and analyze key features that may help in distinguishing between normal and anomalous data points.
+
+3. Initial Model Selection
+Based on the insights from the problem understanding and EDA, you can choose a range of models to try. Here's a categorization of common models used in anomaly detection:
+
+<b>Statistical Models</b>
+
+Z-Score: Useful for data following a Gaussian distribution. It detects how many standard deviations a data point is from the mean.
+Moving Average/Exponential Smoothing: Often used for time-series data to detect anomalies based on deviations from a smoothed trend.
+
+<b>Machine Learning Models</b>
+
+Isolation Forest: Builds random trees and isolates anomalies due to their shorter average path lengths.
+One-Class SVM: Uses support vector machines to separate normal data from anomalies in a high-dimensional space.
+Local Outlier Factor (LOF): Measures the local density deviation of a data point compared to its neighbors.
+Deep Learning Models
+Autoencoders: Neural networks that learn to reconstruct input data. Anomalies are detected based on reconstruction error.
+Recurrent Neural Networks (RNNs): Particularly useful for time-series data to capture temporal dependencies.
+Variational Autoencoders (VAEs): A type of generative model that can be used to detect anomalies based on the likelihood of the data point under the learned distribution.
+
+<b>Hybrid Models</b>
+
+Ensemble Methods: Combine multiple models to leverage their strengths and improve robustness.
+Hybrid Statistical and Machine Learning Models: Use statistical methods for preprocessing and feature extraction, followed by machine learning models for anomaly detection.
+
+4. Model Training and Evaluation
+Train-Test Split: Split the data into training and testing sets. Consider using a time-based split for time-series data.
+Evaluation Metrics: Choose appropriate metrics such as Precision, Recall, F1 Score, Area Under the ROC Curve (AUC-ROC), and Area Under the Precision-Recall Curve (AUC-PRC).
+Cross-Validation: Use cross-validation to ensure the model's robustness and generalizability.
+
+5. Practical Considerations
+
+Scalability: Ensure the model can handle the volume of data in your application.
+Latency: For real-time applications, the model must make predictions within acceptable time limits.
+Interpretability: Consider how easy it is to understand and explain the model’s predictions, especially in regulated industries.
+Maintainability: Evaluate how easy it is to maintain and update the model as new data becomes available.
+
+6. Model Comparison and Selection
+
+Performance Comparison: Compare models based on the chosen evaluation metrics. Look at both overall performance and performance on specific subsets of the data (e.g., recent data, high-risk segments).
+Complexity vs. Performance Trade-off: Balance the complexity of the model with its performance. Sometimes simpler models might perform almost as well as complex ones but are easier to deploy and maintain.
+Use Case Fit: Ensure the selected model meets the specific needs of the business use case and aligns with any operational constraints.
+
+7. Iterative Improvement
+
+Feedback Loop: Incorporate feedback from domain experts and end-users to refine the model.
+Continuous Monitoring: Set up monitoring to track the model’s performance over time and retrain or adjust as needed.
+Experimentation: Regularly experiment with new models and techniques as they become available to ensure the best performance.
+Example Workflow
+Initial Exploration: Perform EDA and preliminary statistical analysis to understand the data.
+Baseline Models: Implement simple models like Z-score and Moving Average to establish baselines.
+Advanced Models: Try machine learning models like Isolation Forest and One-Class SVM, and deep learning models like Autoencoders.
+Evaluation and Comparison: Use cross-validation and appropriate metrics to compare models.
+Selection and Deployment: Choose the best-performing model considering practical constraints and deploy it.
+Monitoring and Iteration: Continuously monitor the model and iterate based on feedback and performance metrics.
+
+By following these steps, you can systematically decide on which models to try and select the most appropriate model for your anomaly detection project.</span>
+
+Q4: Why are you leaving your current company?
+
+Q5: How do you use Gradient Descent for Linear Regression?
+
+<span>Answer:
+
+<div class="markdown prose w-full break-words dark:prose-invert light"><p>Gradient Descent is an optimization algorithm used to minimize the cost function in machine learning models, including linear regression. It iteratively adjusts the model parameters to find the minimum of the cost function. Here’s how to use Gradient Descent for Linear Regression step-by-step:</p><h3>1. Understanding Linear Regression</h3><p>In linear regression, we model the relationship between the input variables (features) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">X</mi></mrow><annotation encoding="application/x-tex">\mathbf{X}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6861em;"></span><span class="mord mathbf">X</span></span></span></span> and the output variable (target) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span></span></span></span> using a linear equation:</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi mathvariant="bold">X</mi><mi mathvariant="bold">w</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">y = \mathbf{X}\mathbf{w} + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.7694em; vertical-align: -0.0833em;"></span><span class="mord mathbf" style="margin-right: 0.01597em;">Xw</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></p><p>where:</p><ul><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">X</mi></mrow><annotation encoding="application/x-tex">\mathbf{X}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6861em;"></span><span class="mord mathbf">X</span></span></span></span> is the matrix of input features.</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">w</mi></mrow><annotation encoding="application/x-tex">\mathbf{w}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4444em;"></span><span class="mord mathbf" style="margin-right: 0.01597em;">w</span></span></span></span> is the vector of weights (parameters).</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> is the bias (intercept).</li></ul><h3>2. Define the Cost Function</h3><p>The cost function for linear regression is usually the Mean Squared Error (MSE):</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mo stretchy="false">(</mo><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup><mo stretchy="false">(</mo><msub><mi>h</mi><mrow><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><msup><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">J(\mathbf{w}, b) = \frac{1}{2m} \sum_{i=1}^m (h_{\mathbf{w}, b}(\mathbf{x}^{(i)}) - y^{(i)})^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.09618em;">J</span><span class="mopen">(</span><span class="mord mathbf" style="margin-right: 0.01597em;">w</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.233em; vertical-align: -0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.8451em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">m</span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.394em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position: relative; top: 0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.8043em;"><span style="top: -2.4003em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top: -3.2029em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2997em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3361em;"><span style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1.138em; vertical-align: -0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></p><p>where:</p><ul><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> is the number of training examples.</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>h</mi><mrow><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><msup><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">h_{\mathbf{w}, b}(\mathbf{x}^{(i)})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.1741em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3361em;"><span style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> is the predicted value for the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>-th example, calculated as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="bold">w</mi><mi>T</mi></msup><msup><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">\mathbf{w}^T \mathbf{x}^{(i)} + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.9713em; vertical-align: -0.0833em;"></span><span class="mord"><span class="mord mathbf" style="margin-right: 0.01597em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8413em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right: 0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>.</li><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">y^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.0824em; vertical-align: -0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span> is the actual value for the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>-th example.</li></ul><h3>3. Initialize Parameters</h3><p>Initialize the weights <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">w</mi></mrow><annotation encoding="application/x-tex">\mathbf{w}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4444em;"></span><span class="mord mathbf" style="margin-right: 0.01597em;">w</span></span></span></span> and bias <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> with some values, usually zeros or small random values.</p><h3>4. Compute the Gradient</h3><p>Compute the gradients of the cost function with respect to each parameter. The gradients for the weights and bias are given by:</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>J</mi><mo stretchy="false">(</mo><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><msub><mi>w</mi><mi>j</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup><mo stretchy="false">(</mo><msub><mi>h</mi><mrow><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><msup><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\frac{\partial J(\mathbf{w}, b)}{\partial w_j} = \frac{1}{m} \sum_{i=1}^m (h_{\mathbf{w}, b}(\mathbf{x}^{(i)}) - y^{(i)}) x_j^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.5523em; vertical-align: -0.5423em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.01em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right: 0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3281em;"><span style="top: -2.357em; margin-left: -0.0269em; margin-right: 0.0714em;"><span class="pstrut" style="height: 2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right: 0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2819em;"><span></span></span></span></span></span></span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.485em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight" style="margin-right: 0.09618em;">J</span><span class="mopen mtight">(</span><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.5423em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.233em; vertical-align: -0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.8451em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.394em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position: relative; top: 0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.8043em;"><span style="top: -2.4003em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top: -3.2029em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2997em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3361em;"><span style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1.4578em; vertical-align: -0.413em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.0448em;"><span style="top: -2.4231em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right: 0.05724em;">j</span></span></span><span style="top: -3.2198em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.413em;"><span></span></span></span></span></span></span></span></span></span>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>J</mi><mo stretchy="false">(</mo><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><mi>b</mi></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup><mo stretchy="false">(</mo><msub><mi>h</mi><mrow><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><msup><mi mathvariant="bold">x</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo><mo>−</mo><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{\partial J(\mathbf{w}, b)}{\partial b} = \frac{1}{m} \sum_{i=1}^m (h_{\mathbf{w}, b}(\mathbf{x}^{(i)}) - y^{(i)})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.355em; vertical-align: -0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.01em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.485em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight" style="margin-right: 0.09618em;">J</span><span class="mopen mtight">(</span><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 1.233em; vertical-align: -0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.8451em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.394em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position: relative; top: 0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.8043em;"><span style="top: -2.4003em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top: -3.2029em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2997em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3361em;"><span style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathbf">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1.138em; vertical-align: -0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.888em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p><h3>5. Update Parameters</h3><p>Update the parameters using the gradients and the learning rate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.0037em;">α</span></span></span></span>:</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>w</mi><mi>j</mi></msub><mo>:</mo><mo>=</mo><msub><mi>w</mi><mi>j</mi></msub><mo>−</mo><mi>α</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>J</mi><mo stretchy="false">(</mo><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><msub><mi>w</mi><mi>j</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">w_j := w_j - \alpha \frac{\partial J(\mathbf{w}, b)}{\partial w_j}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.7167em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span style="top: -2.55em; margin-left: -0.0269em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right: 0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.8694em; vertical-align: -0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span style="top: -2.55em; margin-left: -0.0269em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right: 0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1.5523em; vertical-align: -0.5423em;"></span><span class="mord mathnormal" style="margin-right: 0.0037em;">α</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.01em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right: 0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3281em;"><span style="top: -2.357em; margin-left: -0.0269em; margin-right: 0.0714em;"><span class="pstrut" style="height: 2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right: 0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.2819em;"><span></span></span></span></span></span></span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.485em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight" style="margin-right: 0.09618em;">J</span><span class="mopen mtight">(</span><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.5423em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>:</mo><mo>=</mo><mi>b</mi><mo>−</mo><mi>α</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>J</mi><mo stretchy="false">(</mo><mi mathvariant="bold">w</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">b := b - \alpha \frac{\partial J(\mathbf{w}, b)}{\partial b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.7778em; vertical-align: -0.0833em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1.355em; vertical-align: -0.345em;"></span><span class="mord mathnormal" style="margin-right: 0.0037em;">α</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.01em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight">b</span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.485em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight" style="margin-right: 0.09618em;">J</span><span class="mopen mtight">(</span><span class="mord mathbf mtight" style="margin-right: 0.01597em;">w</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight">b</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p><h3>6. Iterate Until Convergence</h3><p>Repeat the gradient computation and parameter update steps until the cost function converges (i.e., changes very little between iterations) or for a fixed number of iterations.</p><h3>Example Code</h3><p>Here's a simple implementation of Gradient Descent for Linear Regression in Python:</p><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_cost</span>(<span class="hljs-params">X, y, w, b</span>):
+    m = <span class="hljs-built_in">len</span>(y)
+    cost = (<span class="hljs-number">1</span> / (<span class="hljs-number">2</span> * m)) * np.<span class="hljs-built_in">sum</span>((X.dot(w) + b - y) ** <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">return</span> cost
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">gradient_descent</span>(<span class="hljs-params">X, y, w, b, alpha, num_iters</span>):
+    m = <span class="hljs-built_in">len</span>(y)
+    cost_history = []
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_iters):
+        <span class="hljs-comment"># Compute predictions</span>
+        predictions = X.dot(w) + b
+        
+        <span class="hljs-comment"># Compute the gradients</span>
+        dw = (<span class="hljs-number">1</span> / m) * X.T.dot(predictions - y)
+        db = (<span class="hljs-number">1</span> / m) * np.<span class="hljs-built_in">sum</span>(predictions - y)
+        
+        <span class="hljs-comment"># Update the parameters</span>
+        w -= alpha * dw
+        b -= alpha * db
+        
+        <span class="hljs-comment"># Compute and record the cost</span>
+        cost = compute_cost(X, y, w, b)
+        cost_history.append(cost)
+        
+        <span class="hljs-comment"># Print cost every 100 iterations for monitoring</span>
+        <span class="hljs-keyword">if</span> i % <span class="hljs-number">100</span> == <span class="hljs-number">0</span>:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Iteration <span class="hljs-subst">{i}</span>: Cost <span class="hljs-subst">{cost}</span>"</span>)
+
+    <span class="hljs-keyword">return</span> w, b, cost_history
+
+<span class="hljs-comment"># Example usage</span>
+<span class="hljs-comment"># Assuming X is the input feature matrix and y is the target vector</span>
+X = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]])  <span class="hljs-comment"># Example feature matrix</span>
+y = np.array([<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">12</span>])  <span class="hljs-comment"># Example target vector</span>
+
+<span class="hljs-comment"># Initialize parameters</span>
+w = np.zeros(X.shape[<span class="hljs-number">1</span>])
+b = <span class="hljs-number">0</span>
+alpha = <span class="hljs-number">0.01</span>  <span class="hljs-comment"># Learning rate</span>
+num_iters = <span class="hljs-number">1000</span>  <span class="hljs-comment"># Number of iterations</span>
+
+<span class="hljs-comment"># Run gradient descent</span>
+w, b, cost_history = gradient_descent(X, y, w, b, alpha, num_iters)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Optimized weights:"</span>, w)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Optimized bias:"</span>, b)
+</code></div></div></pre><h3>Explanation of the Code</h3><ol><li><p><strong>compute_cost</strong>: This function calculates the Mean Squared Error (MSE) cost given the input features <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.07847em;">X</span></span></span></span>, target <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.625em; vertical-align: -0.1944em;"></span><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span></span></span></span>, weights <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span></span></span></span>, and bias <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>.</p></li><li><p><strong>gradient_descent</strong>: This function performs gradient descent to optimize the weights <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span></span></span></span> and bias <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>. It iteratively updates the parameters using the gradients of the cost function.</p></li><li><p><strong>Example usage</strong>: The example demonstrates how to initialize the parameters, run gradient descent, and print the optimized weights and bias.</p></li></ol><p>By following these steps, you can implement Gradient Descent for Linear Regression and optimize the model parameters to minimize the cost function.</p></div>
+</span>
+
+Q6: What is gradient descent?
+
+<span>Answer:
+
+<div class="markdown prose w-full break-words dark:prose-invert light"><p>Gradient Descent is an optimization algorithm used to minimize the cost function in machine learning and deep learning models. It is widely used to update the parameters of models (such as weights in linear regression, coefficients in logistic regression, and weights in neural networks) to find the values that minimize the cost function.</p><h3>Key Concepts</h3><ol><li><p><strong>Cost Function (Objective Function)</strong>:
+The cost function, also known as the loss function or objective function, measures how well the model's predictions match the actual data. In the context of regression, it is often the Mean Squared Error (MSE); in classification, it could be Cross-Entropy Loss.</p></li><li><p><strong>Gradient</strong>:
+The gradient is a vector of partial derivatives of the cost function with respect to each parameter. It points in the direction of the steepest increase of the cost function.</p></li><li><p><strong>Learning Rate (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.0037em;">α</span></span></span></span>)</strong>:
+The learning rate is a hyperparameter that determines the step size at each iteration while moving toward a minimum of the cost function. It controls how much to change the model parameters in response to the estimated error each time the model parameters are updated.</p></li></ol><h3>How Gradient Descent Works</h3><p>Gradient Descent iteratively adjusts the parameters to minimize the cost function by following these steps:</p><ol><li><p><strong>Initialize Parameters</strong>:
+Initialize the parameters (weights and biases) randomly or with zeros.</p></li><li><p><strong>Compute Predictions</strong>:
+Use the current parameters to make predictions for all training examples.</p></li><li><p><strong>Compute the Cost</strong>:
+Calculate the cost function to determine how far off the predictions are from the actual values.</p></li><li><p><strong>Compute the Gradient</strong>:
+Calculate the gradient of the cost function with respect to each parameter. This involves computing partial derivatives for each parameter.</p></li><li><p><strong>Update Parameters</strong>:
+Update each parameter by moving in the direction opposite to the gradient. The update rule for a parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">θ</span></span></span></span> is:</p><span class="katex-display" style=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>θ</mi><mo>:</mo><mo>=</mo><mi>θ</mi><mo>−</mo><mi>α</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>J</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\theta := \theta - \alpha \frac{\partial J(\theta)}{\partial \theta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">θ</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">:=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.7778em; vertical-align: -0.0833em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">θ</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 2.113em; vertical-align: -0.686em;"></span><span class="mord mathnormal" style="margin-right: 0.0037em;">α</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.427em;"><span style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal" style="margin-right: 0.02778em;">θ</span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal" style="margin-right: 0.09618em;">J</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.02778em;">θ</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.0037em;">α</span></span></span></span> is the learning rate and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>J</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\partial J(\theta)}{\partial \theta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.355em; vertical-align: -0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.01em;"><span style="top: -2.655em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight" style="margin-right: 0.02778em;">θ</span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.485em;"><span class="pstrut" style="height: 3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right: 0.05556em;">∂</span><span class="mord mathnormal mtight" style="margin-right: 0.09618em;">J</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right: 0.02778em;">θ</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> is the gradient of the cost function with respect to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal" style="margin-right: 0.02778em;">θ</span></span></span></span>.</p></li><li><p><strong>Repeat</strong>:
+Repeat the process for a predetermined number of iterations or until the cost function converges to a minimum (i.e., changes very little between iterations).</p></li></ol><h3>Types of Gradient Descent</h3><ol><li><p><strong>Batch Gradient Descent</strong>:</p><ul><li>Uses the entire dataset to compute the gradient at each iteration.</li><li>Can be computationally expensive and slow for large datasets.</li><li>Guarantees convergence to the global minimum for convex cost functions.</li></ul></li><li><p><strong>Stochastic Gradient Descent (SGD)</strong>:</p><ul><li>Uses a single training example to compute the gradient at each iteration.</li><li>Faster and can handle large datasets but introduces more noise in the gradient computation.</li><li>Can converge to a minimum but not necessarily the global minimum.</li></ul></li><li><p><strong>Mini-batch Gradient Descent</strong>:</p><ul><li>Uses a small random subset (mini-batch) of the training data to compute the gradient at each iteration.</li><li>Balances the trade-off between the efficiency of Batch Gradient Descent and the noise of SGD.</li><li>Often used in practice and can lead to faster convergence.</li></ul></li></ol><h3>Example: Gradient Descent for Linear Regression</h3><p>Here's a simple example to illustrate Gradient Descent for a linear regression model:</p><pre><div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium"><div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><div class="flex items-center"><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm"><path fill="currentColor" fill-rule="evenodd" d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" clip-rule="evenodd"></path></svg>Copy code</button></span></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="!whitespace-pre hljs language-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-comment"># Hypothesis function</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">predict</span>(<span class="hljs-params">X, w, b</span>):
+    <span class="hljs-keyword">return</span> np.dot(X, w) + b
+
+<span class="hljs-comment"># Cost function (Mean Squared Error)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">compute_cost</span>(<span class="hljs-params">X, y, w, b</span>):
+    m = <span class="hljs-built_in">len</span>(y)
+    cost = (<span class="hljs-number">1</span> / (<span class="hljs-number">2</span> * m)) * np.<span class="hljs-built_in">sum</span>((predict(X, w, b) - y) ** <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">return</span> cost
+
+<span class="hljs-comment"># Gradient Descent</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">gradient_descent</span>(<span class="hljs-params">X, y, w, b, alpha, num_iters</span>):
+    m = <span class="hljs-built_in">len</span>(y)
+    cost_history = []
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_iters):
+        predictions = predict(X, w, b)
+        dw = (<span class="hljs-number">1</span> / m) * np.dot(X.T, (predictions - y))
+        db = (<span class="hljs-number">1</span> / m) * np.<span class="hljs-built_in">sum</span>(predictions - y)
+        
+        w -= alpha * dw
+        b -= alpha * db
+        
+        cost = compute_cost(X, y, w, b)
+        cost_history.append(cost)
+        
+        <span class="hljs-keyword">if</span> i % <span class="hljs-number">100</span> == <span class="hljs-number">0</span>:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"Iteration <span class="hljs-subst">{i}</span>: Cost <span class="hljs-subst">{cost}</span>"</span>)
+
+    <span class="hljs-keyword">return</span> w, b, cost_history
+
+<span class="hljs-comment"># Example usage</span>
+X = np.array([[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>]])  <span class="hljs-comment"># Example feature matrix</span>
+y = np.array([<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">12</span>])  <span class="hljs-comment"># Example target vector</span>
+
+<span class="hljs-comment"># Initialize parameters</span>
+w = np.zeros(X.shape[<span class="hljs-number">1</span>])
+b = <span class="hljs-number">0</span>
+alpha = <span class="hljs-number">0.01</span>  <span class="hljs-comment"># Learning rate</span>
+num_iters = <span class="hljs-number">1000</span>  <span class="hljs-comment"># Number of iterations</span>
+
+<span class="hljs-comment"># Run gradient descent</span>
+w, b, cost_history = gradient_descent(X, y, w, b, alpha, num_iters)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Optimized weights:"</span>, w)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Optimized bias:"</span>, b)
+</code></div></div></pre><h3>Summary</h3><p>Gradient Descent is a fundamental optimization algorithm in machine learning. It iteratively updates model parameters by moving them in the direction that reduces the cost function the most, eventually finding the minimum. Various types of Gradient Descent, such as Batch, Stochastic, and Mini-batch, offer different trade-offs between computational efficiency and convergence stability.</p></div>
+</span>
+
+Q7: What are vector databases?
+
+<span>Answer: Vector databases are specialized databases designed to store, index, and query vector data. In the context of machine learning and data science, vectors often refer to high-dimensional representations of data, such as embeddings generated by deep learning models. These embeddings can represent various types of data, including text, images, audio, and more, in a way that captures semantic meaning.
+
+Key Features of Vector Databases
+Efficient Storage:
+
+Vector databases are optimized for storing high-dimensional vectors efficiently, often using specialized data structures and compression techniques.
+Similarity Search:
+
+They support fast similarity searches to find vectors that are similar to a given query vector. This is typically done using distance metrics like cosine similarity, Euclidean distance, or other distance functions.
+Indexing Techniques:
+
+Vector databases use advanced indexing techniques, such as hierarchical navigable small world graphs (HNSW), locality-sensitive hashing (LSH), or tree-based structures like KD-trees and Ball-trees, to speed up the search process.
+Scalability:
+
+They are designed to handle large-scale datasets, allowing for the efficient storage and retrieval of millions or even billions of vectors.
+Integration with Machine Learning Pipelines:
+
+Vector databases often provide APIs and tools to integrate seamlessly with machine learning workflows, making it easy to store and retrieve embeddings generated by models.
+Use Cases of Vector Databases
+Recommendation Systems:
+
+By storing user and item embeddings, vector databases can quickly find similar items to recommend based on a user’s preferences.
+Image and Video Search:
+
+Vector databases can store image or video embeddings and allow for fast similarity searches to find visually similar content.
+Natural Language Processing (NLP):
+
+In NLP applications, vector databases can store text embeddings (e.g., sentence embeddings, word embeddings) and enable efficient semantic search, text classification, and clustering.
+Anomaly Detection:
+
+Vector databases can help identify outliers or anomalies in high-dimensional data by comparing embeddings to find unusual patterns.
+Fraud Detection:
+
+Embeddings representing transaction patterns can be stored in a vector database to quickly identify similar or suspicious transactions.
+Examples of Vector Databases
+FAISS (Facebook AI Similarity Search):
+
+An open-source library developed by Facebook AI Research, FAISS is highly optimized for efficient similarity search and clustering of dense vectors.
+Annoy (Approximate Nearest Neighbors Oh Yeah):
+
+Developed by Spotify, Annoy is designed for fast approximate nearest neighbor search in high-dimensional spaces.
+Milvus:
+
+An open-source vector database designed for scalability and efficiency, supporting various indexing algorithms and integrating well with machine learning frameworks.
+Pinecone:
+
+A managed vector database service that provides fast and scalable similarity search with built-in indexing and clustering.
+Weaviate:
+
+An open-source vector search engine that supports semantic search and integrates with various data sources and machine learning models.
+Example: Using FAISS for Similarity Search
+Here’s a simple example of how to use FAISS to perform similarity search on a set of vectors:
+
+python
+Copy code
+import numpy as np
+import faiss
+
+# Generate some random vectors
+d = 128  # Dimension of vectors
+nb = 10000  # Number of vectors in the database
+nq = 5  # Number of query vectors
+
+np.random.seed(1234)  # Fix seed for reproducibility
+xb = np.random.random((nb, d)).astype('float32')
+xb[:, 0] += np.arange(nb) / 1000.
+
+xq = np.random.random((nq, d)).astype('float32')
+xq[:, 0] += np.arange(nq) / 1000.
+
+# Build the index
+index = faiss.IndexFlatL2(d)  # Use L2 distance
+index.add(xb)  # Add vectors to the index
+
+# Perform search
+k = 5  # Number of nearest neighbors to retrieve
+D, I = index.search(xq, k)  # D is distances, I is indices of nearest neighbors
+
+print("Indices of nearest neighbors:\n", I)
+print("Distances to nearest neighbors:\n", D)
+Summary
+Vector databases are crucial tools for applications that involve high-dimensional data and require efficient similarity search. They are widely used in various domains, such as recommendation systems, image and video search, NLP, anomaly detection, and fraud detection. By leveraging specialized indexing techniques and scalable architectures, vector databases enable fast and efficient retrieval of similar data points, making them indispensable in modern data-driven applications.</span>
+
+Q8: What is the difference between text encoding, text embedding and text representation?
+
+<span>Answer: 
+
+Text encoding, text embedding, and text representation are concepts used in natural language processing (NLP) to convert text data into numerical formats that can be processed by machine learning models. While they are related, they have distinct differences and applications.
+
+Text Encoding
+Text encoding refers to the process of converting raw text into a numerical format. This can involve various techniques, ranging from simple to complex, to prepare text data for machine learning models. Common text encoding methods include:
+
+One-Hot Encoding:
+
+Represents each word or token as a binary vector with a length equal to the size of the vocabulary. Each vector has all zeros except for a single one at the position corresponding to the word.
+Example: For a vocabulary of {“cat”, “dog”, “fish”}, the word “dog” could be represented as [0, 1, 0].
+Bag-of-Words (BoW):
+
+Represents text as a frequency vector where each element corresponds to the frequency of a word in the document.
+Example: For the sentence “cat cat dog”, the BoW representation could be [2, 1, 0] assuming the same vocabulary as above.
+TF-IDF (Term Frequency-Inverse Document Frequency):
+
+An extension of BoW that considers the importance of a word in the document and across the corpus. It helps in reducing the impact of frequently occurring but less informative words.
+Text Embedding
+Text embedding is a more advanced form of text representation where words or phrases are mapped to dense vectors of fixed size. These vectors capture semantic information about the words and their relationships with each other. Common text embedding techniques include:
+
+Word2Vec:
+
+Generates word embeddings using neural networks. Words with similar meanings are positioned close to each other in the vector space.
+Example: “king” and “queen” might have similar embeddings due to their semantic similarity.
+GloVe (Global Vectors for Word Representation):
+
+Generates embeddings by analyzing word co-occurrence statistics from a corpus. It captures global statistical information about words.
+FastText:
+
+Extends Word2Vec by considering subword information, which allows it to generate better embeddings for rare or out-of-vocabulary words.
+Transformer-based Models (e.g., BERT, GPT):
+
+Use deep learning architectures to create contextual embeddings that consider the context in which words appear. They generate different embeddings for the same word depending on its usage.
+Text Representation
+Text representation is a broader concept that encompasses any method used to represent text data in a numerical format, including both encoding and embedding. It is an umbrella term that includes:
+
+Symbolic Representations:
+
+Simple encoding methods like one-hot encoding, BoW, and TF-IDF.
+Distributed Representations:
+
+Dense vectors generated by embedding techniques like Word2Vec, GloVe, and transformer-based models.
+Hierarchical Representations:
+
+Representations that capture information at multiple levels, such as sentence embeddings, paragraph embeddings, and document embeddings.
+Summary
+Text Encoding: Converts text into a numerical format, often using simple techniques like one-hot encoding, BoW, or TF-IDF. It focuses on representing text in a way that can be easily processed by machine learning algorithms.
+
+Text Embedding: Generates dense, fixed-size vectors that capture semantic information about words and their relationships. Embeddings are typically created using advanced techniques like Word2Vec, GloVe, or transformers.
+
+Text Representation: A general term that includes any method used to convert text into numerical data, encompassing both encoding and embedding. It refers to the overall approach to representing text data for processing by machine learning models.
+
+In practice, text embedding methods are preferred for modern NLP tasks because they provide richer and more meaningful representations compared to traditional text encoding techniques.</span>
+
+Q9: What is transfer learning?
+
+<span>Answer:
+
+Transfer learning is a machine learning technique where a model developed for one task is reused as the starting point for a model on a second, related task. This approach leverages the knowledge gained from the initial task to improve the learning efficiency and performance on the new task. It is particularly useful when the new task has limited data available for training.
+
+Key Concepts in Transfer Learning
+Pre-trained Model:
+
+A model that has been previously trained on a large dataset and has learned general features. For example, models like VGG, ResNet, or BERT are often pre-trained on large datasets like ImageNet (for images) or large text corpora (for NLP).
+Fine-tuning:
+
+Adjusting the pre-trained model's parameters by training it on a new, typically smaller, dataset specific to the target task. Fine-tuning involves updating the weights of the pre-trained model to adapt it to the specifics of the new task.
+Feature Extraction:
+
+Using the pre-trained model to extract features from the new dataset without further training. In this approach, the pre-trained model's layers act as a fixed feature extractor, and a new classifier or regressor is trained on top of these features.
+Types of Transfer Learning
+Inductive Transfer Learning:
+
+The source and target tasks are different, but the source domain data is used to learn the target task. Fine-tuning a pre-trained neural network on a new dataset is an example of inductive transfer learning.
+Transductive Transfer Learning:
+
+The source and target tasks are the same, but the source and target domains are different. For example, adapting a sentiment analysis model trained on movie reviews to analyze product reviews.
+Unsupervised Transfer Learning:
+
+No labeled data is available for the source task. The model is trained in an unsupervised manner on the source domain and then transferred to the target task.
+Examples and Use Cases
+Image Classification:
+
+A model pre-trained on ImageNet can be fine-tuned to classify medical images or identify specific objects in satellite imagery.
+Natural Language Processing:
+
+BERT, a model pre-trained on a large text corpus, can be fine-tuned for tasks like sentiment analysis, named entity recognition, or question answering with a smaller, task-specific dataset.
+Speech Recognition:
+
+A model pre-trained on a large dataset of general speech data can be fine-tuned for recognizing domain-specific jargon or accents.
+Steps in Transfer Learning
+Select a Pre-trained Model:
+
+Choose a model pre-trained on a large dataset that is similar to your target task.
+Adapt the Model Architecture:
+
+Modify the model architecture as needed, such as replacing the final classification layer to match the number of classes in the target task.
+Fine-tuning:
+
+Train the model on the new dataset. This can involve training all layers or just the final layers while keeping the initial layers frozen to retain the pre-trained knowledge.
+Evaluate and Iterate:
+
+Evaluate the model's performance on the target task and iterate as needed, potentially adjusting hyperparameters or fine-tuning additional layers.
+Example: Transfer Learning with a Pre-trained CNN
+Here is an example of how to use transfer learning with a pre-trained convolutional neural network (CNN) in Python using TensorFlow and Keras:
+
+python
+Copy code
+import tensorflow as tf
+from tensorflow.keras.applications import VGG16
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Flatten
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+# Load pre-trained VGG16 model + higher level layers
+base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+
+# Freeze the layers of the base model
+for layer in base_model.layers:
+    layer.trainable = False
+
+# Add custom top layers
+x = base_model.output
+x = Flatten()(x)
+x = Dense(1024, activation='relu')(x)
+predictions = Dense(10, activation='softmax')(x)  # Assuming 10 classes
+
+# Define the new model
+model = Model(inputs=base_model.input, outputs=predictions)
+
+# Compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+# Create data generators for training and validation
+train_datagen = ImageDataGenerator(rescale=1.0/255.0, rotation_range=20, zoom_range=0.2, horizontal_flip=True)
+train_generator = train_datagen.flow_from_directory('path/to/train/data', target_size=(224, 224), batch_size=32, class_mode='categorical')
+
+validation_datagen = ImageDataGenerator(rescale=1.0/255.0)
+validation_generator = validation_datagen.flow_from_directory('path/to/validation/data', target_size=(224, 224), batch_size=32, class_mode='categorical')
+
+# Train the model
+model.fit(train_generator, epochs=10, validation_data=validation_generator)
+
+# Optionally, fine-tune some of the deeper layers
+for layer in base_model.layers[-4:]:
+    layer.trainable = True
+
+model.compile(optimizer=tf.keras.optimizers.Adam(1e-5), loss='categorical_crossentropy', metrics=['accuracy'])
+model.fit(train_generator, epochs=10, validation_data=validation_generator)
+Summary
+Transfer learning leverages knowledge from a pre-trained model to improve performance on a related task with less data and training time. It is widely used in various applications, from image and text classification to speech recognition, and has proven to be highly effective in achieving state-of-the-art results.</span>
+
+Q10: How do you generate text embeddings?
+
+<span>Answer:
+
+Generating text embeddings involves converting text data into dense, continuous vector representations that capture semantic information about the text. There are several methods and models for generating text embeddings, ranging from traditional techniques to modern deep learning approaches. Here’s an overview of some common methods:
+
+Traditional Methods
+TF-IDF (Term Frequency-Inverse Document Frequency):
+
+Process: TF-IDF scores each word in a document by considering its frequency in the document and its rarity across all documents in the corpus.
+Usage: It can be used to create sparse vector representations of documents where each dimension corresponds to a specific word in the vocabulary.
+Word2Vec:
+
+Process: Word2Vec uses neural networks to learn word representations in a continuous vector space, capturing semantic relationships between words. There are two main architectures: Continuous Bag of Words (CBOW) and Skip-Gram.
+Usage: Once trained, each word in the vocabulary is represented by a dense vector. Sentences or documents can be represented by aggregating (e.g., averaging) these word vectors.
+Deep Learning-Based Methods
+GloVe (Global Vectors for Word Representation):
+
+Process: GloVe trains word vectors by factorizing a word co-occurrence matrix, capturing global statistical information about words in the corpus.
+Usage: Similar to Word2Vec, each word is represented by a dense vector, and text representations can be created by aggregating these vectors.
+FastText:
+
+Process: FastText, developed by Facebook, extends Word2Vec by considering subword information, allowing it to create better representations for rare and out-of-vocabulary words.
+Usage: Each word is represented by the sum of its subword (n-gram) vectors.
+Transformer-Based Methods
+BERT (Bidirectional Encoder Representations from Transformers):
+
+Process: BERT is a transformer-based model that generates contextual embeddings by considering the context of a word in both directions (left and right). It is pre-trained on a large corpus and fine-tuned for specific tasks.
+Usage: Text embeddings can be generated by taking the output of the BERT model for each token and aggregating them (e.g., using the [CLS] token for sentence-level embeddings).
+GPT (Generative Pre-trained Transformer):
+
+Process: GPT models are transformer-based and generate embeddings by processing text in a left-to-right fashion. They are pre-trained on large corpora and can be fine-tuned for specific tasks.
+Usage: Text embeddings can be derived from the hidden states of the model's transformer layers.
+Sentence-BERT (SBERT):
+
+Process: SBERT is a modification of BERT that uses siamese and triplet networks to derive semantically meaningful sentence embeddings.
+Usage: It is specifically designed to generate high-quality sentence embeddings suitable for tasks like semantic search and clustering.
+Example: Generating Text Embeddings with BERT in Python
+Here is an example of how to generate text embeddings using BERT and the transformers library from Hugging Face:
+
+python
+Copy code
+from transformers import BertTokenizer, BertModel
+import torch
+
+# Load pre-trained BERT model and tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Encode text
+text = "This is an example sentence."
+inputs = tokenizer(text, return_tensors='pt', max_length=512, truncation=True, padding='max_length')
+
+# Generate embeddings
+with torch.no_grad():
+    outputs = model(**inputs)
+    last_hidden_states = outputs.last_hidden_state
+
+# Extract embeddings for the [CLS] token
+cls_embedding = last_hidden_states[:, 0, :]
+
+print("CLS Embedding Shape:", cls_embedding.shape)
+print("CLS Embedding:", cls_embedding)
+Summary
+Generating text embeddings is a fundamental step in many NLP tasks. The choice of method depends on the specific requirements and complexity of the task. Traditional methods like TF-IDF and Word2Vec are simpler and computationally efficient, while transformer-based methods like BERT and GPT provide richer, context-aware embeddings that are well-suited for complex tasks. The advancements in embedding techniques have significantly improved the performance of various NLP applications, including text classification, sentiment analysis, information retrieval, and more.</span>
+
+Q11: ChatGPT was trained in three stages. What are those three stages?
+
+<span>Answer:
+
+ChatGPT, like other large language models from OpenAI, was trained in a multi-stage process. The stages are:
+
+Pre-training:
+
+Objective: The model is trained to predict the next word in a sentence given all the previous words. This helps the model learn the structure and nuances of language.
+Data: Large-scale datasets from diverse sources on the internet, such as books, articles, and websites.
+Process: During pre-training, the model learns to capture general language patterns, grammar, facts, and some reasoning abilities by processing vast amounts of text data.
+Result: The model gains a broad understanding of language but lacks specific knowledge of particular tasks or the ability to follow detailed instructions.
+Fine-tuning:
+
+Objective: Refine the pre-trained model to follow specific instructions and improve performance on a narrower set of tasks.
+Data: A more curated and smaller dataset, usually labeled by human annotators, which includes various prompts and their corresponding high-quality responses.
+Process: The model is trained with a technique called supervised learning, where it learns from example prompts and responses to improve its ability to generate coherent and relevant outputs.
+Result: The model becomes better at understanding and responding to a wide variety of user queries with higher relevance and accuracy.
+Reinforcement Learning from Human Feedback (RLHF):
+
+Objective: Further align the model with user expectations by optimizing it using feedback from human evaluations.
+Data: Human feedback on the model's responses, including rankings and corrections.
+Process: The model is fine-tuned using reinforcement learning techniques, where human feedback is used to reward or penalize the model's responses, guiding it to generate more desirable outputs.
+Result: The model improves in generating responses that are not only accurate but also align better with human preferences, making the interactions more useful and satisfactory.
+These three stages collectively enable ChatGPT to generate high-quality, contextually relevant, and human-like text responses.    
+</span>
+
+Q12: What are some of the use cases of bidirectional LSTM? Apart from language translation.
+
+<span>Answer:
+
+Bidirectional Long Short-Term Memory (BiLSTM) networks are a type of recurrent neural network (RNN) that processes data in both forward and backward directions, capturing context from both past and future states. This makes BiLSTMs particularly powerful for tasks where context from both directions is crucial. Here are some common use cases for BiLSTMs:
+
+<b>1. Natural Language Processing (NLP)</b>
+
+Text Classification:
+
+Sentiment Analysis: Determining the sentiment (positive, negative, neutral) of a given text.
+Spam Detection: Classifying emails or messages as spam or not spam.
+
+Named Entity Recognition (NER):
+
+Identifying and classifying entities (like names, dates, locations) in a text.
+Part-of-Speech Tagging (POS):
+Assigning parts of speech (noun, verb, adjective, etc.) to each word in a sentence.
+
+Chunking:
+
+Dividing a text into syntactically correlated parts like noun or verb phrases.
+
+<b>2. Machine Translation</b>
+
+Translating Text:
+Translating text from one language to another by understanding the context of words in both source and target languages.
+
+<b>3. Speech Recognition</b>
+
+Transcribing Speech to Text:
+Converting spoken language into written text, which benefits from understanding context both before and after a word to improve accuracy.
+
+<b>4. Time Series Analysis</b>
+
+Forecasting and Prediction:
+Predicting future values of a time series (like stock prices, weather data) by understanding trends and patterns from both past and future data points.
+
+<b>5. Question Answering Systems</b>
+
+Answer Extraction:
+Extracting accurate answers from a given context by understanding the question and the surrounding context of potential answer candidates.
+
+<b>6. Text Generation</b>
+
+Generating Text:
+Creating coherent and contextually relevant text by understanding the flow of information in both directions.
+
+<b>7. Handwriting Recognition</b>
+
+Recognizing Handwritten Text:
+Converting handwritten text into digital format, where context from surrounding characters helps in accurate recognition.
+
+<b>8. Bioinformatics</b>
+
+Sequence Analysis:
+Analyzing biological sequences (like DNA, RNA) where context from both directions helps in identifying patterns and anomalies.
+
+Example Code: Sentiment Analysis with BiLSTM
+
+Here's a simple example of using a BiLSTM for sentiment analysis in Python with Keras:
+
+import numpy as np
+from keras.models import Sequential
+from keras.layers import Embedding, LSTM, Dense, Bidirectional
+from keras.preprocessing.sequence import pad_sequences
+from keras.preprocessing.text import Tokenizer
+
+# Sample data
+texts = ['I love this movie', 'I hate this movie', 'This movie is great', 'This movie is terrible']
+labels = [1, 0, 1, 0]  # 1 = positive, 0 = negative
+
+# Tokenization and padding
+tokenizer = Tokenizer(num_words=10000)
+tokenizer.fit_on_texts(texts)
+sequences = tokenizer.texts_to_sequences(texts)
+x_data = pad_sequences(sequences, maxlen=10)
+y_data = np.array(labels)
+
+# Model definition
+model = Sequential()
+model.add(Embedding(input_dim=10000, output_dim=128, input_length=10))
+model.add(Bidirectional(LSTM(64)))
+model.add(Dense(1, activation='sigmoid'))
+
+# Model compilation
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Model training
+model.fit(x_data, y_data, epochs=10, batch_size=2)
+
+# Model summary
+model.summary()
+Summary
+BiLSTMs are versatile and powerful for any sequential data task where context from both past and future states is important. They have been widely adopted across various domains, especially in NLP, due to their ability to capture comprehensive contextual information, leading to improved performance over unidirectional LSTMs in many applications.    
+</span>
+
+Q13: What is RAG?
+
+Q14: What is early stopping?
+
+Q15: What are the benefits of early stopping?
+
+Q16: What is the difference between random forest and isolation forest?
+
+Q17: What are the different types of transformer architectures?
+
+Q18: ChatGPT is which type of architecture? Encoder, Decoder or Encoder-Decoder?
+
+<span>Answer:
+
+ChatGPT is based on the Transformer architecture, specifically leveraging the advancements and principles of the Generative Pre-trained Transformer (GPT) models developed by OpenAI.
+
+Key Characteristics of the Transformer Architecture:
+Self-Attention Mechanism:
+
+The Transformer uses self-attention mechanisms to weigh the importance of different words in a sentence, allowing the model to capture dependencies and relationships between words, regardless of their position in the sequence.
+Encoder-Decoder Structure (in original Transformer):
+
+The original Transformer model proposed by Vaswani et al. in "Attention is All You Need" consists of an encoder-decoder structure. The encoder processes the input sequence, and the decoder generates the output sequence.
+In the case of GPT models, only the decoder part of the Transformer is used for generating text.
+Positional Encoding:
+
+Since the Transformer model does not process data sequentially (like RNNs), it uses positional encodings to maintain the order of words in the input sequence.
+Layer Normalization and Residual Connections:
+
+Each sub-layer in the Transformer model employs layer normalization and residual connections, helping to stabilize the training process and allowing the model to learn more efficiently.
+GPT Architecture:
+Unidirectional Decoder:
+
+GPT models, including ChatGPT, use only the decoder part of the Transformer architecture, processing input tokens sequentially from left to right. Each token can attend to the tokens before it using masked self-attention.
+Pre-training and Fine-tuning:
+
+Pre-training: The model is pre-trained on a large corpus of text data using a language modeling objective, where it learns to predict the next word in a sentence given the preceding words.
+Fine-tuning: The pre-trained model is then fine-tuned on specific tasks or datasets, often using supervised learning with labeled examples, to adapt it to particular applications or improve its performance on specific tasks.
+Generative Capabilities:
+
+GPT models are designed to generate coherent and contextually relevant text, making them suitable for a wide range of natural language generation tasks, including text completion, summarization, translation, and conversation.
+Summary
+ChatGPT, as an instance of GPT models, relies on the Transformer architecture's powerful attention mechanisms and parallel processing capabilities. This architecture allows it to effectively model long-range dependencies in text and generate high-quality, context-aware language outputs.
+</span>
+
+Q19: Which all LLMs have you used?
+
+Q20: Can you give an example of models for each type of transformer architectures?
+
+Q21: Are you comfortable in Python?
+
+Q22: Can you build a RAG based chatbot using Python?
+
+Q23: Have you deployed any of your ML models in the cloud?
+
+Q24: Do you know about Amazon Sage Maker?
+
+Q25: What are differences and similarities between Amazon Sage Maker, Azure ML Studio and Databricks?
+</pre>
+
+<span style="display: none;">Tags: Interview Preparation,Generative AI,Large Language Models,</span>
