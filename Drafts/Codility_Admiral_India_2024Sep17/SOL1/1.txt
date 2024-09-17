@@ -1,0 +1,53 @@
+1:
+
+sqlite> select state, sum(ClaimFlag) from PolicyData group by state;
+CA,1912
+FL,296
+NY,1060
+TX,908
+VA,820
+WV,414
+
+
+2:
+
+sqlite> select state, avg(ClaimAmount) from PolicyData where ClaimFlag = 1 group by state;
+CA,5821.54811715481
+FL,5164.18918918919
+NY,6219.43396226415
+TX,5205.50660792952
+VA,4984.87804878049
+WV,6186.95652173913
+
+
+
+
+3:
+
+sqlite> SELECT
+    NTILE(10) OVER (ORDER BY Age) AS quartile, PolicyID
+FROM PolicyData;
+
+4:
+
+sqlite> SELECT
+    avg(geo.ZipCode),
+    avg(geo.ZIP_AverageHomeValue),
+    avg(geo.ZIP_AverageIncome),
+    avg(geo.ZIP_Population),
+    avg(geo.ZIP_LandArea),
+    pd.ClaimFlag
+FROM PolicyData pd
+JOIN GeoData geo
+    ON pd.ZipCode = geo.ZipCode
+GROUP BY pd.ClaimFlag;
+55817.7376343465|180332.956777996|60795.2182768982|31496.3983011672|61.9336119264995|0
+55025.108770586|188526.273458445|63348.3163538874|33329.9835312141|53.2835388739946|1
+sqlite> 
+
+
+
+5:
+
+sqlite> select distinct(ZipCode) from PolicyData;
+

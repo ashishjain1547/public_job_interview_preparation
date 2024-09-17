@@ -1,0 +1,2 @@
+maximum return for a continuous sequence from a list of random positive and negative numbers
+Maximum return possible if all the stock market history is available to you.

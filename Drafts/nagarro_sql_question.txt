@@ -1,0 +1,8 @@
+write pyspark based code using rdd, sql, pandas api on pyspark:
+
+to apply groupby on employee table and return the count of employees whose 
+salary is 50K
+
+---
+
+can you write query to return the group name with second highest salary 
