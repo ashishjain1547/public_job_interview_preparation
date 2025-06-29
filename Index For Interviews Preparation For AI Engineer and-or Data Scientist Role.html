@@ -163,9 +163,24 @@
 </div>
 
 <span class="customLink toggleBtn">Toggle All Sections</span>
+<br>
+<h2>For AI Engineer</h2>
+<br>
+<h3 class="customAIEnggByChipHuyenHeader"><span class="arrow up"></span> From the book "AI Engineering" by Chip Huyen</h3>
 
+<div id="customAIEnggByChipHuyen">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2025/06/ch1-30-interview-questions-on-ai.html"
+                target="_blank">
+                Ch.1 - 30 Interview Questions from "Introduction to Building AI Applications with Foundation Models"
+            </a>
+        </li>
+    </ol>
+</div>
+<br>
 <h2>For Data Scientist Role</h2>
-
+<br>
 <h3 class="customTheoreticalQuestionsOnDataScienceHeader">
     <span class="arrow up"></span> Theoretical Questions On Data Science
 </h3>
@@ -484,6 +499,12 @@
 </div>
 
 <script>
+    
+    $('h3.customAIEnggByChipHuyenHeader').click(function () {
+        $("div#customAIEnggByChipHuyen").fadeToggle();
+        $("h3.customAIEnggByChipHuyenHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
+
     $('h3.customTheoreticalQuestionsOnDataScienceHeader').click(function () {
         $("div#customTheoreticalQuestionsOnDataScience").fadeToggle();
         $("h3.customTheoreticalQuestionsOnDataScienceHeader > .arrow").toggleClass('up').toggleClass('down');
@@ -554,5 +575,4 @@
         $("h3[class$='Header']").click();
     }); 
 </script>
-<span style="display: none;">Tags: Interview Preparation,Generative AI,Technology,Natural Language Processing,Machine
-    Learning,Large Language Models,Database,</span>
+<span style="display: none;">Tags: Interview Preparation,Generative AI,Technology,Natural Language Processing,Database,Machine Learning,Large Language Models,Agentic AI,Artificial Intelligence,</span>
