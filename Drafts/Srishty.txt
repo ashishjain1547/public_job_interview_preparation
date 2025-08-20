@@ -1,0 +1,54 @@
+algo: 7 segment display
+incorrect
+Brute force
+
+file:///home/jain/Desktop/ws/public/public_interviews_for_data_scientist_role_at_quantlytix/QUESTIONS/ML/1_Core%20ML%20&%20Statistics/1_core%20ml.html
+
+bias-variance: incorrect
+says bias variance depends on data apart form model itself
+
+
+
+
+
+Out of 100 emails, 40 are spam mails
+Model predicted 50 spam mails:
+30 (correctly predicted spam)
+20 (predicted spam, but not spam)
+10 (actual spam, but predicted not spam)
+
+
+
+
+
+file:///home/jain/Desktop/ws/public/public_interviews_for_data_scientist_role_at_quantlytix/QUESTIONS/ML/2_Modeling%20&%20Algorithms/1_modeling_and_algo.html
+
+what is logistic regression?
+
+
+
+
+SQL
+
+
+SQL: 2nd highest marks:
+table: stud_name, stud_marks
+
++1
+
+====================
+
+Table: <name, section, marks, result(pass/fail)>
+
+Report: <section, pass_count, fail_count>
+
+====================
+
+How many types of joins are there?
+
+4
+left, right, inner and outer
+
+
+==========================
+

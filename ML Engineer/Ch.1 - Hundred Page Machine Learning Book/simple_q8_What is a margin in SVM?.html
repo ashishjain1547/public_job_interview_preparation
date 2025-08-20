@@ -1,0 +1,188 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+  
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+  
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+  
+        .customLink:hover {
+            text-decoration: none;
+        }
+  
+        div.code-block-decoration.footer {
+            display: none;
+        }
+  
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+  
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+  
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+  
+        .custom_link_h2 a:active {
+            color: black;
+        }
+  
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+  
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+      .customul {
+        list-style: none;
+      }
+  
+      [aria-hidden='true'] {
+        display: none;
+      }
+    </style>
+  
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+To See All Interview Preparation Articles: <a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Interviews Preparation</a>
+<br>
+Other Ques From: <a class="customLink" href="https://survival8.blogspot.com/2025/08/ch1-20-interview-questions-from-hundred.html" target="_blank">Ch.1 from the 'Hundred-Page Machine Learning Book'</a>
+<br>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm6CB14-4QjvEDshui-B-puQPmvC_F_CY8-2EyulNHtnQ9Wj_5OLzOUBwD4P3pWnV61G1HDGXubD_bEh6x6Vd2bG2csZuTGspESXjwk06MGRtHHcK-3eEfa5Bz7T22W7wkor14UIB0Rvwex-kgWfpCmfr60VUAASFYMJGznvupgDlU9cMae_zr8x1iroaN/s500/q5.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="500" data-original-width="500" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm6CB14-4QjvEDshui-B-puQPmvC_F_CY8-2EyulNHtnQ9Wj_5OLzOUBwD4P3pWnV61G1HDGXubD_bEh6x6Vd2bG2csZuTGspESXjwk06MGRtHHcK-3eEfa5Bz7T22W7wkor14UIB0Rvwex-kgWfpCmfr60VUAASFYMJGznvupgDlU9cMae_zr8x1iroaN/s600/q5.png"/></a></div>
+
+<br>
+
+
+<div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling"><p data-start="0" data-end="181">In <strong data-start="3" data-end="36">Support Vector Machines (SVM)</strong>, the <strong data-start="42" data-end="52">margin</strong> is the distance between the <strong data-start="81" data-end="102">decision boundary</strong> (the separating hyperplane) and the <strong data-start="139" data-end="162">closest data points</strong> from each class.</p>
+<hr data-start="183" data-end="186">
+<h2 data-start="188" data-end="205">📌 Key Points:</h2>
+<ol data-start="206" data-end="935">
+<li data-start="206" data-end="374">
+<p data-start="209" data-end="230"><strong data-start="209" data-end="228">Support Vectors</strong></p>
+<ul data-start="234" data-end="374">
+<li data-start="234" data-end="294">
+<p data-start="236" data-end="294">The data points that lie closest to the decision boundary.</p>
+</li>
+<li data-start="298" data-end="370">
+<p data-start="300" data-end="370">They "support" or define the position and orientation of the boundary.</p>
+</li>
+</ul>
+</li>
+<li data-start="375" data-end="635">
+<p data-start="378" data-end="401"><strong data-start="378" data-end="399">Margin Definition</strong></p>
+<ul data-start="405" data-end="635">
+<li data-start="405" data-end="539">
+<p data-start="407" data-end="539">The margin is measured as the <strong data-start="437" data-end="463">perpendicular distance</strong> from the decision boundary to the nearest support vector from either class.</p>
+</li>
+<li data-start="543" data-end="635">
+<p data-start="545" data-end="635">In a <strong data-start="550" data-end="579">maximum-margin classifier</strong>, SVM chooses the boundary that maximizes this distance.</p>
+</li>
+</ul>
+</li>
+<li data-start="637" data-end="935">
+<p data-start="640" data-end="670"><strong data-start="640" data-end="668">Why Maximize the Margin?</strong></p>
+<ul data-start="674" data-end="935">
+<li data-start="674" data-end="818">
+<p data-start="676" data-end="818">A <strong data-start="678" data-end="695">larger margin</strong> means the decision boundary is farther from any training data point, which usually improves generalization on unseen data.</p>
+</li>
+<li data-start="822" data-end="935">
+<p data-start="824" data-end="935">This aligns with the <strong data-start="845" data-end="877">structural risk minimization</strong> principle: simpler decision boundaries generalize better.</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr data-start="937" data-end="940">
+<h2 data-start="942" data-end="966">📐 Formula for Margin</h2>
+<p data-start="967" data-end="1007">For a linear SVM, the margin <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.10903em;">M</span></span></span></span> is:</p>
+<span class="katex-display" style=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>M</mi><mo>=</mo><mfrac><mn>2</mn><mrow><mi mathvariant="normal">∥</mi><mi>w</mi><mi mathvariant="normal">∥</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">M = \frac{2}{\|w\|}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.10903em;">M</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 2.2574em; vertical-align: -0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.3214em;"><span style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord">∥</span><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span><span class="mord">∥</span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<p data-start="1034" data-end="1040">Where:</p>
+<ul data-start="1041" data-end="1114">
+<li data-start="1041" data-end="1114">
+<p data-start="1043" data-end="1114"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4306em;"></span><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span></span></span></span> = weight vector defining the hyperplane <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>⋅</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">w \cdot x + b = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.4445em;"></span><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6667em; vertical-align: -0.0833em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 0.6444em;"></span><span class="mord">0</span></span></span></span></p>
+</li>
+</ul>
+<hr data-start="1116" data-end="1119">
+<h2 data-start="1121" data-end="1145">🖼 Intuition Example:</h2>
+<p data-start="1146" data-end="1219">Imagine two parallel lines enclosing the training points of both classes:</p>
+<ul data-start="1220" data-end="1466">
+<li data-start="1220" data-end="1280">
+<p data-start="1222" data-end="1280">The <strong data-start="1226" data-end="1241">middle line</strong> between them is the decision boundary.</p>
+</li>
+<li data-start="1281" data-end="1369">
+<p data-start="1283" data-end="1369">The <strong data-start="1287" data-end="1299">distance</strong> from this middle line to either parallel line is <strong data-start="1349" data-end="1368">half the margin</strong>.</p>
+</li>
+<li data-start="1370" data-end="1466">
+<p data-start="1372" data-end="1466">SVM’s goal is to push these lines as far apart as possible while still separating the classes.</p>
+</li>
+</ul>
+<hr data-start="1468" data-end="1471">
+<p data-start="1473" data-end="1672" data-is-last-node="" data-is-only-node="">If you want, I can create a <strong data-start="1501" data-end="1519">visual diagram</strong> showing an SVM decision boundary with the margin and support vectors labeled. That usually makes this concept much clearer.<br data-start="1643" data-end="1646">
+Do you want me to make it?</p></div>
+
+<span style="opacity: 0;">Tags: Technology,Machine Learning,Interview Preparation,</span>

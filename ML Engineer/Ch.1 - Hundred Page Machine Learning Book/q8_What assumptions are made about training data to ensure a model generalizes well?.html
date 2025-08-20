@@ -1,0 +1,230 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+  
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+  
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+  
+        .customLink:hover {
+            text-decoration: none;
+        }
+  
+        div.code-block-decoration.footer {
+            display: none;
+        }
+  
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+  
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+  
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+  
+        .custom_link_h2 a:active {
+            color: black;
+        }
+  
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+  
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+      .customul {
+        list-style: none;
+      }
+  
+      [aria-hidden='true'] {
+        display: none;
+      }
+    </style>
+  
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+To See All Interview Preparation Articles: <a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Interviews Preparation</a>
+<br>
+Other Ques From: <a class="customLink" href="https://survival8.blogspot.com/2025/08/ch1-20-interview-questions-from-hundred.html" target="_blank">Ch.1 from the 'Hundred-Page Machine Learning Book'</a>
+<br>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhn_sDeFo_Heev6s_nYRMwNorphy7twH1V7zYOOXfPrXNiRk2lnt0QRrz4P36x3BGpm3Jl8KHXzJfIOIEMghuQwER1vry4g-Rp4Io3CpgIhXhgdIxTIJQnipmJDWy0_7OHqrzjyMIPOHpL0DfhoVvWk2_RjzsQlUkkLeK5EfcFPhdzBl9qVYJWUsJC-kbfH/s500/q8.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="500" data-original-width="500" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhn_sDeFo_Heev6s_nYRMwNorphy7twH1V7zYOOXfPrXNiRk2lnt0QRrz4P36x3BGpm3Jl8KHXzJfIOIEMghuQwER1vry4g-Rp4Io3CpgIhXhgdIxTIJQnipmJDWy0_7OHqrzjyMIPOHpL0DfhoVvWk2_RjzsQlUkkLeK5EfcFPhdzBl9qVYJWUsJC-kbfH/s600/q8.png"/></a></div>
+
+<h2>What assumptions are made about training data to ensure a model generalizes well?</h2>
+
+<div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling"><p data-start="0" data-end="157">To ensure a model generalizes well — meaning it performs well on <strong data-start="65" data-end="80">unseen data</strong> — machine learning makes some key assumptions about the <strong data-start="137" data-end="154">training data</strong>:</p>
+<hr data-start="159" data-end="162">
+<h3 data-start="164" data-end="202">1️⃣ <strong data-start="172" data-end="200">Independence of Examples</strong></h3>
+<ul data-start="203" data-end="422">
+<li data-start="203" data-end="341">
+<p data-start="205" data-end="341">Training samples are assumed to be <strong data-start="240" data-end="255">independent</strong> of each other (no autocorrelation unless explicitly modeled, e.g., in time series).</p>
+</li>
+<li data-start="342" data-end="422">
+<p data-start="344" data-end="422">This avoids misleading patterns caused by dependencies between observations.</p>
+</li>
+</ul>
+<hr data-start="424" data-end="427">
+<h3 data-start="429" data-end="475">2️⃣ <strong data-start="437" data-end="473">Identically Distributed (i.i.d.)</strong></h3>
+<ul data-start="476" data-end="644">
+<li data-start="476" data-end="560">
+<p data-start="478" data-end="560">All training and test data are drawn from the <strong data-start="524" data-end="557">same probability distribution</strong>.</p>
+</li>
+<li data-start="561" data-end="644">
+<p data-start="563" data-end="644">This ensures the patterns the model learns are relevant for future predictions.</p>
+</li>
+</ul>
+<hr data-start="646" data-end="649">
+<h3 data-start="651" data-end="688">3️⃣ <strong data-start="659" data-end="686">Representative Sampling</strong></h3>
+<ul data-start="689" data-end="860">
+<li data-start="689" data-end="765">
+<p data-start="691" data-end="765">The training data should be representative of the real-world population.</p>
+</li>
+<li data-start="766" data-end="860">
+<p data-start="768" data-end="860">Missing subgroups or skewed sampling can cause bias and poor performance on certain cases.</p>
+</li>
+</ul>
+<hr data-start="862" data-end="865">
+<h3 data-start="867" data-end="896">4️⃣ <strong data-start="875" data-end="894">Sufficient Size</strong></h3>
+<ul data-start="897" data-end="1043">
+<li data-start="897" data-end="981">
+<p data-start="899" data-end="981">The dataset should be large enough to cover the natural variability in the data.</p>
+</li>
+<li data-start="982" data-end="1043">
+<p data-start="984" data-end="1043">Small datasets increase the risk of overfitting to noise.</p>
+</li>
+</ul>
+<hr data-start="1045" data-end="1048">
+<h3 data-start="1050" data-end="1118">5️⃣ <strong data-start="1058" data-end="1091">Correct and Consistent Labels</strong> (in supervised learning)</h3>
+<ul data-start="1119" data-end="1213">
+<li data-start="1119" data-end="1213">
+<p data-start="1121" data-end="1213">Labels should be accurate; mislabeled data acts like noise and can degrade model accuracy.</p>
+</li>
+</ul>
+<hr data-start="1215" data-end="1218">
+<p data-start="1220" data-end="1428">💡 If <strong data-start="1226" data-end="1233">any</strong> of these assumptions is violated — for example, if the training and test sets come from <strong data-start="1322" data-end="1349">different distributions</strong> (dataset shift) — the model’s generalization ability can drop significantly.</p>
+<hr data-start="1430" data-end="1433">
+<p data-start="1435" data-end="1594" data-is-last-node="" data-is-only-node="">If you want, I can also share <strong data-start="1465" data-end="1484">5 warning signs</strong> during training that indicate your generalization assumptions might be failing. Would you like me to do that?</p></div>
+<br>
+<hr>
+<br>
+<div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling"><h3 data-start="0" data-end="106">Here are <strong data-start="9" data-end="28">5 warning signs</strong> that the generalization assumptions might be breaking down during training:</h3>
+<hr data-start="108" data-end="111">
+<h3 data-start="113" data-end="180">1️⃣ <strong data-start="121" data-end="178">Large Gap Between Training and Validation Performance</strong></h3>
+<ul data-start="181" data-end="388">
+<li data-start="181" data-end="293">
+<p data-start="183" data-end="293"><strong data-start="183" data-end="195">Symptom:</strong> High accuracy (or low loss) on the training set but much worse results on validation/test sets.</p>
+</li>
+<li data-start="294" data-end="388">
+<p data-start="296" data-end="388"><strong data-start="296" data-end="315">Possible Cause:</strong> Overfitting due to non-representative training data or too much noise.</p>
+</li>
+</ul>
+<hr data-start="390" data-end="393">
+<h3 data-start="395" data-end="447">2️⃣ <strong data-start="403" data-end="445">Sudden Drop in Performance on New Data</strong></h3>
+<ul data-start="448" data-end="648">
+<li data-start="448" data-end="525">
+<p data-start="450" data-end="525"><strong data-start="450" data-end="462">Symptom:</strong> Model works well on historical data but fails when deployed.</p>
+</li>
+<li data-start="526" data-end="648">
+<p data-start="528" data-end="648"><strong data-start="528" data-end="547">Possible Cause:</strong> <strong data-start="548" data-end="562">Data drift</strong> — the real-world data distribution has shifted away from the training distribution.</p>
+</li>
+</ul>
+<hr data-start="650" data-end="653">
+<h3 data-start="655" data-end="712">3️⃣ <strong data-start="663" data-end="710">High Variance Across Cross-Validation Folds</strong></h3>
+<ul data-start="713" data-end="890">
+<li data-start="713" data-end="781">
+<p data-start="715" data-end="781"><strong data-start="715" data-end="727">Symptom:</strong> Performance varies significantly from fold to fold.</p>
+</li>
+<li data-start="782" data-end="890">
+<p data-start="784" data-end="890"><strong data-start="784" data-end="803">Possible Cause:</strong> Training data might not be independent or is not evenly representative of all cases.</p>
+</li>
+</ul>
+<hr data-start="892" data-end="895">
+<h3 data-start="897" data-end="962">4️⃣ <strong data-start="905" data-end="960">Very High Model Complexity Without Performance Gain</strong></h3>
+<ul data-start="963" data-end="1186">
+<li data-start="963" data-end="1089">
+<p data-start="965" data-end="1089"><strong data-start="965" data-end="977">Symptom:</strong> Adding more parameters or layers increases training accuracy but validation accuracy stays the same or drops.</p>
+</li>
+<li data-start="1090" data-end="1186">
+<p data-start="1092" data-end="1186"><strong data-start="1092" data-end="1111">Possible Cause:</strong> Model is memorizing training data rather than learning general patterns.</p>
+</li>
+</ul>
+<hr data-start="1188" data-end="1191">
+<h3 data-start="1193" data-end="1245">5️⃣ <strong data-start="1201" data-end="1243">Poor Performance on Minority Subgroups</strong></h3>
+<ul data-start="1246" data-end="1460">
+<li data-start="1246" data-end="1338">
+<p data-start="1248" data-end="1338"><strong data-start="1248" data-end="1260">Symptom:</strong> Model works well overall but fails for specific segments of the population.</p>
+</li>
+<li data-start="1339" data-end="1460">
+<p data-start="1341" data-end="1460"><strong data-start="1341" data-end="1360">Possible Cause:</strong> Training data underrepresents those subgroups, breaking the "representative sampling" assumption.</p>
+</li>
+</ul>
+<hr data-start="1462" data-end="1465">
+<p data-start="1467" data-end="1638" data-is-last-node="" data-is-only-node="">If you want, I can give you a <strong data-start="1497" data-end="1549">table of these warning signs + possible remedies</strong> so you can keep it handy for ML project reviews.<br data-start="1598" data-end="1601">
+Do you want me to prepare that table?</p></div>
+<span style="opacity: 0;">Tags: Technology,Machine Learning,Interview Preparation,</span>

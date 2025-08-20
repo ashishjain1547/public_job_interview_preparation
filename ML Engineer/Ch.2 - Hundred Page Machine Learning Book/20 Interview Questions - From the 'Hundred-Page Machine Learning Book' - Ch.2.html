@@ -1,0 +1,246 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+  
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+  
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+  
+        .customLink:hover {
+            text-decoration: none;
+        }
+  
+        div.code-block-decoration.footer {
+            display: none;
+        }
+  
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+  
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+  
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+  
+        .custom_link_h2 a:active {
+            color: black;
+        }
+  
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+  
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+      .customul {
+        list-style: none;
+      }
+  
+      [aria-hidden='true'] {
+        display: none;
+      }
+    </style>
+  
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+To See All Interview Preparation Articles: <a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Interviews Preparation</a>
+<br>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRuZaDaA69Y-KrARcA8-zVPXtt07DQ-fjS0MJTCLB4dnY0tOvxB0UadotHPIHulJ-g8A3nx1TrCbzFjBRvsDsDw_2dwWuxElEtYfhO03gknw5iDEhnchDxd2HkyjiG3hpyYxgAZfXRp4ROHgSloqh0E3GuhZeUacmiCsOAyA4IKzbq1xgZjxVN3QGCszWy/s500/Ch%201.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="500" data-original-width="500" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRuZaDaA69Y-KrARcA8-zVPXtt07DQ-fjS0MJTCLB4dnY0tOvxB0UadotHPIHulJ-g8A3nx1TrCbzFjBRvsDsDw_2dwWuxElEtYfhO03gknw5iDEhnchDxd2HkyjiG3hpyYxgAZfXRp4ROHgSloqh0E3GuhZeUacmiCsOAyA4IKzbq1xgZjxVN3QGCszWy/s600/Ch%201.png"/></a></div>
+<br>
+<h3><i>Prompt: Extract 10 simple and 10 complex questions from this pdf with detailed answers</i></h3>
+
+<div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling"><p data-start="0" data-end="300">Here’s a set of <strong data-start="16" data-end="29">10 simple</strong> and <strong data-start="34" data-end="48">10 complex</strong> questions with <strong data-start="64" data-end="84">detailed answers</strong> from the chapter you provided (pp. 29–42 of <em data-start="129" data-end="169">The Hundred-Page Machine Learning Book</em>).<br data-start="171" data-end="174">
+I’ve made sure the simple ones check basic understanding, while the complex ones require reasoning, synthesis, or application.</p>
+<hr data-start="302" data-end="305">
+<h2 data-start="307" data-end="345"><strong data-start="310" data-end="345">Simple Questions (with Answers)</strong></h2>
+<p data-start="347" data-end="737"><strong data-start="347" data-end="353">1.</strong> <strong data-start="354" data-end="448">What is the main difference between Linear Regression and SVM in terms of their objective?</strong><br data-start="448" data-end="451">
+<strong data-start="451" data-end="462">Answer:</strong><br data-start="462" data-end="465">
+In Linear Regression, the model’s hyperplane is chosen to be as close as possible to all training examples, minimizing the average squared error. In SVM, the hyperplane serves as a decision boundary that separates classes and is placed to maximize the margin between them.</p>
+<hr data-start="739" data-end="742">
+<p data-start="744" data-end="947"><strong data-start="744" data-end="750">2.</strong> <strong data-start="751" data-end="807">What is the loss function used in Linear Regression?</strong><br data-start="807" data-end="810">
+<strong data-start="810" data-end="821">Answer:</strong><br data-start="821" data-end="824">
+Linear Regression uses <strong data-start="847" data-end="869">squared error loss</strong>, which is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(f(x_i) - y_i)^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1.0641em; vertical-align: -0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span style="top: -2.55em; margin-left: -0.0359em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.8141em;"><span style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> for each example, averaged across the dataset.</p>
+<hr data-start="949" data-end="952">
+<p data-start="954" data-end="1226"><strong data-start="954" data-end="960">3.</strong> <strong data-start="961" data-end="1035">Why is squared loss preferred over absolute loss in Linear Regression?</strong><br data-start="1035" data-end="1038">
+<strong data-start="1038" data-end="1049">Answer:</strong><br data-start="1049" data-end="1052">
+Squared loss has a continuous derivative, making it smoother and easier to optimize using linear algebra for closed-form solutions, unlike absolute loss, which is not smooth.</p>
+<hr data-start="1228" data-end="1231">
+<p data-start="1233" data-end="1439"><strong data-start="1233" data-end="1239">4.</strong> <strong data-start="1240" data-end="1293">Is Logistic Regression used for regression tasks?</strong><br data-start="1293" data-end="1296">
+<strong data-start="1296" data-end="1307">Answer:</strong><br data-start="1307" data-end="1310">
+No. Despite the name, Logistic Regression is a <strong data-start="1357" data-end="1375">classification</strong> algorithm, typically for binary classification, not regression.</p>
+<hr data-start="1441" data-end="1444">
+<p data-start="1446" data-end="1588"><strong data-start="1446" data-end="1452">5.</strong> <strong data-start="1453" data-end="1533">What function is used in Logistic Regression to map outputs between 0 and 1?</strong><br data-start="1533" data-end="1536">
+<strong data-start="1536" data-end="1547">Answer:</strong><br data-start="1547" data-end="1550">
+The <strong data-start="1554" data-end="1585">sigmoid (logistic) function</strong>:</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">f(x) = \frac{1}{1 + e^{-x}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal" style="margin-right: 0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.2778em;"></span></span><span class="base"><span class="strut" style="height: 2.0908em; vertical-align: -0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 1.3214em;"><span style="top: -2.314em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.6973em;"><span style="top: -2.989em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span></span></span><span style="top: -3.23em;"><span class="pstrut" style="height: 3em;"></span><span class="frac-line" style="border-bottom-width: 0.04em;"></span></span><span style="top: -3.677em;"><span class="pstrut" style="height: 3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+<hr data-start="1624" data-end="1627">
+<p data-start="1629" data-end="1833"><strong data-start="1629" data-end="1635">6.</strong> <strong data-start="1636" data-end="1704">What is the main optimization criterion for Logistic Regression?</strong><br data-start="1704" data-end="1707">
+<strong data-start="1707" data-end="1718">Answer:</strong><br data-start="1718" data-end="1721">
+It uses <strong data-start="1729" data-end="1768">Maximum Likelihood Estimation (MLE)</strong>, maximizing the likelihood of the observed data under the model.</p>
+<hr data-start="1835" data-end="1838">
+<p data-start="1840" data-end="2066"><strong data-start="1840" data-end="1846">7.</strong> <strong data-start="1847" data-end="1911">What does the ID3 algorithm use to determine the best split?</strong><br data-start="1911" data-end="1914">
+<strong data-start="1914" data-end="1925">Answer:</strong><br data-start="1925" data-end="1928">
+ID3 uses <strong data-start="1937" data-end="1948">entropy</strong> to measure uncertainty and selects the feature/threshold that minimizes the weighted average entropy after the split.</p>
+<hr data-start="2068" data-end="2071">
+<p data-start="2073" data-end="2386"><strong data-start="2073" data-end="2079">8.</strong> <strong data-start="2080" data-end="2147">What is the difference between hard-margin and soft-margin SVM?</strong><br data-start="2147" data-end="2150">
+<strong data-start="2150" data-end="2161">Answer:</strong><br data-start="2161" data-end="2164">
+Hard-margin SVM requires perfect separation of data without errors. Soft-margin SVM allows some misclassifications using <strong data-start="2285" data-end="2299">hinge loss</strong> and a regularization parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.07153em;">C</span></span></span></span> to balance margin size and classification errors.</p>
+<hr data-start="2388" data-end="2391">
+<p data-start="2393" data-end="2599"><strong data-start="2393" data-end="2399">9.</strong> <strong data-start="2400" data-end="2436">What is the kernel trick in SVM?</strong><br data-start="2436" data-end="2439">
+<strong data-start="2439" data-end="2450">Answer:</strong><br data-start="2450" data-end="2453">
+It’s a method to compute dot products in a higher-dimensional feature space without explicitly transforming the data, using a <strong data-start="2579" data-end="2598">kernel function</strong>.</p>
+<hr data-start="2601" data-end="2604">
+<p data-start="2606" data-end="2805"><strong data-start="2606" data-end="2613">10.</strong> <strong data-start="2614" data-end="2687">What does the parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6944em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span> represent in k-Nearest Neighbors (kNN)?</strong><br data-start="2687" data-end="2690">
+<strong data-start="2690" data-end="2701">Answer:</strong><br data-start="2701" data-end="2704">
+It represents the number of nearest neighbors considered when predicting the label for a new example.</p>
+<hr data-start="2807" data-end="2810">
+<h2 data-start="2812" data-end="2851"><strong data-start="2815" data-end="2851">Complex Questions (with Answers)</strong></h2>
+<p data-start="2853" data-end="3317"><strong data-start="2853" data-end="2859">1.</strong> <strong data-start="2860" data-end="2971">Explain why overfitting can occur with high-degree polynomial regression, using the concepts from the text.</strong><br data-start="2971" data-end="2974">
+<strong data-start="2974" data-end="2985">Answer:</strong><br data-start="2985" data-end="2988">
+High-degree polynomial regression can create a curve that fits the training data almost perfectly, capturing noise and outliers rather than the underlying pattern. This leads to poor generalization on unseen data, as shown in Fig. 2 of the text. The curve follows training points too closely, increasing variance and overfitting.</p>
+<hr data-start="3319" data-end="3322">
+<p data-start="3324" data-end="3762"><strong data-start="3324" data-end="3330">2.</strong> <strong data-start="3331" data-end="3426">Why does Logistic Regression use log-likelihood instead of raw likelihood for optimization?</strong><br data-start="3426" data-end="3429">
+<strong data-start="3429" data-end="3440">Answer:</strong><br data-start="3440" data-end="3443">
+Log-likelihood simplifies the product of probabilities into a sum (via logarithms), making it easier to compute and differentiate. Since the log function is monotonically increasing, maximizing log-likelihood yields the same result as maximizing likelihood but is more numerically stable and computationally convenient.</p>
+<hr data-start="3764" data-end="3767">
+<p data-start="3769" data-end="3876"><strong data-start="3769" data-end="3775">3.</strong> <strong data-start="3776" data-end="3860">How does the choice of the hyperparameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.07153em;">C</span></span></span></span> in SVM affect bias and variance?</strong><br data-start="3860" data-end="3863">
+<strong data-start="3863" data-end="3874">Answer:</strong></p>
+<ul data-start="3877" data-end="4126">
+<li data-start="3877" data-end="3998">
+<p data-start="3879" data-end="3998">High <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.07153em;">C</span></span></span></span>: Focuses on minimizing classification errors, leading to low bias but high variance (risk of overfitting).</p>
+</li>
+<li data-start="3999" data-end="4126">
+<p data-start="4001" data-end="4126">Low <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.6833em;"></span><span class="mord mathnormal" style="margin-right: 0.07153em;">C</span></span></span></span>: Allows more misclassifications for a larger margin, increasing bias but reducing variance (better generalization).</p>
+</li>
+</ul>
+<hr data-start="4128" data-end="4131">
+<p data-start="4133" data-end="4288"><strong data-start="4133" data-end="4139">4.</strong> <strong data-start="4140" data-end="4226">Describe the process of finding the best split in the ID3 decision tree algorithm.</strong><br data-start="4226" data-end="4229">
+<strong data-start="4229" data-end="4240">Answer:</strong><br data-start="4240" data-end="4243">
+For each feature and possible threshold, ID3:</p>
+<ol data-start="4289" data-end="4568">
+<li data-start="4289" data-end="4328">
+<p data-start="4292" data-end="4328">Splits the dataset into two subsets.</p>
+</li>
+<li data-start="4329" data-end="4385">
+<p data-start="4332" data-end="4385">Computes the weighted average entropy of the subsets.</p>
+</li>
+<li data-start="4386" data-end="4568">
+<p data-start="4389" data-end="4568">Selects the split (feature + threshold) with the <strong data-start="4438" data-end="4465">lowest weighted entropy</strong>.<br data-start="4466" data-end="4469">
+This process is repeated recursively until stopping criteria (e.g., pure nodes, max depth) are met.</p>
+</li>
+</ol>
+<hr data-start="4570" data-end="4573">
+<p data-start="4575" data-end="4958"><strong data-start="4575" data-end="4581">5.</strong> <strong data-start="4582" data-end="4675">Why is the kernel trick computationally advantageous compared to explicit transformation?</strong><br data-start="4675" data-end="4678">
+<strong data-start="4678" data-end="4689">Answer:</strong><br data-start="4689" data-end="4692">
+Explicit transformation to high-dimensional space is computationally expensive and memory-intensive. The kernel trick computes the dot product in that space directly from the original feature vectors, avoiding the explicit mapping and thus saving time and resources.</p>
+<hr data-start="4960" data-end="4963">
+<p data-start="4965" data-end="5335"><strong data-start="4965" data-end="4971">6.</strong> <strong data-start="4972" data-end="5026">Explain the role of hinge loss in soft-margin SVM.</strong><br data-start="5026" data-end="5029">
+<strong data-start="5029" data-end="5040">Answer:</strong><br data-start="5040" data-end="5043">
+Hinge loss, defined as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>max</mi><mo>⁡</mo><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mi>w</mi><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mi>b</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\max(0, 1 - y_i(w x_i - b))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mop">max</span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.1667em;"></span><span class="mord">1</span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span style="top: -2.55em; margin-left: -0.0359em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right: 0.02691em;">w</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.3117em;"><span style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.2222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathnormal">b</span><span class="mclose">))</span></span></span></span>, penalizes points on the wrong side of the margin or decision boundary. It allows the SVM to tolerate some violations (misclassifications) while still aiming to maximize the margin, balancing between training accuracy and generalization.</p>
+<hr data-start="5337" data-end="5340">
+<p data-start="5342" data-end="5477"><strong data-start="5342" data-end="5348">7.</strong> <strong data-start="5349" data-end="5431">In what situations would the RBF kernel be preferred over a polynomial kernel?</strong><br data-start="5431" data-end="5434">
+<strong data-start="5434" data-end="5445">Answer:</strong><br data-start="5445" data-end="5448">
+RBF kernel is preferred when:</p>
+<ul data-start="5478" data-end="5763">
+<li data-start="5478" data-end="5534">
+<p data-start="5480" data-end="5534">The relationship between features is highly nonlinear.</p>
+</li>
+<li data-start="5535" data-end="5607">
+<p data-start="5537" data-end="5607">You expect the decision boundary to be smooth rather than oscillatory.</p>
+</li>
+<li data-start="5608" data-end="5763">
+<p data-start="5610" data-end="5763">The data is not well-represented by polynomial combinations of features.<br>
+RBF maps to an infinite-dimensional space, allowing flexible, smooth boundaries.</p>
+</li>
+</ul>
+<hr data-start="5765" data-end="5768">
+<p data-start="5770" data-end="5894"><strong data-start="5770" data-end="5776">8.</strong> <strong data-start="5777" data-end="5878">How does cosine similarity differ from Euclidean distance in kNN, and when might it be preferred?</strong><br data-start="5878" data-end="5881">
+<strong data-start="5881" data-end="5892">Answer:</strong></p>
+<ul data-start="5895" data-end="6216">
+<li data-start="5895" data-end="5999">
+<p data-start="5897" data-end="5999"><strong data-start="5897" data-end="5918">Cosine similarity</strong> measures the angle between vectors, focusing on direction rather than magnitude.</p>
+</li>
+<li data-start="6000" data-end="6216">
+<p data-start="6002" data-end="6216"><strong data-start="6002" data-end="6024">Euclidean distance</strong> measures absolute geometric distance.<br data-start="6062" data-end="6065">
+Cosine similarity is preferred when the magnitude of features is irrelevant (e.g., text data with TF-IDF vectors) and direction (pattern) matters more.</p>
+</li>
+</ul>
+<hr data-start="6218" data-end="6221">
+<p data-start="6223" data-end="6532"><strong data-start="6223" data-end="6229">9.</strong> <strong data-start="6230" data-end="6300">Why does the ID3 algorithm not guarantee an optimal decision tree?</strong><br data-start="6300" data-end="6303">
+<strong data-start="6303" data-end="6314">Answer:</strong><br data-start="6314" data-end="6317">
+ID3 makes <strong data-start="6327" data-end="6354">greedy, local decisions</strong> at each split without considering future splits. It doesn’t backtrack to evaluate whether earlier splits could lead to better overall trees, so it may get stuck in local optima.</p>
+<hr data-start="6534" data-end="6537">
+<p data-start="6539" data-end="6965"><strong data-start="6539" data-end="6546">10.</strong> <strong data-start="6547" data-end="6643">Explain how kNN can be interpreted as a locally linear classifier under certain assumptions.</strong><br data-start="6643" data-end="6646">
+<strong data-start="6646" data-end="6657">Answer:</strong><br data-start="6657" data-end="6660">
+With normalized feature vectors and cosine similarity, kNN predicts based on a weighted sum of feature vectors from neighbors with label 1. This sum acts like a <strong data-start="6821" data-end="6843">local linear model</strong>, where the classification is based on the dot product (cosine similarity) between the summed vector and the input vector.</p>
+<hr data-start="6967" data-end="6970">
+<p data-start="6972" data-end="7198" data-is-last-node="" data-is-only-node="">If you want, I can also make a <strong data-start="7003" data-end="7031">printable 2-column table</strong> with these questions and answers so you can directly use it as a quick study sheet. That would make it easy to revise before exams. Would you like me to prepare that?</p></div>
+
+<span style="display: none;">Tags: Technology,Machine Learning,Interview Preparation,</span>

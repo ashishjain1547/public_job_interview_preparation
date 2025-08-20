@@ -1,0 +1,177 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+  
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+  
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+  
+        .customLink:hover {
+            text-decoration: none;
+        }
+  
+        div.code-block-decoration.footer {
+            display: none;
+        }
+  
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+  
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+  
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+  
+        .custom_link_h2 a:active {
+            color: black;
+        }
+  
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+  
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+      .customul {
+        list-style: none;
+      }
+  
+      [aria-hidden='true'] {
+        display: none;
+      }
+    </style>
+  
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+To See All Interview Preparation Articles: <a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Interviews Preparation</a>
+<br>
+Other Ques From: <a class="customLink" href="https://survival8.blogspot.com/2025/08/ch1-20-interview-questions-from-hundred.html" target="_blank">Ch.1 from the 'Hundred-Page Machine Learning Book'</a>
+<br>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm6CB14-4QjvEDshui-B-puQPmvC_F_CY8-2EyulNHtnQ9Wj_5OLzOUBwD4P3pWnV61G1HDGXubD_bEh6x6Vd2bG2csZuTGspESXjwk06MGRtHHcK-3eEfa5Bz7T22W7wkor14UIB0Rvwex-kgWfpCmfr60VUAASFYMJGznvupgDlU9cMae_zr8x1iroaN/s500/q5.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="500" data-original-width="500" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhm6CB14-4QjvEDshui-B-puQPmvC_F_CY8-2EyulNHtnQ9Wj_5OLzOUBwD4P3pWnV61G1HDGXubD_bEh6x6Vd2bG2csZuTGspESXjwk06MGRtHHcK-3eEfa5Bz7T22W7wkor14UIB0Rvwex-kgWfpCmfr60VUAASFYMJGznvupgDlU9cMae_zr8x1iroaN/s600/q5.png"/></a></div>
+
+<br>
+
+<h2>Why might perfect separation be impossible in some datasets?</h2>
+
+<div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling"><p data-start="0" data-end="66">Perfect separation might be impossible in some datasets because:</p>
+<hr data-start="68" data-end="71">
+<h3 data-start="73" data-end="104">1️⃣ <strong data-start="81" data-end="104">Overlapping Classes</strong></h3>
+<ul data-start="105" data-end="248">
+<li data-start="105" data-end="175">
+<p data-start="107" data-end="175">The features for different classes may overlap in the feature space.</p>
+</li>
+<li data-start="176" data-end="248">
+<p data-start="178" data-end="248">Example: Two groups of points mixed together without a clear boundary.</p>
+</li>
+</ul>
+<hr data-start="250" data-end="253">
+<h3 data-start="255" data-end="280">2️⃣ <strong data-start="263" data-end="280">Noise in Data</strong></h3>
+<ul data-start="281" data-end="414">
+<li data-start="281" data-end="365">
+<p data-start="283" data-end="365">Random variations in measurements can cause points to appear in unexpected places.</p>
+</li>
+<li data-start="366" data-end="414">
+<p data-start="368" data-end="414">Example: Sensor errors or random fluctuations.</p>
+</li>
+</ul>
+<hr data-start="416" data-end="419">
+<h3 data-start="421" data-end="448">3️⃣ <strong data-start="429" data-end="448">Labeling Errors</strong></h3>
+<ul data-start="449" data-end="603">
+<li data-start="449" data-end="523">
+<p data-start="451" data-end="523">Some data points may be assigned the wrong label during data collection.</p>
+</li>
+<li data-start="524" data-end="603">
+<p data-start="526" data-end="603">This creates contradictions that no decision boundary can perfectly separate.</p>
+</li>
+</ul>
+<hr data-start="605" data-end="608">
+<h3 data-start="610" data-end="630">4️⃣ <strong data-start="618" data-end="630">Outliers</strong></h3>
+<ul data-start="631" data-end="787">
+<li data-start="631" data-end="722">
+<p data-start="633" data-end="722">Extreme values can disrupt the separation, even if the majority of the data is separable.</p>
+</li>
+<li data-start="723" data-end="787">
+<p data-start="725" data-end="787">Example: One mislabeled point far away from its class cluster.</p>
+</li>
+</ul>
+<hr data-start="789" data-end="792">
+<h3 data-start="794" data-end="827">5️⃣ <strong data-start="802" data-end="827">Insufficient Features</strong></h3>
+<ul data-start="828" data-end="977">
+<li data-start="828" data-end="906">
+<p data-start="830" data-end="906">The chosen features might not fully capture the differences between classes.</p>
+</li>
+<li data-start="907" data-end="977">
+<p data-start="909" data-end="977">Without the right information, no model can separate them perfectly.</p>
+</li>
+</ul>
+<hr data-start="979" data-end="982">
+<p data-start="984" data-end="1127" data-is-last-node="" data-is-only-node="">If you want, I can show you a <strong data-start="1014" data-end="1032">visual example</strong> where overlapping data makes perfect separation impossible. Would you like me to prepare that?</p></div>
+
+<span style="opacity: 0;">Tags: Technology,Machine Learning,Interview Preparation,</span>

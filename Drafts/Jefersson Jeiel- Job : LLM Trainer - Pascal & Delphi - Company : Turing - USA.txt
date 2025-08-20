@@ -1,0 +1,359 @@
+2025-Aug-9
+
+1
+Important instruction: ID card validation is a must!
+*
+
+
+
+
+2
+Information only: Introductory script and guidelines
+*
+Introduction script for interview kick off
+
+Hello [Candidate name], am I pronouncing your name correctly? 
+Thank you for taking the time to speak with me today. My name is [Your Name] and I’ll be conducting your interview for the [Job name] role. I’m excited to learn more about your technical skills and experiences.
+Before we begin the technical assessment, I would love a brief introduction from yourself to learn a bit about your background and work experience.
+Great, so as you may know, Turing is a platform that connects world-class developers like yourself to top U.S. and Silicon Valley companies. We’re not just looking to fill a slot, we are focused on finding consistent long-term work that aligns with your career goals and offers you the opportunity to work on challenging projects that drive growth and innovation.
+As part of that mission, we have a vetting process designed to match you with roles that are a good fit for your experiences and to help you become an integral part of the development team you join.
+Now, let's get into the technical assessment. This is a crucial part of our process. We want to see how you approach problems, your coding proficiency, and your overall compatibility with the work environment our clients offer.
+During this process, please feel free to ask questions and communicate your thought process. We are not just evaluating your final answers but also your approach to problem-solving – this is key to understanding how you'll integrate with teams and projects.
+
+
+
+
+
+3
+Information: If candidate begins to ask questions about vetting process + client + other information
+If candidate begins to ask questions about vetting process + client + other information
+
+At a high level, the way Turing’s process is set up is to first evaluate your qualifications and ability to succeed in the clients role, second to prepare your profile and share it with the client, third if the client is interested in meeting you, we will help to schedule an interview between you and the client, finally depending on the outcome of that interview you’ll be onboarded for a two week trial period with the client before finally transitioning into the full engagement.
+That said – this call is focused on evaluating your technical capabilities and I am not from the hiring team.  I would suggest you reserved your questions for the HR person working with you - so that you get an accurate information.
+
+
+
+
+
+
+
+
+
+
+4
+Selection Criteria : (IMPORTANT)
+Please mark the skills rating out of 10.
+ 
+
+Candidates with the overall rating of 7,8,9,10 can be considered SELECT
+
+ 
+
+Candidates with overall rating of 6,5,4,3,2,1 should be REJECT.
+
+Ideal Answer (5 Star)
+Please mark the skills rating out of 10.
+ 
+
+Candidates with the overall rating of 8,9,10 can be considered SELECT
+
+ 
+
+Candidates with overall rating of 7,6,5,4,3,2,1 should be REJECT.
+
+
+
+
+
+
+
+
+6
+Prior project knowledge
+*
+Check the prior project knowledge. Ask questions about projects mentioned in CV/ resume of candidate. Tweak the project & ask about alternate problem around similar line.
+
+
+
+7:
+Optimizing Legacy Code
+You are tasked with optimizing a legacy application written in Delphi. The application has performance issues due to inefficient use of loops and data structures. Describe your approach to identifying bottlenecks and optimizing the code.
+Ideal Answer (5 Star)
+To optimize the legacy Delphi application, I would first use performance profiling tools such as AQtime or Deleaker to identify bottlenecks in the code. Once identified, I would analyze the inefficient loops and data structures. For instance, if I find a loop that processes data inefficiently, I might replace it with more efficient algorithms, such as using a binary search instead of a linear search. Additionally, I would look into using appropriate data structures like TDictionary for faster access times instead of using lists. I would also review memory management practices, ensuring that objects are properly created and freed, and consider using FastMM for memory allocation improvements. Here's a simple example of replacing a loop with a more efficient structure:
+var
+  i: Integer;
+  List: TList;
+begin
+  List := TList.Create;
+  try
+    for i := 0 to List.Count - 1 do
+    begin
+      // Inefficient operation
+    end;
+    // Optimized using TDictionary
+    var Dict: TDictionary;
+    Dict := TDictionary.Create;
+    try
+      // Efficient access
+    finally
+      Dict.Free;
+    end;
+  finally
+    List.Free;
+  end;
+end;
+
+----------------------------------------------------------------------------------------------
+
+8:
+
+Migrating from VCL to FireMonkey
+You are tasked with migrating a Delphi application from the VCL framework to FireMonkey to support cross-platform deployment. Describe the challenges you might face and how you would address them.
+Ideal Answer (5 Star)
+Migrating a Delphi application from VCL to FireMonkey involves several challenges due to differences in the frameworks. The first challenge is the difference in component sets and properties. I would need to replace VCL components with their FireMonkey counterparts, adapting the UI layout as necessary. Another challenge is platform-specific functionality, such as file handling and API calls, which may need to be abstracted using platform services in FireMonkey. I would also need to address differences in event handling and threading models between the two frameworks. To manage these changes, I would start by creating a migration plan, identifying all VCL-specific features and mapping them to FireMonkey equivalents. I would incrementally migrate and test each module, ensuring that the application's functionality and performance remain intact. Here's an example of replacing a VCL button with a FireMonkey button:
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ShowMessage('Hello, world!');
+end;
+After migration, thorough testing across all target platforms would be conducted to ensure consistent behavior.
+
+-------------------------------------------------------------------------------------------------
+
+9
+Handling Database Transactions
+You need to implement a feature in a Delphi application that performs multiple related database operations. Explain how you would handle transactions to ensure data integrity.
+Ideal Answer (5 Star)
+To handle database transactions in a Delphi application, I would use Delphi's database components, such as TADOConnection or TFDConnection, depending on the database framework in use. I would wrap the related database operations within a transaction block to ensure atomicity. This involves starting a transaction, executing the operations, and then committing the transaction if all operations succeed. In case of an error, I would roll back the transaction to maintain data integrity. Here's an example using FireDAC:
+var
+  FDConnection: TFDConnection;
+begin
+  FDConnection.StartTransaction;
+  try
+    // Perform database operations
+    FDConnection.ExecSQL('INSERT INTO Table1 (Field1) VALUES (Value1)');
+    FDConnection.ExecSQL('UPDATE Table2 SET Field2 = Value2 WHERE Condition');
+    FDConnection.Commit;
+  except
+    on E: Exception do
+    begin
+      FDConnection.Rollback;
+      raise;
+    end;
+  end;
+end;
+Ensuring that the transaction is properly committed or rolled back is crucial for maintaining data consistency.
+
+-------------------------------------------------
+
+
+
+
+10
+Feature Engineering for Contextual Understanding
+You need to train a language model to understand context better in customer support dialogues. What kind of feature engineering techniques would you apply to improve the model's contextual understanding?
+Ideal Answer (5 Star)
+To enhance the model's contextual understanding, I would use the following feature engineering techniques:
+1. **Contextual Embeddings**: Use embeddings like BERT or GPT that capture context within sentences.
+2. **Sequential Features**: Encode the sequence of interactions using techniques such as RNNs or Transformers.
+3. **Sentence Pairing**: For dialogues, treat consecutive sentences as pairs to maintain context across exchanges.
+4. **Temporal Features**: Incorporate time-based features that reflect the sequence and timing of dialogues.
+
+Here's an example of using BERT for contextual embeddings:
+```python
+from transformers import BertTokenizer, BertModel
+import torch
+
+# Load BERT model and tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Sample text
+text = "Hello, how can I help you today?"
+
+# Tokenize and get embeddings
+inputs = tokenizer(text, return_tensors='pt')
+outputs = model(**inputs)
+embeddings = outputs.last_hidden_state
+
+print(embeddings)
+```
+These techniques ensure that the model captures the nuances of dialogues, improving its ability to understand and respond contextually.
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+11
+Refactoring a Monolithic Pascal Application
+You have inherited a large, monolithic Pascal application that has been in use for over a decade. The application has grown unwieldy and difficult to maintain due to its size and the use of outdated coding practices. Your task is to refactor the codebase to improve maintainability and prepare it for future enhancements.
+Ideal Answer (5 Star)
+To refactor the monolithic Pascal application effectively, start by analyzing the current architecture to identify tightly coupled components. Use this analysis to break down the application into smaller, more manageable modules or units. Introduce modular programming practices by encapsulating related functionalities within units, thereby promoting code reusability and separation of concerns. Implement modern Pascal features where applicable, such as records with methods or new data types, to replace outdated constructs. Additionally, write comprehensive unit tests for each module to ensure existing functionality is preserved and to support future development efforts. 
+unit UserManagement; interface procedure AddUser(UserInfo: TUserInfo); implementation uses DatabaseConnector; procedure AddUser(UserInfo: TUserInfo); begin if not DatabaseConnector.UserExists(UserInfo.Username) then DatabaseConnector.InsertUser(UserInfo) else raise Exception.Create('User already exists'); end; end.
+
+
+
+---------------------------------------------------------------------------------------
+
+
+12
+Handling a Critical Production Issue
+A critical bug has been discovered in your Delphi application that affects a major client. The issue is causing significant downtime. Describe the steps you would take to resolve the issue while maintaining clear communication with the client and minimizing impact.
+Ideal Answer (5 Star)
+In such a situation, the first priority is to assess the issue's severity and scope. I'd gather information from logs and user reports to understand the root cause. An immediate workaround might be communicated to the client to minimize downtime. Internally, I'd set up a war room scenario, with key developers focusing on a fix. Using tools like Delphi's debugger and version control, the team would work collaboratively on a patch. Parallelly, I'd ensure transparent communication with the client, providing regular updates on progress and expected resolution times. Once a fix is developed, it would undergo rigorous testing in a staging environment to prevent further issues. After ensuring stability, I'd deploy the fix to production during a scheduled window to minimize user disruption. Post-resolution, a retrospective would be conducted to understand the root cause, improve future processes, and update the client with a detailed report.
+
+
+------------------------------------------------------------------------------------
+
+13
+
+13
+Please explain what the following FCL code snippet does
+*
+Section MFJorNot;
+
+begin
+
+        If (IsChecked(WINFO.FS2)) then
+
+        Begin
+
+                FSMJ := checked;
+
+                FSJ := 2;
+
+                FSJAMT := kPersonalExemptionJoint;
+
+        End
+
+        Else If (HasValue(WINFO.FS)) then
+
+        Begin
+
+                FSMS := Checked;
+
+                EXE2 := 1;
+
+                FSSAMT := kPersonalExemptionNotJoint;
+
+                If (IsChecked(WINFO.FS4)) then
+
+                        FSHHAMT := kAdditionalExemption;
+
+        End;        
+
+Ideal Answer (5 Star)
+The candidate should identify that this section determines a tax filing status. They should explain the conditional logic:
+
+If checkbox WINFO.FS2 is checked, it sets the status to "Married Filing Jointly" (FSMJ), assigning a corresponding joint exemption amount.
+Otherwise, if WINFO.FS has a value, it sets a different status (likely "Married Filing Separately" or "Single"), assigns a non-joint exemption amount, and checks for a further condition (WINFO.FS4) to potentially add an additional exemption for "Head of Household" 
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+
+
+14
+Can you walk me through the calculations happening in this FCL code?
+*
+Can you walk me through the calculations happening in this FCL code?
+
+ 
+
+if (TTOTUN <> 0) then
+                        Begin
+                                IF (TPDisabled) AND (GASCHD12.hTPMilexcl > 0)  Then //Taxpayer disability and has military retirement
+                                        TRATIOUN := max(0,min(1,TGAUN / (TTOTUN + GASCHD12.hTPMilexcl)))
+                                else
+                                        TRATIOUN := max(0,min(1,TGAUN / TTOTUN));
+                        End
+
+                                if (STOTUN <> 0) then
+                                Begin
+                                        IF (SPDisabled) AND (GASCHD12.hSPMilexcl > 0)  Then //Spouse disability and has military retirement
+                                                SRATIOUN := max(0,min(1,SGAUN / (STOTUN + GASCHD12.hSPMilexcl)))
+                                        else
+                                                SRATIOUN := max(0,min(1,SGAUN / STOTUN));
+                                End;
+Ideal Answer (5 Star)
+The candidate should identify that this code calculates a ratio for both the taxpayer (TRATIOUN) and spouse (SRATIOUN).
+
+It first checks that the total amount (TTOTUN / STOTUN) is not zero to avoid division by zero.
+It calculates a base ratio (TGAUN / TTOTUN).
+A special condition checks if the person is disabled (TPDisabled / SPDisabled) and has a military retirement exclusion. If so, the denominator of the ratio is increased by the exclusion amount.
+The max(0, min(1, ...)) function ensures the final ratio is clamped between 0 and 1
+
+
+------------------------------------------------------------------------------
+
+
+
+
+15
+Factorial Calculator
+Sample Syntax Reference (as hint before test):
+
+ 
+
+program EvenOddChecker;
+var
+ i, num: Integer;
+begin
+ for i := 1 to 3 do
+ begin
+ writeln('Enter a number:');
+ readln(num);
+ if num mod 2 = 0 then
+ writeln('That number is even.')
+ else
+ writeln('That number is odd.');
+ end;
+end.
+Statement: Write a Pascal program to read an integer n and print its factorial.
+
+ 
+
+Ideal Answer (5 Star)
+program Factorial;
+var
+ i, n, fact: Integer;
+begin
+ writeln('Enter a number:');
+ readln(n);
+ fact := 1;
+ for i := 1 to n do
+ fact := fact * i;
+ writeln('Factorial of ', n, ' is: ', fact);
+end.
+
+
+---------------------------------------------------
+
+
+16
+Information: Outro
+*
+Closing and next steps
+
+"The interview is now over. We'd like to take a few minutes to discuss what a typical day might entail for you in this role. Our aim is to ensure you have a clear understanding of the role and responsibilities, with no surprises on your first day.This position is within a project with one of the foundational LLM companies. The goal is to assist these foundational LLM companies in enhancing their Large Language Models.One way we help these companies improve their models is by providing them with high-quality proprietary data. This data serves two main purposes: first, as a basis for fine-tuning their models, and second, as an evaluation set to benchmark the performance of their models or competitor models. The project's goal is to create this high-quality dataset, and you will have a critical role to play.
+We have two approaches to generate this proprietary data: Supervised Fine Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF). RLHF typically involves interacting with the LLM model, providing feedback on its output, and offering rewrites when necessary. In SFT, we generate numerous golden prompt-response pairs, devoid of model interaction.For example, in SFT, you might take an open-source dataset, ask data analysis questions, and write corresponding Python code to solve them. A collection of 5k-10k such samples could form the dataset for model fine-tuning.In RLHF, you might upload a dataset to a tool provided by the customer, ask data analysis questions, and evaluate the outputs generated by two versions of the LLM model. You'd compare these outputs and provide feedback, which is then used to fine-tune the models."
+
+ 
+
+ 
+
+Here's what you can expect moving forward:
+
+If you are selected to proceed to the next stage, you will be introduced to the specific client who is interested in hiring you. They have their own interview process tailored to their needs.
+Please be prepared to engage in another technical interview from the client that may delve deeper into your core skill areas. They might also wish to discuss your experience in a conversational format to understand how you could contribute to their team.
+Along with the technical evaluation, clients will be interested in your communication skills, cultural fit, and your approach to collaboration and problem-solving within a team. So, it’s important to showcase your interpersonal skills as much as your technical abilities.
+I highly recommend that you review the job description once more to refresh your understanding of the role you are being considered for. Also, it would be advantageous for you to revisit some of the questions I asked during our interview or similar ones. Practice articulating your thoughts and processes clearly, as this could be a significant factor during your conversation with the client.
+Our talent operations specialist will reach out to you with updates on next steps if you are selected.They will be your point of contact and are there to help guide you through the next stages of the process.
+Thank you again for your collaboration,

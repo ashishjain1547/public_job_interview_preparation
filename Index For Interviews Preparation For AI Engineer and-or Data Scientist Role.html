@@ -164,6 +164,46 @@
 
 <span class="customLink toggleBtn">Toggle All Sections</span>
 <br>
+<h2>To Test Your Python Skills</h2>
+<br>
+<h3 class="customFluentPythonHeader"><span class="arrow up"></span> From the book "Fluent Python" by Luciano Ramalho></h3>
+
+<div id="customFluentPython">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2025/06/interview-questions-on-python-data.html" target="_blank">
+                Interview Questions on "The Python Data Model" - Ch 1 - Fluent Python
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2025/06/interview-questions-on-arrays-ch-2.html" target="_blank">
+                Interview Questions on "Arrays" - Ch 2 - Fluent Python
+            </a>
+        </li>
+    </ol>
+</div>
+<br>
+<h2>For ML Engineer</h2>
+<br>
+<h3 class="customTheHundredPageMachineLearningBookHeader"><span class="arrow up"></span> From the book "The Hundred-Page Machine Learning Book" by Andriy Burkov (2019)</h3>
+
+<div id="customTheHundredPageMachineLearningBook">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2025/08/ch1-20-interview-questions-from-hundred.html" target="_blank">
+                Ch.1 - 20 Interview Questions - From the 'Hundred-Page Machine Learning Book'
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2025/08/20-interview-questions-from-hundred.html" target="_blank">
+                Ch.2 - 20 Interview Questions - From the 'Hundred-Page Machine Learning Book'
+            </a>
+        </li>
+    </ol>
+</div>
+
 <h2>For AI Engineer</h2>
 <br>
 <h3 class="customAIEnggByChipHuyenHeader"><span class="arrow up"></span> From the book "AI Engineering" by Chip Huyen</h3>
@@ -499,7 +539,18 @@
 </div>
 
 <script>
-    
+    $('h3.customTheHundredPageMachineLearningBookHeader').click(function () {
+        $("div#customTheHundredPageMachineLearningBook").fadeToggle();
+        $("h3.customTheHundredPageMachineLearningBookHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
+
+
+    $('h3.customFluentPythonHeader').click(function () {
+        $("div#customFluentPython").fadeToggle();
+        $("h3.customFluentPythonHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
+
+
     $('h3.customAIEnggByChipHuyenHeader').click(function () {
         $("div#customAIEnggByChipHuyen").fadeToggle();
         $("h3.customAIEnggByChipHuyenHeader > .arrow").toggleClass('up').toggleClass('down');

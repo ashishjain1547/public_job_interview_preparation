@@ -1,0 +1,218 @@
+Prior projects validation
+Validate prior projects claimed by candidate on the resume. Go into design decision brainstorming as required.
+
+
+Ideal Answer (5 Star)
+Soft skills plus overall check
+
+
+Guidelines for 4 star rating
+Soft skills plus overall check
+
+
+Guidelines for 3 star rating
+Soft skills plus overall check
+
+
+Guidelines for 2 star rating
+Soft skills plus overall check
+
+
+Guidelines for 1 star rating
+Soft skills plus overall check
+
+-----------------------------------
+
+Scalable Low-Latency Architecture
+Design a scalable architecture for a low-latency pipeline that processes video analytics data in real time. What components would you include, and how would they interact?
+Ideal Answer (5 Star)
+For a scalable low-latency architecture, I would use a combination of AWS services and open-source tools. The pipeline would start with AWS Kinesis Video Streams for ingesting video data. This data is then processed in real-time using AWS Lambda functions or Spark Streaming on Amazon EMR for any necessary transformations and analytics.
+
+For storage, I would use Amazon S3 to store raw and processed data, enabling scalable storage that can be accessed by other AWS analytics services like Redshift or Athena for further analysis. To ensure low-latency processing, I would leverage AWS's autoscaling capabilities to dynamically allocate resources based on the current load.
+
+For monitoring and logging, AWS CloudWatch and Elasticsearch can provide real-time insights into the pipeline's performance and help in quickly identifying any issues that arise.
+Guidelines for 4 star rating
+NA
+
+Guidelines for 3 star rating
+NA
+
+Guidelines for 2 star rating
+NA
+
+Guidelines for 1 star rating
+NA
+
+-----------------------------------------
+
+Real-time Anomaly Detection
+You are tasked with building a pipeline to detect anomalies in streaming ecommerce transaction data in real-time. What approach would you take to implement this system while ensuring low-latency processing?
+Ideal Answer (5 Star)
+For real-time anomaly detection, I would use a combination of data preprocessing, feature extraction, and anomaly detection algorithms within the streaming pipeline. Spark Structured Streaming can process incoming transaction data, applying transformations and feature extraction in real-time.
+
+For anomaly detection, I might use machine learning models like Isolation Forest or clustering algorithms like DBSCAN, which can run in real-time using MLlib in Spark. These models can be trained offline and then applied to the streaming data for real-time predictions.
+
+Ensuring low-latency, I would optimize the Spark configurations and use efficient data structures. I would also implement alerting mechanisms to notify relevant stakeholders of detected anomalies immediately.
+Guidelines for 4 star rating
+NA
+
+Guidelines for 3 star rating
+NA
+
+Guidelines for 2 star rating
+NA
+
+Guidelines for 1 star rating
+NA
+
+------------------------------------
+
+Ensuring Data Consistency in Low-Latency Systems
+You are responsible for a pipeline that requires processing and enriching streaming data from multiple sources in real-time. How would you ensure data consistency across the pipeline while maintaining low-latency requirements?
+Ideal Answer (5 Star)
+To ensure data consistency across multiple sources, I would implement an event-driven architecture using Kafka, where each data source publishes events independently. Events can be enriched and processed in real-time by consuming these streams in Spark Structured Streaming.
+
+Implementing a schema registry can help manage data contracts and ensure consistent data formats. By using idempotent operations and exactly-once semantics, I can prevent data duplication and ensure that each event is processed accurately.
+
+Additionally, using techniques like watermarking and windowing in Spark can help handle late-arriving data and ensure that all relevant data is processed together, maintaining consistency without sacrificing latency.
+Guidelines for 4 star rating
+NA
+
+Guidelines for 3 star rating
+NA
+
+Guidelines for 2 star rating
+NA
+
+Guidelines for 1 star rating
+NA
+
+------------------------------------------
+Designing a Data Mesh Architecture
+Your organization is considering adopting a data mesh architecture to improve data ownership and domain-driven design. How would you approach designing and implementing a data mesh in Databricks?
+Ideal Answer (5 Star)
+Designing a data mesh architecture involves decentralizing data ownership to domain teams while ensuring interoperability and governance. I would start by identifying the key domains and assigning data product owners responsible for their respective data assets. Each domain team would manage their data pipelines and infrastructure, using Databricks as the common platform. I would implement a federated governance model with standardized metadata, data contracts, and quality checks to ensure consistency across domains. Tools like Databricks Delta Lake can be used for managing data products with ACID properties. The data platform team would provide self-service infrastructure and tooling to support domain teams in building their data products.
+Guidelines for 4 star rating
+NA
+
+Guidelines for 3 star rating
+NA
+
+Guidelines for 2 star rating
+NA
+
+Guidelines for 1 star rating
+NA
+
+--------------------------------------
+
+Implementing CI/CD for Databricks Notebooks
+Your team wants to implement a CI/CD pipeline for Databricks notebooks to ensure consistent and reliable deployment of data pipelines. Describe the steps you would take to set up this pipeline, including any tools and integrations you would use.
+Ideal Answer (5 Star)
+To implement CI/CD for Databricks notebooks, I would use a version control system like Git to track changes in the notebooks. The pipeline would start with a trigger from the repository, where any new commit would initiate the CI/CD process. I would use tools like Jenkins or GitHub Actions to automate the build and test phases. During the build phase, I would use Databricks CLI to export and import notebooks and run automated tests to verify the functionality. For deployment, I would leverage Databricks REST API or the CLI to deploy the notebooks to the target environment. Integrating with tools like Databricks Repos can enhance collaboration and streamline the process.
+Guidelines for 4 star rating
+
+---------------------------------------------
+
+
+Handling Schema Evolution in Databricks
+Your data sources frequently change, leading to schema evolution issues in your Databricks pipelines. How would you design your data processing to gracefully handle schema changes without disrupting the pipeline?
+Ideal Answer (5 Star)
+To handle schema evolution in Databricks, I would use Delta Lake, which inherently supports schema evolution. I would enable 'Merge Schema' during writes to automatically update the table schema when new columns are added. It's important to maintain a schema registry where all schema versions are documented, and any changes are reviewed and approved before implementation. Using DataFrame APIs with explicit schema definitions can help manage expected changes. For backward compatibility, I would design the pipeline to handle nullable fields and ensure that default values are set for new columns. Regular testing and monitoring are crucial to quickly identify and address any schema-related issues.
+Guidelines for 4 star rating
+
+-----------------------------------
+
+Handling Data Skew in Spark
+You are working on a Spark job that aggregates data based on a key, but you notice that the job is suffering from data skew, leading to long processing times and resource inefficiencies. How would you address and mitigate the effects of data skew in this scenario?
+Ideal Answer (5 Star)
+Data skew in Spark can be mitigated by redistributing the data more evenly across partitions. One approach is to use a salting technique, where additional random values are appended to the keys to distribute skewed data across multiple partitions. For example, if the key is 'customerId', we could create new keys like 'customerId_1', 'customerId_2', etc., and then aggregate the results before removing the salt. Another approach is to increase the parallelism by adjusting the number of partitions using 'repartition' or 'coalesce'. Additionally, using specialized join strategies like 'skewed join' in Spark SQL can also help. Monitoring the Spark UI for skewed stages and using the 'Data Skew' metrics can guide the adjustments needed.
+
+--------------------------------------
+
+
+Implementing a Fault-Tolerant Spark Pipeline
+You are responsible for designing a Spark pipeline that processes streaming data in real-time. It's crucial that the pipeline is fault-tolerant and can recover from failures without losing data. What strategies and configurations would you implement to achieve this?
+Ideal Answer (5 Star)
+To create a fault-tolerant Spark streaming pipeline, I would leverage Spark's checkpointing feature to save the state of the stream processing periodically. This involves configuring a reliable checkpoint directory in a fault-tolerant storage system like HDFS or S3. Additionally, I would set up the pipeline to process data in micro-batches using Spark Structured Streaming, which allows for exactly-once processing semantics. I would also implement an offset management strategy to keep track of the data processed, ensuring that in case of a failure, processing can resume from the last committed offset. Configuring Spark with appropriate 'spark.streaming.backpressure.enabled' and 'spark.streaming.receiver.maxRate' settings can help control the rate of data ingestion, preventing system overload. Finally, I would use data deduplication techniques based on unique identifiers to avoid duplicate processing.
+
+--------------------------
+
+
+Implementing Data Lineage and Cataloging
+Your team needs to implement a system for tracking data lineage and cataloging to improve data governance and traceability. How would you architect this system using AWS and Databricks?
+Ideal Answer (5 Star)
+To implement data lineage and cataloging, I would use a combination of AWS Glue, Databricks, and open-source tools:
+
+1. **Data Cataloging**: Use AWS Glue Data Catalog to automatically discover and catalog datasets. Configure Glue crawlers to scan data in S3 and populate the catalog.
+2. **Data Lineage**: Integrate with Apache Atlas or use Databricks’ built-in data lineage features to track transformations and data flow across pipelines.
+3. **Integration with Databricks**: Use Databricks’ integration with AWS Glue to access the data catalog directly from Databricks notebooks and jobs.
+4. **Metadata Management**: Store additional metadata such as data owners, classifications, and tags within the Glue Data Catalog.
+5. **Visualization and Reporting**: Use custom dashboards or tools like AWS QuickSight to visualize data lineage and catalog information for stakeholders.
+
+Code Example:
+```python
+# Registering a table in AWS Glue Data Catalog
+spark.sql("CREATE TABLE IF NOT EXISTS my_table (id INT, name STRING) USING delta LOCATION 's3://my-data-lake/my_table'")
+
+# Configure Glue Crawler
+# (Assuming using AWS CLI or Management Console)
+
+# Query Glue Data Catalog from Databricks
+spark.sql("SHOW TABLES IN my_database")
+```
+This system enhances data governance, making it easier to track and manage data assets.
+
+--------------------------------------
+
+Implementing Data Quality Checks
+Your team has noticed data quality issues with incoming batch data. You need to implement a system to ensure data quality before it is processed further in Databricks. What approach would you take to architect a robust data quality framework?
+Ideal Answer (5 Star)
+To address data quality issues, I would implement a robust data quality framework using a combination of Apache Deequ for data validation, AWS Lambda for orchestration, and Databricks for processing:
+
+1. **Data Validation**: Use Apache Deequ, a library built on Spark, to define and execute data quality checks. These checks can include constraints like uniqueness, non-null values, and range checks.
+2. **Orchestration**: Set up AWS Lambda to trigger data quality checks after data ingestion but before processing. This can be done via an event-driven architecture where Lambda functions listen to new data uploads in S3.
+3. **Feedback Loop**: Implement alerting mechanisms using Amazon SNS to notify the team of any data quality failures.
+4. **Data Pipeline Integration**: Integrate these checks into the existing data pipelines within Databricks using notebooks or automated jobs.
+
+Code Example:
+```python
+from pydeequ.checks import Check
+from pydeequ.verification import VerificationSuite
+from pydeequ.repository import FileSystemMetricsRepository
+
+# Define data quality checks
+check = Check(spark, CheckLevel.Error, "Data Quality Checks") \
+    .isComplete("column1") \
+    .hasUniqueness("column2") \
+    .isContainedIn("column3", ["value1", "value2"])
+
+# Run checks
+results = VerificationSuite(spark) \
+    .onData(df) \
+    .addCheck(check) \
+    .run()
+
+# Evaluate results
+if results.status != "Success":
+    sns_client.publish(TopicArn="arn:aws:sns:us-west-2:123456789012:DataQualityAlerts",
+                       Message="Data quality checks failed!")
+```
+This framework ensures that only high-quality data proceeds through the pipeline.
+Guidelines for 4 star rating
+
+-----------------------------
+
+Temporal Data Analysis
+Write a query to find the maximum consecutive days a product was sold without interruption in a `sales` table with columns `product_id` and `sale_date`.
+Ideal Answer (5 Star)
+WITH DateSequence AS ( SELECT product_id, sale_date, ROW_NUMBER() OVER (PARTITION BY product_id ORDER BY sale_date) AS rn FROM sales ), DateGroups AS ( SELECT product_id, sale_date - INTERVAL '1 day' * rn AS grp FROM DateSequence ) SELECT product_id, COUNT(*) AS max_consecutive_days FROM DateGroups GROUP BY product_id, grp ORDER BY max_consecutive_days DESC;
+This solution uses a combination of row numbers and date arithmetic to group consecutive sale dates and then counts the length of these groups to find the maximum streak.
+
+
+
+----------------------
+
+
+
+
