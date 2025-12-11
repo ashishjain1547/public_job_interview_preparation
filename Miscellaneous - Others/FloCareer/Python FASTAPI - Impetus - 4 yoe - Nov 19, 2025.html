@@ -1,0 +1,320 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/bookSummariesAndReviews/main/links_to_book_clubs.json",
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['current book club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `
+                    );
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+    </style>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .custom_iframe {
+            width: 100%;
+            height: 305px;
+        }
+    </style>
+</head>
+<div id="customWhatsAppGroupLinkWrapper"></div>
+<br>
+<a class="customLink" href="https://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html#customMiscellaneousHeader" target="_blank">See All: Miscellaneous Interviews @ FloCareer</a>
+<br>
+<br>
+<ol>
+    <li>
+        <pre>
+Data Validation with Pydantic
+How does FastAPI leverage Pydantic for data validation, and why is it beneficial?
+
+FastAPI uses Pydantic models for data validation and serialization. Pydantic allows defining data schemas with Python type annotations, and it performs runtime data validation and parsing. For example, you can define a Pydantic model as follows:
+from pydantic import BaseModel
+
+class Item(BaseModel):
+    name: str
+    price: float
+    is_offer: bool = None
+When a request is made, FastAPI automatically validates the request data against this model. This ensures that only correctly structured data reaches your application logic, reducing errors and improving reliability.
+        </pre>
+    </li>
+
+    <li>
+        <pre>
+Implementing Workflow Rules in FastAPI
+How would you implement workflow rules in a FastAPI application using a rules engine or library?
+Ideal Answer (5 Star)
+Implementing workflow rules in FastAPI can be done using libraries like Temporal or Azure Logic Apps. Temporal provides a framework for defining complex workflows in code with features like retries and timers. In FastAPI, you can define a workflow as a series of tasks executed in a specific order:
+from temporalio import workflow
+
+@workflow.defn(name='my_workflow')
+class MyWorkflow:
+    @workflow.run
+    async def run(self, param: str) -> str:
+        result = await some_async_task(param)
+        return result
+Using a rules engine allows for separation of business logic from application code, improving maintainability and scalability.
+        </pre>
+    </li>
+
+    <li>
+        <pre>
+Understanding Python Decorators
+Explain how decorators work in Python. Provide an example of a custom decorator that logs the execution time of a function.
+Ideal Answer (5 Star)
+Python decorators are a powerful tool that allows you to modify the behavior of a function or class method. A decorator is a function that takes another function as an argument and extends or alters its behavior. Decorators are often used for logging, enforcing access control and authentication, instrumentation, and caching.
+
+Here is an example of a custom decorator that logs the execution time of a function:
+
+```python
+import time
+
+def execution_time_logger(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"Execution time of {func.__name__}: {end_time - start_time} seconds")
+        return result
+    return wrapper
+
+@execution_time_logger
+def sample_function():
+    time.sleep(2)
+    return "Function executed"
+
+sample_function()
+```
+
+In this example, `execution_time_logger` is a decorator that prints the time taken by `sample_function` to execute. The `wrapper` function inside the decorator captures the start and end times and calculates the execution time, printing the result.
+        </pre>
+    </li>
+
+    <li>
+        <pre>
+Designing REST APIs with FastAPI
+How would you design a REST API using FastAPI for a simple online bookstore application? Describe the main components and endpoints you would create.
+Ideal Answer (5 Star)
+To design a REST API for an online bookstore using FastAPI, you would start by identifying the main resources: books, authors, and orders. Each resource would have its own endpoint. For example, '/books' would handle book-related operations. You would use FastAPI's path operation decorators to define routes like GET '/books' to retrieve all books, POST '/books' to add a new book, GET '/books/{id}' to get a specific book, PUT '/books/{id}' to update a book, and DELETE '/books/{id}' to remove a book. FastAPI's automatic data validation using Pydantic models ensures that the request and response bodies are correctly formatted.
+        </pre>
+    </li>
+
+    <li>
+        <pre>
+Problem Solving in Software Development
+Discuss a challenging problem you encountered in a Python FastAPI project and how you resolved it. What was your thought process and which tools or techniques did you use?
+Ideal Answer (5 Star)
+In a recent FastAPI project, I encountered a performance bottleneck due to synchronous database queries in a high-traffic endpoint. The solution involved refactoring the code to use asynchronous database operations with `asyncpg` and `SQLAlchemy`. My thought process was to first identify the problematic areas using profiling tools like cProfile and Py-Spy to pinpoint the slowest parts of the application. Once identified, I researched best practices for async programming in Python and implemented changes. I also set up load testing with tools like Locust to verify the improvements. This approach not only resolved the performance issue but also increased the overall responsiveness of the application.
+        </pre>
+    </li>
+
+    <li>
+        <pre>
+
+Testing REST APIs
+Explain how you would test a REST API developed with FastAPI. What tools and strategies would you use?
+Ideal Answer (5 Star)
+Testing a REST API developed with FastAPI involves writing unit and integration tests to ensure the correctness and reliability of the API. You can use the 'pytest' framework for writing tests and 'httpx' for making HTTP requests in the test environment. FastAPI's 'TestClient' allows you to simulate requests to your API endpoints without running a live server. You should test various scenarios, including valid and invalid inputs, to ensure that your API behaves as expected. Mocking external services and databases can help isolate the API logic during testing.
+        </pre>
+    </li>
+
+    <li>
+<pre>
+Asynchronous Background Tasks
+In FastAPI, implement an endpoint that triggers a background task to send an email. Assume the email sending is a mock function that prints to the console.
+Ideal Answer (5 Star)
+from fastapi import FastAPI, BackgroundTasks
+
+app = FastAPI()
+
+def send_email(email: str, message: str):
+    print(f"Sending email to {email}: {message}")
+
+@app.post("/send-email/")
+async def send_email_endpoint(email: str, message: str, background_tasks: BackgroundTasks):
+    background_tasks.add_task(send_email, email, message)
+    return {"message": "Email sending in progress"}
+</pre>
+    </li>
+
+    <li>
+<pre>
+File Upload Endpoint
+Create an endpoint in FastAPI that allows users to upload files. The files should be saved to a directory on the server.
+Ideal Answer (5 Star)
+from fastapi import FastAPI, File, UploadFile
+import os
+
+app = FastAPI()
+UPLOAD_DIRECTORY = './uploads/'
+os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
+
+@app.post("/uploadfile/")
+async def create_upload_file(file: UploadFile = File(...)):
+    file_location = os.path.join(UPLOAD_DIRECTORY, file.filename)
+    with open(file_location, "wb") as f:
+        f.write(await file.read())
+    return {"info": f"file '{file.filename}' saved at '{UPLOAD_DIRECTORY}'"}
+</pre>
+    </li>
+
+    <li>
+<pre>
+Asynchronous Programming in FastAPI
+Discuss how FastAPI supports asynchronous programming and the advantages it provides.
+Ideal Answer (5 Star)
+FastAPI supports asynchronous programming natively, utilizing Python's async and await keywords. This allows the server to handle multiple requests simultaneously, making it highly efficient and capable of supporting a large number of concurrent users. Asynchronous programming is especially beneficial for I/O-bound operations, such as database queries and external API calls. For instance, an async function in FastAPI might look like this:
+@app.get('/async-endpoint')
+async def async_endpoint():
+    await some_async_io_operation()
+    return {"message": "Async operation complete"}
+This non-blocking nature can significantly improve the throughput of web applications.
+</pre>
+    </li>
+
+    <li>
+<pre>
+RATE CANDIDATE'S SKILLS
+Python
+FAST API
+REST API
+</pre>
+    </li>
+</ol>
