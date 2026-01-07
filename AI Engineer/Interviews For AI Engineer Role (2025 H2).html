@@ -1,0 +1,220 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+  
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+  
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+  
+        .customLink:hover {
+            text-decoration: none;
+        }
+  
+        div.code-block-decoration.footer {
+            display: none;
+        }
+  
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+  
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+  
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+  
+        .custom_link_h2 a:active {
+            color: black;
+        }
+  
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+  
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+      .customul {
+        list-style: none;
+      }
+  
+      [aria-hidden='true'] {
+        display: none;
+      }
+    </style>
+  
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+To See All Interview Preparation Articles: <a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Interviews Preparation</a>
+<br>
+
+<pre>
+<h3>1: Ericsson at Accenture</h3>
+
+Q: What do you know about MCP?
+
+Q: What is the difference between an MCP server and an API?
+
+Q: Can we setup asynchronous connection with an MCP server? If yes, how?
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### 
+
+<h3>2: Macquarie (Australian Financial Firm)</h3>
+
+Q: Talk about your overall experience. 
+
+Q: Talk about your current/last project.
+
+Q: What's prompting you to leave Accenture? What is that trigger?
+
+Q: What do you know about Macquarie?
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ### 
+
+<h3>3: abc@relx.com at a Legal Firm</h3>
+
+Q: Can you explain the architecture of your current / last Agentic AI project?
+
+Q: How would you evaluate a custom model that you have trained for classification purpose?
+
+Q: Why and how did you choose framework for your Agentic application between LangGraph, LangChain, CrewAI, AutoGen, AI Refinery?
+
+Q: Can you build a simple Agentic workflow with one agent and one or two tools (getWeather, getTraffic)?
+
+<h3>4: Barclay's @ Accenture</h3>
+
+Q1: I was asked about my AI/ML journey.
+- Answer: Start with your latest project:
+# Content Optimization platform in Ed-tech domain
+# Then on top of that content, building mobile apps later donated to NGO in Educational cuase as part of CSR initiative of Accenture.
+
+# Built three apps using vibe coding using Agentic Coding platforms such as Windsurf and GitHub Copilot.
+
+In simple terms, I was generating content for the Ed-tech mobile apps first, seeding them in a SQLite database (so that the user has a local and offline access to the data), then vibe-coding the mobile apps.
+
+... ... ... ... ...
+
+Q2: Challenges faced in this project were:
+- content relevance 
+- grammatical correctness 
+- complexity of content for different age groups
+
+Q3: Explain your last project -- AI Over BI
+- what it did
+- how it worked
+- talk a bit on the architecture
+
+Q4: So you used LLM-As-A-Judge to reflect on the query generated by an LLM and produce some feedback. The question is: how do you know LLM-As-a-Judge is not hallucinating itself and that it is providing the desired feedback?
+
+Q5: How does your application come out of generate-reflect-regenerate loop?
+Answer: Two techniques to come out of loop:
+1. Max iterations
+2. Consistency check between last and second-last generated query.
+
+Q6: How do you know that the two queries are consistent? What metric are you employing there?
+
+Q7: Do you have a hands-on experience with 'procuring and setting up cloud resources' to 'building solution' to 'deployment on the cloud'?
+
+Q8: If you observe that there is a latency issue with your RAG solution, what can you do about it?
+
+Answer:
+1. Trying out a faster LLM
+2. Caching
+3. Collecting component wise traces for checking which component is taking maximum time (viz usually the LLM but the traces will tell which is the second highest)
+
+Q9: Which chunking strategy did you use and why?
+
+Q10: Why didn't you use Semantic Chunking?
+
+Q11: How did you prevent or reduce hallucinations in your RAG agent?
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- 
+
+<h3>5: IBM (Jan 2026)</h3>
+
+Q1: Question on Pandas library around the functions such as merge(), groupby() and corr().
+
+Q2: Have you built AI agents from scratch? If yes, using which framework?
+
+Q3: Distinguish between AI Agent and AI Assistant.
+
+Q4: Why does one-shot works better than zero-shot prompts?
+
+Q5: Give an example where zero shot prompting seems to work just fine.
+
+Q6: What is the structure of your current team?
+
+Q7: Are you in a client facing role?
+
+Q8: Describe a situation where you had to handle a client escalation?
+
+Q9: Why are you leaving Accenture?
+
+Q10: Why do you want to join IBM?
+
+</pre>
+<span style="opacity: 0;">Tags: Interview Preparation,</span>

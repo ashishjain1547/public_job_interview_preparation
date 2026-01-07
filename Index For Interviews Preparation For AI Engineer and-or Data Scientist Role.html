@@ -164,6 +164,39 @@
 
 <span class="customLink toggleBtn">Toggle All Sections</span>
 <br>
+
+
+<h3 class="customMotivationForInterviewPreparationHeader" id="customMotivationForInterviewPreparationHeader"><span class="arrow up"></span> Motivation For Interview Preparation</h3>
+<div id="customMotivationForInterviewPreparation">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2025/12/when-5-5-5-550.html" target="_blank">
+                When 5 + 5 + 5 = 550
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2025/12/dream-job-webinar-by-vikram-anand.html" target="_blank">
+                Dream Job Webinar - By Vikram Anand (2025 Dec 19)
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2025/11/the-bridge-building-exercise.html" target="_blank">
+                The Bridge-Building Exercise - A Masterclass in Stress, Noise, and Leadership
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://survival8.blogspot.com/2025/11/how-to-stay-calm-in-stress-interview.html" target="_blank">
+                How to Stay Calm in a Stress Interview -- Lessons From a Simple Triangle
+            </a>
+        </li>
+    </ol>
+
+</div>
+
+<br>
 <h2>To Test Your Python Skills</h2>
 <br>
 <h3 class="customFluentPythonHeader"><span class="arrow up"></span> From the book "Fluent Python" by Luciano Ramalho></h3>
@@ -203,7 +236,7 @@
         </li>
     </ol>
 </div>
-
+<br>
 <h2>For AI Engineer</h2>
 <br>
 <h3 class="customAIEnggByChipHuyenHeader"><span class="arrow up"></span> From the book "AI Engineering" by Chip Huyen</h3>
@@ -219,6 +252,16 @@
     </ol>
 </div>
 <br>
+<hr>
+<ul>
+    <li>
+        <a href="https://survival8.blogspot.com/2026/01/interviews-for-ai-engineer-role-2025-h2.html" target="_blank">
+            Interviews For AI Engineer Role (2025 H2)
+        </a>
+    </li>
+</ul>
+<hr>
+
 <h2>For Data Scientist Role</h2>
 <br>
 <h3 class="customTheoreticalQuestionsOnDataScienceHeader">
@@ -523,17 +566,20 @@
         </li>
     </ol>
 </div>
+<br>
+<h2>Miscellaneous Interviews on Different Platforms</h2>
+<br>
 
-<h3 class="customMiscellaneousHeader" id="customMiscellaneousHeader">
+<h3 class="customMiscellaneousFlocareerHeader" id="customMiscellaneousFlocareerHeader">
     <span class="arrow up"></span> Miscellaneous Interviews @ FloCareer
 </h3>
 
-<div id="customMiscellaneous">
+<div id="customMiscellaneousFlocareer">
     <ol>
         
         <li>
             <a href="https://survival8.blogspot.com/2024/06/interview-questions-for-big-data.html" target="_blank">
-                Interview Questions For Big Data Engineer (2 Years of Experience)
+                Big Data Engineer - 2 yoe - Jun 29, 2025
             </a>
         </li>
 
@@ -548,10 +594,62 @@
                 Data Engineer - Mphasis USA - Nov 19, 2025
             </a>
         </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2025/12/data-engineer-mphasis-usa-nov-18-2025.html" target="_blank">
+                Data Engineer - Mphasis USA - Nov 18, 2025
+            </a>
+        </li>
+    </ol>
+</div>
+<br>
+<h3 class="customMiscellaneousNaukriDotComHeader" id="customMiscellaneousNaukriDotComHeader">
+    <span class="arrow up"></span> Miscellaneous Interviews @ Naukri.com
+</h3>
+
+<div id="customMiscellaneousNaukriDotCom">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2025/12/gen-ai-manager-mount-talent-consulting.html" target="_blank">
+                Gen AI Manager - Mount Talent Consulting - 11 to 14 yoe
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2025/12/manager-data-science-machine-learning.html" target="_blank">
+                Manager - Data science, Machine Learning, Gen AI - People Staffing - 11 to 14 yoe
+            </a>
+        </li>
     </ol>
 </div>
 
+<h3 class="customMiscellaneousAccentureHeader" id="customMiscellaneousAccentureHeader">
+    <span class="arrow up"></span> Miscellaneous Interviews @ Accenture
+</h3>
+
+<div id="customMiscellaneousAccenture">
+    <ol>
+        <li>
+            <a href="https://survival8.blogspot.com/2025/12/accenture-skill-proficiency-test.html" target="_blank">
+               Accenture Skill Proficiency Test - Natural Language Processing (NLP) - Dec 2025
+            </a>
+        </li>
+
+        <li>
+            <a href="https://survival8.blogspot.com/2025/12/accenture-skill-proficiency-test-large.html" target="_blank">
+                Accenture Skill Proficiency Test - Large Language Models (LLMs) - Dec 2025
+            </a>
+        </li>
+    </ol>
+</div>
 <script>
+    
+    $('h3.customMotivationForInterviewPreparationHeader').click(function () {
+        $("div#customMotivationForInterviewPreparation").fadeToggle();
+        $("h3.customMotivationForInterviewPreparationHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
+
+
     $('h3.customTheHundredPageMachineLearningBookHeader').click(function () {
         $("div#customTheHundredPageMachineLearningBook").fadeToggle();
         $("h3.customTheHundredPageMachineLearningBookHeader > .arrow").toggleClass('up').toggleClass('down');
@@ -621,11 +719,21 @@
         $("h3.customExplainProjectHeader > .arrow").toggleClass('up').toggleClass('down');
     });
 
-    $('h3.customMiscellaneousHeader').click(function () {
-        $("div#customMiscellaneous").fadeToggle();
-        $("h3.customMiscellaneousHeader > .arrow").toggleClass('up').toggleClass('down');
+    $('h3.customMiscellaneousFlocareerHeader').click(function () {
+        $("div#customMiscellaneousFlocareer").fadeToggle();
+        $("h3.customMiscellaneousFlocareerHeader > .arrow").toggleClass('up').toggleClass('down');
     });
 
+    $('h3.customMiscellaneousNaukriDotComHeader').click(function () {
+        $("div#customMiscellaneousNaukriDotCom").fadeToggle();
+        $("h3.customMiscellaneousNaukriDotComHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
+
+    
+    $('h3.customMiscellaneousAccentureHeader').click(function () {
+        $("div#customMiscellaneousAccenture").fadeToggle();
+        $("h3.customMiscellaneousAccentureHeader > .arrow").toggleClass('up').toggleClass('down');
+    });
 
     var sectionClosedFlag = false;
     $(".customLink.toggleBtn").click(function () {

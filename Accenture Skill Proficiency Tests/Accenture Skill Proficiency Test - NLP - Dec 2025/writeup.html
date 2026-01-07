@@ -1,0 +1,455 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/bookSummariesAndReviews/main/links_to_book_clubs.json",
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['current book club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `
+                    );
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+    </style>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .custom_iframe {
+            width: 100%;
+            height: 305px;
+        }
+    </style>
+</head>
+<div id="customWhatsAppGroupLinkWrapper"></div>
+<br>
+<a class="customLink" href="https://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html#customMiscellaneousAccentureHeader" target="_blank">See All: Miscellaneous Interviews @ Accenture</a>
+<br>
+<br>
+
+<div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling">
+
+<h1 data-start="135" data-end="192">📘 Accenture Skill Proficiency Test - NLP - Question Report</h1>
+
+
+<h2 data-start="440" data-end="478">🧠 SECTION 1: NLP &amp; WORD EMBEDDINGS</h2>
+<h3 data-start="480" data-end="506"><strong data-start="484" data-end="506">Q1. What is GloVe?</strong></h3>
+<p data-start="508" data-end="544"><strong data-start="508" data-end="544">Extracted options (interpreted):</strong></p>
+<ul data-start="545" data-end="839">
+<li data-start="545" data-end="618">
+<p data-start="547" data-end="618">Matrix factorization of (raw) PMI values with respect to squared loss</p>
+</li>
+<li data-start="619" data-end="695">
+<p data-start="621" data-end="695">Matrix factorization of log-counts with respect to weighted squared loss</p>
+</li>
+<li data-start="696" data-end="766">
+<p data-start="698" data-end="766">Neural network that predicts words in context and learns from that</p>
+</li>
+<li data-start="767" data-end="839">
+<p data-start="769" data-end="839">Neural network that predicts words based on similarity and embedding</p>
+</li>
+</ul>
+<h3 data-start="841" data-end="865">✅ <strong data-start="847" data-end="865">Correct Answer</strong></h3>
+<p data-start="866" data-end="944">✔ <strong data-start="868" data-end="944">Matrix factorization of log-counts with respect to weighted squared loss</strong></p>
+<h3 data-start="946" data-end="961">💡 <strong data-start="953" data-end="961">Hint</strong></h3>
+<ul data-start="962" data-end="1188">
+<li data-start="962" data-end="990">
+<p data-start="964" data-end="990">GloVe = <strong data-start="972" data-end="990">Global Vectors</strong></p>
+</li>
+<li data-start="991" data-end="1084">
+<p data-start="993" data-end="1084">Combines <strong data-start="1002" data-end="1048">count-based methods (co-occurrence matrix)</strong> with <strong data-start="1054" data-end="1084">predictive embedding ideas</strong></p>
+</li>
+<li data-start="1085" data-end="1188">
+<p data-start="1087" data-end="1188">Objective minimizes <strong data-start="1107" data-end="1133">weighted squared error</strong> between word vectors and <strong data-start="1159" data-end="1188">log(co-occurrence counts)</strong></p>
+</li>
+</ul>
+<hr data-start="1190" data-end="1193">
+<h2 data-start="1195" data-end="1244">🧠 SECTION 2: TRANSFORMERS &amp; CONTEXTUAL MODELS</h2>
+<h3 data-start="1246" data-end="1369"><strong data-start="1250" data-end="1369">Q2. In which architecture are relationships between all words in a sentence modeled irrespective of their position?</strong></h3>
+<p data-start="1371" data-end="1393"><strong data-start="1371" data-end="1393">Extracted options:</strong></p>
+<ul data-start="1394" data-end="1437">
+<li data-start="1394" data-end="1408">
+<p data-start="1396" data-end="1408">OpenAI GPT</p>
+</li>
+<li data-start="1409" data-end="1417">
+<p data-start="1411" data-end="1417">BERT</p>
+</li>
+<li data-start="1418" data-end="1428">
+<p data-start="1420" data-end="1428">ULMFiT</p>
+</li>
+<li data-start="1429" data-end="1437">
+<p data-start="1431" data-end="1437">ELMo</p>
+</li>
+</ul>
+<h3 data-start="1439" data-end="1463">✅ <strong data-start="1445" data-end="1463">Correct Answer</strong></h3>
+<p data-start="1464" data-end="1474">✔ <strong data-start="1466" data-end="1474">BERT</strong></p>
+<h3 data-start="1476" data-end="1491">💡 <strong data-start="1483" data-end="1491">Hint</strong></h3>
+<ul data-start="1492" data-end="1653">
+<li data-start="1492" data-end="1536">
+<p data-start="1494" data-end="1536"><strong data-start="1494" data-end="1536">BERT uses bidirectional self-attention</strong></p>
+</li>
+<li data-start="1537" data-end="1597">
+<p data-start="1539" data-end="1597">Every token attends to <strong data-start="1562" data-end="1597">all other tokens simultaneously</strong></p>
+</li>
+<li data-start="1598" data-end="1653">
+<p data-start="1600" data-end="1653">GPT = causal (left-to-right), not fully bidirectional</p>
+</li>
+</ul>
+<hr data-start="1655" data-end="1658">
+<h2 data-start="1660" data-end="1695">📊 SECTION 3: EVALUATION METRICS</h2>
+<h3 data-start="1697" data-end="1760"><strong data-start="1701" data-end="1760">Q3. Log loss evaluation metric can have negative values</strong></h3>
+<p data-start="1762" data-end="1774"><strong data-start="1762" data-end="1774">Options:</strong></p>
+<ul data-start="1775" data-end="1793">
+<li data-start="1775" data-end="1783">
+<p data-start="1777" data-end="1783">True</p>
+</li>
+<li data-start="1784" data-end="1793">
+<p data-start="1786" data-end="1793">False</p>
+</li>
+</ul>
+<h3 data-start="1795" data-end="1819">✅ <strong data-start="1801" data-end="1819">Correct Answer</strong></h3>
+<p data-start="1820" data-end="1831">✔ <strong data-start="1822" data-end="1831">False</strong></p>
+<h3 data-start="1833" data-end="1848">💡 <strong data-start="1840" data-end="1848">Hint</strong></h3>
+<ul data-start="1849" data-end="2000">
+<li data-start="1849" data-end="1889">
+<p data-start="1851" data-end="1889">Log loss = <strong data-start="1862" data-end="1889">negative log likelihood</strong></p>
+</li>
+<li data-start="1890" data-end="1971">
+<p data-start="1892" data-end="1971">Probabilities ∈ (0,1) → log(probability) ≤ 0 → <strong data-start="1939" data-end="1971">negative sign makes loss ≥ 0</strong></p>
+</li>
+<li data-start="1972" data-end="2000">
+<p data-start="1974" data-end="2000"><strong data-start="1974" data-end="2000">Log loss is always ≥ 0</strong></p>
+</li>
+</ul>
+<hr data-start="2002" data-end="2005">
+<h3 data-start="2007" data-end="2087"><strong data-start="2011" data-end="2087">Q4. Which metric is used to evaluate STT (Speech-to-Text) transcription?</strong></h3>
+<p data-start="2089" data-end="2111"><strong data-start="2089" data-end="2111">Extracted options:</strong></p>
+<ul data-start="2112" data-end="2149">
+<li data-start="2112" data-end="2121">
+<p data-start="2114" data-end="2121">ROUGE</p>
+</li>
+<li data-start="2122" data-end="2130">
+<p data-start="2124" data-end="2130">BLEU</p>
+</li>
+<li data-start="2131" data-end="2138">
+<p data-start="2133" data-end="2138">WER</p>
+</li>
+<li data-start="2139" data-end="2149">
+<p data-start="2141" data-end="2149">METEOR</p>
+</li>
+</ul>
+<h3 data-start="2151" data-end="2175">✅ <strong data-start="2157" data-end="2175">Correct Answer</strong></h3>
+<p data-start="2176" data-end="2203">✔ <strong data-start="2178" data-end="2203">WER (Word Error Rate)</strong></p>
+<h3 data-start="2205" data-end="2220">💡 <strong data-start="2212" data-end="2220">Hint</strong></h3>
+<ul data-start="2221" data-end="2328">
+<li data-start="2221" data-end="2283">
+<p data-start="2223" data-end="2283">WER = (Insertions + Deletions + Substitutions) / Total words</p>
+</li>
+<li data-start="2284" data-end="2328">
+<p data-start="2286" data-end="2328">Standard metric for <strong data-start="2306" data-end="2328">speech recognition</strong></p>
+</li>
+</ul>
+<hr data-start="2330" data-end="2333">
+<h2 data-start="2335" data-end="2376">🧩 SECTION 4: NLP ALGORITHMS &amp; TAGGING</h2>
+<h3 data-start="2378" data-end="2419"><strong data-start="2382" data-end="2419">Q5. Best Cut algorithm works for:</strong></h3>
+<p data-start="2421" data-end="2443"><strong data-start="2421" data-end="2443">Extracted options:</strong></p>
+<ul data-start="2444" data-end="2510">
+<li data-start="2444" data-end="2467">
+<p data-start="2446" data-end="2467">Text classification</p>
+</li>
+<li data-start="2468" data-end="2494">
+<p data-start="2470" data-end="2494">Coreference resolution</p>
+</li>
+<li data-start="2495" data-end="2510">
+<p data-start="2497" data-end="2510">POS tagging</p>
+</li>
+</ul>
+<h3 data-start="2512" data-end="2536">✅ <strong data-start="2518" data-end="2536">Correct Answer</strong></h3>
+<p data-start="2537" data-end="2562">✔ <strong data-start="2539" data-end="2562">Text classification</strong></p>
+<h3 data-start="2564" data-end="2579">💡 <strong data-start="2571" data-end="2579">Hint</strong></h3>
+<ul data-start="2580" data-end="2689">
+<li data-start="2580" data-end="2631">
+<p data-start="2582" data-end="2631">Best Cut / Min Cut → <strong data-start="2603" data-end="2631">graph-based partitioning</strong></p>
+</li>
+<li data-start="2632" data-end="2689">
+<p data-start="2634" data-end="2689">Often used for <strong data-start="2649" data-end="2689">document clustering / classification</strong></p>
+</li>
+</ul>
+<hr data-start="2691" data-end="2694">
+<h3 data-start="2696" data-end="2738"><strong data-start="2700" data-end="2738">Q6. BIO tagging is applicable for:</strong></h3>
+<p data-start="2740" data-end="2762"><strong data-start="2740" data-end="2762">Extracted options:</strong></p>
+<ul data-start="2763" data-end="2833">
+<li data-start="2763" data-end="2786">
+<p data-start="2765" data-end="2786">Text classification</p>
+</li>
+<li data-start="2787" data-end="2813">
+<p data-start="2789" data-end="2813">Coreference resolution</p>
+</li>
+<li data-start="2814" data-end="2821">
+<p data-start="2816" data-end="2821">NER</p>
+</li>
+<li data-start="2822" data-end="2833">
+<p data-start="2824" data-end="2833">N-grams</p>
+</li>
+</ul>
+<h3 data-start="2835" data-end="2859">✅ <strong data-start="2841" data-end="2859">Correct Answer</strong></h3>
+<p data-start="2860" data-end="2896">✔ <strong data-start="2862" data-end="2896">NER (Named Entity Recognition)</strong></p>
+<h3 data-start="2898" data-end="2913">💡 <strong data-start="2905" data-end="2913">Hint</strong></h3>
+<ul data-start="2914" data-end="3028">
+<li data-start="2914" data-end="2950">
+<p data-start="2916" data-end="2950">BIO = <strong data-start="2922" data-end="2950">Begin – Inside – Outside</strong></p>
+</li>
+<li data-start="2951" data-end="2988">
+<p data-start="2953" data-end="2988">Used in <strong data-start="2961" data-end="2988">sequence labeling tasks</strong></p>
+</li>
+<li data-start="2989" data-end="3028">
+<p data-start="2991" data-end="3028">Especially common in NER and chunking</p>
+</li>
+</ul>
+<hr data-start="3030" data-end="3033">
+<h2 data-start="3035" data-end="3072">🎯 SECTION 5: ATTENTION MECHANISMS</h2>
+<h3 data-start="3074" data-end="3177"><strong data-start="3078" data-end="3177">Q7. Which among the following are attention mechanisms generally used in neural network models?</strong></h3>
+<p data-start="3179" data-end="3201"><strong data-start="3179" data-end="3201">Extracted options:</strong></p>
+<ul data-start="3202" data-end="3308">
+<li data-start="3202" data-end="3224">
+<p data-start="3204" data-end="3224">Bahdanau attention</p>
+</li>
+<li data-start="3225" data-end="3247">
+<p data-start="3227" data-end="3247">Karpathy attention</p>
+</li>
+<li data-start="3248" data-end="3267">
+<p data-start="3250" data-end="3267">Luong attention</p>
+</li>
+<li data-start="3268" data-end="3286">
+<p data-start="3270" data-end="3286">ReLU attention</p>
+</li>
+<li data-start="3287" data-end="3308">
+<p data-start="3289" data-end="3308">Sigmoid attention</p>
+</li>
+</ul>
+<h3 data-start="3310" data-end="3335">✅ <strong data-start="3316" data-end="3335">Correct Answers</strong></h3>
+<p data-start="3336" data-end="3384">✔ <strong data-start="3338" data-end="3360">Bahdanau attention</strong><br data-start="3360" data-end="3363">
+✔ <strong data-start="3365" data-end="3384">Luong attention</strong></p>
+<h3 data-start="3386" data-end="3405">❌ <strong data-start="3392" data-end="3405">Incorrect</strong></h3>
+<ul data-start="3406" data-end="3502">
+<li data-start="3406" data-end="3447">
+<p data-start="3408" data-end="3447">Karpathy (not an attention mechanism)</p>
+</li>
+<li data-start="3448" data-end="3502">
+<p data-start="3450" data-end="3502">ReLU / Sigmoid (activation functions, not attention)</p>
+</li>
+</ul>
+<h3 data-start="3504" data-end="3519">💡 <strong data-start="3511" data-end="3519">Hint</strong></h3>
+<ul data-start="3520" data-end="3634">
+<li data-start="3520" data-end="3555">
+<p data-start="3522" data-end="3555">Bahdanau = <strong data-start="3533" data-end="3555">additive attention</strong></p>
+</li>
+<li data-start="3556" data-end="3608">
+<p data-start="3558" data-end="3608">Luong = <strong data-start="3566" data-end="3608">multiplicative (dot-product) attention</strong></p>
+</li>
+<li data-start="3609" data-end="3634">
+<p data-start="3611" data-end="3634">Activations ≠ attention</p>
+</li>
+</ul>
+<hr data-start="3636" data-end="3639">
+<h2 data-start="3641" data-end="3690">📚 SECTION 6: TEXT PROCESSING &amp; TOPIC MODELING</h2>
+<h3 data-start="3692" data-end="3731"><strong data-start="3696" data-end="3731">Q8. Porter Stemmer is used for:</strong></h3>
+<h3 data-start="3733" data-end="3757">✅ <strong data-start="3739" data-end="3757">Correct Answer</strong></h3>
+<p data-start="3758" data-end="3797">✔ <strong data-start="3760" data-end="3797">Stemming words to their root form</strong></p>
+<h3 data-start="3799" data-end="3814">💡 <strong data-start="3806" data-end="3814">Hint</strong></h3>
+<ul data-start="3815" data-end="3902">
+<li data-start="3815" data-end="3841">
+<p data-start="3817" data-end="3841">Example: <em data-start="3826" data-end="3841">running → run</em></p>
+</li>
+<li data-start="3842" data-end="3867">
+<p data-start="3844" data-end="3867">Reduces vocabulary size</p>
+</li>
+<li data-start="3868" data-end="3902">
+<p data-start="3870" data-end="3902">Rule-based, not dictionary-based</p>
+</li>
+</ul>
+<hr data-start="3904" data-end="3907">
+<h3 data-start="3909" data-end="3936"><strong data-start="3913" data-end="3936">Q9. LDA stands for:</strong></h3>
+<h3 data-start="3938" data-end="3962">✅ <strong data-start="3944" data-end="3962">Correct Answer</strong></h3>
+<p data-start="3963" data-end="3996">✔ <strong data-start="3965" data-end="3996">Latent Dirichlet Allocation</strong></p>
+<h3 data-start="3998" data-end="4013">💡 <strong data-start="4005" data-end="4013">Hint</strong></h3>
+<ul data-start="4014" data-end="4115">
+<li data-start="4014" data-end="4048">
+<p data-start="4016" data-end="4048">Probabilistic <strong data-start="4030" data-end="4048">topic modeling</strong></p>
+</li>
+<li data-start="4049" data-end="4080">
+<p data-start="4051" data-end="4080">Documents = mixture of topics</p>
+</li>
+<li data-start="4081" data-end="4115">
+<p data-start="4083" data-end="4115">Topics = distribution over words</p>
+</li>
+</ul>
+<hr data-start="4117" data-end="4120">
+<h3 data-start="4122" data-end="4228"><strong data-start="4126" data-end="4228">Q10. Which of the following are true to choose optimal number of topics in LDA for topic modeling?</strong></h3>
+<p data-start="4230" data-end="4252"><strong data-start="4230" data-end="4252">Extracted options:</strong></p>
+<ul data-start="4253" data-end="4350">
+<li data-start="4253" data-end="4276">
+<p data-start="4255" data-end="4276">Min coherence value</p>
+</li>
+<li data-start="4277" data-end="4301">
+<p data-start="4279" data-end="4301">Max model perplexity</p>
+</li>
+<li data-start="4302" data-end="4325">
+<p data-start="4304" data-end="4325">Max coherence value</p>
+</li>
+<li data-start="4326" data-end="4350">
+<p data-start="4328" data-end="4350">Min model perplexity</p>
+</li>
+</ul>
+<h3 data-start="4352" data-end="4377">✅ <strong data-start="4358" data-end="4377">Correct Answers</strong></h3>
+<p data-start="4378" data-end="4432">✔ <strong data-start="4380" data-end="4403">Max coherence value</strong><br data-start="4403" data-end="4406">
+✔ <strong data-start="4408" data-end="4432">Min model perplexity</strong></p>
+<h3 data-start="4434" data-end="4449">💡 <strong data-start="4441" data-end="4449">Hint</strong></h3>
+<ul data-start="4450" data-end="4589">
+<li data-start="4450" data-end="4503">
+<p data-start="4452" data-end="4503"><strong data-start="4452" data-end="4465">Coherence</strong> → interpretability (higher is better)</p>
+</li>
+<li data-start="4504" data-end="4555">
+<p data-start="4506" data-end="4555"><strong data-start="4506" data-end="4520">Perplexity</strong> → generalization (lower is better)</p>
+</li>
+<li data-start="4556" data-end="4589">
+<p data-start="4558" data-end="4589">Best practice: <strong data-start="4573" data-end="4589">balance both</strong></p>
+</li>
+</ul>
+<hr data-start="4591" data-end="4594">
+
+</div>
+<span style="opacity: 0;">Tags: Interview Preparation,Natural Language Processing,</span>

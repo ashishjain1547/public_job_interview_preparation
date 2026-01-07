@@ -1,0 +1,442 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/bookSummariesAndReviews/main/links_to_book_clubs.json",
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['current book club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `
+                    );
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .customLink:hover {
+            text-decoration: none;
+        }
+
+        div.code-block-decoration.footer {
+            display: none;
+        }
+
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+
+        .custom_link_h2 a:active {
+            color: black;
+        }
+
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+
+        .customul {
+            list-style: none;
+        }
+
+        [aria-hidden='true'] {
+            display: none;
+        }
+    </style>
+
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .custom_iframe {
+            width: 100%;
+            height: 305px;
+        }
+    </style>
+</head>
+<div id="customWhatsAppGroupLinkWrapper"></div>
+<br>
+<a class="customLink" href="https://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html#customMiscellaneousAccentureHeader" target="_blank">See All: Miscellaneous Interviews @ Accenture</a>
+<br>
+<br>
+
+<div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling">
+
+
+
+<h1 data-start="328" data-end="369">📘 Accenture Proficiency Test on LLMs</h1>
+<p data-start="370" data-end="412"></p>
+<hr data-start="414" data-end="417">
+<h2 data-start="419" data-end="458"><strong data-start="422" data-end="458">Q1. Few-shot Learning with GPT-3</strong></h2>
+<h3 data-start="460" data-end="486"><strong data-start="464" data-end="486">Question (Cleaned)</strong></h3>
+<p data-start="487" data-end="714">You are developing a large language model using GPT-3 and want to apply few-shot learning techniques. You have a limited dataset for a specific task and want the model to generalize well. Which approach would be most effective?</p>
+<p data-start="716" data-end="923"><strong data-start="716" data-end="728">Options:</strong><br>
+a) Train the model on the entire dataset, then fine-tune on a small subset<br data-start="803" data-end="806">
+b) Provide examples of the task in the input and let the model generate<br data-start="877" data-end="880">
+c) LLMs are unable to handle single tasks</p>
+<h3 data-start="925" data-end="949">✅ <strong data-start="931" data-end="949">Correct Answer</strong></h3>
+<p data-start="950" data-end="1027">✔ <strong data-start="952" data-end="1027">b) Provide examples of the task in the input and let the model generate</strong></p>
+<h3 data-start="1029" data-end="1044">💡 <strong data-start="1036" data-end="1044">Hint</strong></h3>
+<ul data-start="1045" data-end="1163">
+<li data-start="1045" data-end="1089">
+<p data-start="1047" data-end="1089">Few-shot learning = <strong data-start="1067" data-end="1089">prompt engineering</strong></p>
+</li>
+<li data-start="1090" data-end="1114">
+<p data-start="1092" data-end="1114">No retraining required</p>
+</li>
+<li data-start="1115" data-end="1163">
+<p data-start="1117" data-end="1163">You <em data-start="1121" data-end="1127">show</em> the task via examples in the prompt</p>
+</li>
+</ul>
+<hr data-start="1165" data-end="1168">
+<h2 data-start="1170" data-end="1198"><strong data-start="1173" data-end="1198">Q2. Edge AI with LLMs</strong></h2>
+<h3 data-start="1200" data-end="1216"><strong data-start="1204" data-end="1216">Question</strong></h3>
+<p data-start="1217" data-end="1336">You are using an LLM for an edge AI application requiring real-time object detection. Which approach is most efficient?</p>
+<p data-start="1338" data-end="1566"><strong data-start="1338" data-end="1350">Options:</strong><br>
+a) Cloud-based LLM processing<br data-start="1380" data-end="1383">
+b) Use a complex LLM regardless of compute<br data-start="1425" data-end="1428">
+c) Use an LLM optimized for edge devices balancing accuracy and efficiency<br data-start="1502" data-end="1505">
+d) Store data and process later<br data-start="1536" data-end="1539">
+e) Manual input-based LLM</p>
+<h3 data-start="1568" data-end="1592">✅ <strong data-start="1574" data-end="1592">Correct Answer</strong></h3>
+<p data-start="1593" data-end="1639">✔ <strong data-start="1595" data-end="1639">c) Use an LLM optimized for edge devices</strong></p>
+<h3 data-start="1641" data-end="1656">💡 <strong data-start="1648" data-end="1656">Hint</strong></h3>
+<ul data-start="1657" data-end="1766">
+<li data-start="1657" data-end="1708">
+<p data-start="1659" data-end="1708">Edge AI prioritizes <strong data-start="1679" data-end="1708">low latency + low compute</strong></p>
+</li>
+<li data-start="1709" data-end="1737">
+<p data-start="1711" data-end="1737">Cloud = latency bottleneck</p>
+</li>
+<li data-start="1738" data-end="1766">
+<p data-start="1740" data-end="1766">“Optimized” is the keyword</p>
+</li>
+</ul>
+<hr data-start="1768" data-end="1771">
+<h2 data-start="1773" data-end="1833"><strong data-start="1776" data-end="1833">Q3. Improving Fine-tuned LLM Performance (Select Two)</strong></h2>
+<h3 data-start="1835" data-end="1851"><strong data-start="1839" data-end="1851">Question</strong></h3>
+<p data-start="1852" data-end="1932">You fine-tuned a pre-trained LLM but performance is poor. What steps improve it?</p>
+<p data-start="1934" data-end="2203"><strong data-start="1934" data-end="1946">Options:</strong><br>
+a) Gather more annotated Q&amp;A data with better supervision<br data-start="2004" data-end="2007">
+b) Change architecture to Mixture of Experts / Mixture of Tokens<br data-start="2071" data-end="2074">
+c) Simplify the task definition<br data-start="2105" data-end="2108">
+d) Smaller chunks reduce retrieval complexity<br data-start="2153" data-end="2156">
+e) Smaller chunks improve generation accuracy</p>
+<h3 data-start="2205" data-end="2230">✅ <strong data-start="2211" data-end="2230">Correct Answers</strong></h3>
+<p data-start="2231" data-end="2306">✔ <strong data-start="2233" data-end="2266">a) Gather more annotated data</strong><br data-start="2266" data-end="2269">
+✔ <strong data-start="2271" data-end="2306">c) Simplify the task definition</strong></p>
+<h3 data-start="2308" data-end="2323">💡 <strong data-start="2315" data-end="2323">Hint</strong></h3>
+<ul data-start="2324" data-end="2447">
+<li data-start="2324" data-end="2367">
+<p data-start="2326" data-end="2367">First fix <strong data-start="2336" data-end="2367">data quality &amp; task framing</strong></p>
+</li>
+<li data-start="2368" data-end="2403">
+<p data-start="2370" data-end="2403">Architecture changes come <em data-start="2396" data-end="2403">later</em></p>
+</li>
+<li data-start="2404" data-end="2447">
+<p data-start="2406" data-end="2447">Accenture favors <strong data-start="2423" data-end="2447">practical ML hygiene</strong></p>
+</li>
+</ul>
+<hr data-start="2449" data-end="2452">
+<h2 data-start="2454" data-end="2488"><strong data-start="2457" data-end="2488">Q4. Chunking in RAG Systems</strong></h2>
+<h3 data-start="2490" data-end="2506"><strong data-start="2494" data-end="2506">Question</strong></h3>
+<p data-start="2507" data-end="2552">Why do smaller chunks improve a RAG pipeline?</p>
+<p data-start="2554" data-end="2671"><strong data-start="2554" data-end="2577">Correct Statements:</strong><br>
+✔ Smaller chunks reduce retrieval complexity<br data-start="2622" data-end="2625">
+✔ Smaller chunks improve generation accuracy</p>
+<h3 data-start="2673" data-end="2688">💡 <strong data-start="2680" data-end="2688">Hint</strong></h3>
+<ul data-start="2689" data-end="2771">
+<li data-start="2689" data-end="2737">
+<p data-start="2691" data-end="2737">Retrieval works better with <strong data-start="2719" data-end="2737">semantic focus</strong></p>
+</li>
+<li data-start="2738" data-end="2771">
+<p data-start="2740" data-end="2771">Too large chunks dilute meaning</p>
+</li>
+</ul>
+<hr data-start="2773" data-end="2776">
+<h2 data-start="2778" data-end="2825"><strong data-start="2781" data-end="2825">Q5. Challenges of Local LLMs in Chatbots</strong></h2>
+<h3 data-start="2827" data-end="2843"><strong data-start="2831" data-end="2843">Question</strong></h3>
+<p data-start="2844" data-end="2917">What is a potential challenge local LLMs face in long-term task planning?</p>
+<p data-start="2919" data-end="3090"><strong data-start="2919" data-end="2931">Options:</strong><br>
+a) Unable to adjust plans when errors occur<br data-start="2975" data-end="2978">
+b) Unable to handle complex tasks<br data-start="3011" data-end="3014">
+c) Unable to handle multiple queries<br data-start="3050" data-end="3053">
+d) Unable to use task decomposition</p>
+<h3 data-start="3092" data-end="3116">✅ <strong data-start="3098" data-end="3116">Correct Answer</strong></h3>
+<p data-start="3117" data-end="3166">✔ <strong data-start="3119" data-end="3166">a) Unable to adjust plans when errors occur</strong></p>
+<h3 data-start="3168" data-end="3183">💡 <strong data-start="3175" data-end="3183">Hint</strong></h3>
+<ul data-start="3184" data-end="3287">
+<li data-start="3184" data-end="3242">
+<p data-start="3186" data-end="3242">Local models lack <strong data-start="3204" data-end="3242">persistent memory &amp; feedback loops</strong></p>
+</li>
+<li data-start="3243" data-end="3287">
+<p data-start="3245" data-end="3287">Planning correction is the real limitation</p>
+</li>
+</ul>
+<hr data-start="3289" data-end="3292">
+<h2 data-start="3294" data-end="3348"><strong data-start="3297" data-end="3348">Q6. RAG Pipeline – Poor Semantic Representation</strong></h2>
+<h3 data-start="3350" data-end="3366"><strong data-start="3354" data-end="3366">Question</strong></h3>
+<p data-start="3367" data-end="3429">Why might embeddings not represent semantic meaning correctly?</p>
+<p data-start="3431" data-end="3606"><strong data-start="3431" data-end="3443">Options:</strong><br>
+a) Encoder not trained on similar data<br data-start="3482" data-end="3485">
+b) Text chunks too large<br data-start="3509" data-end="3512">
+c) Encoder incompatible with RAG<br data-start="3544" data-end="3547">
+d) Incorrect chunk splitting<br data-start="3575" data-end="3578">
+e) Encoder not initialized</p>
+<h3 data-start="3608" data-end="3633">✅ <strong data-start="3614" data-end="3633">Correct Answers</strong></h3>
+<p data-start="3634" data-end="3707">✔ <strong data-start="3636" data-end="3675">a) Domain mismatch in training data</strong><br data-start="3675" data-end="3678">
+✔ <strong data-start="3680" data-end="3707">b) Chunk size too large</strong></p>
+<h3 data-start="3709" data-end="3724">💡 <strong data-start="3716" data-end="3724">Hint</strong></h3>
+<ul data-start="3725" data-end="3835">
+<li data-start="3725" data-end="3790">
+<p data-start="3727" data-end="3790">Embeddings fail due to <strong data-start="3750" data-end="3766">domain shift</strong> or <strong data-start="3770" data-end="3790">context overflow</strong></p>
+</li>
+<li data-start="3791" data-end="3835">
+<p data-start="3793" data-end="3835">Initialization issues are rare in practice</p>
+</li>
+</ul>
+<hr data-start="3837" data-end="3840">
+<h2 data-start="3842" data-end="3895"><strong data-start="3845" data-end="3895">Q7. Designing Advanced RAG – Chunking Decision</strong></h2>
+<h3 data-start="3897" data-end="3913"><strong data-start="3901" data-end="3913">Question</strong></h3>
+<p data-start="3914" data-end="3986">Which is NOT a valid reason for splitting documents into smaller chunks?</p>
+<p data-start="3988" data-end="4133"><strong data-start="3988" data-end="4000">Options:</strong><br>
+a) Large chunks are harder to search<br data-start="4037" data-end="4040">
+b) Small chunks won’t fit in context window<br data-start="4083" data-end="4086">
+c) Smaller chunks improve indexing efficiency</p>
+<h3 data-start="4135" data-end="4159">✅ <strong data-start="4141" data-end="4159">Correct Answer</strong></h3>
+<p data-start="4160" data-end="4209">✔ <strong data-start="4162" data-end="4209">b) Small chunks won’t fit in context window</strong></p>
+<h3 data-start="4211" data-end="4226">💡 <strong data-start="4218" data-end="4226">Hint</strong></h3>
+<ul data-start="4227" data-end="4312">
+<li data-start="4227" data-end="4269">
+<p data-start="4229" data-end="4269">Smaller chunks fit <strong data-start="4248" data-end="4258">better</strong>, not worse</p>
+</li>
+<li data-start="4270" data-end="4312">
+<p data-start="4272" data-end="4312">This is a classic <strong data-start="4290" data-end="4312">reverse-logic trap</strong></p>
+</li>
+</ul>
+<hr data-start="4314" data-end="4317">
+<h2 data-start="4319" data-end="4348"><strong data-start="4322" data-end="4348">Q8. Intent in Chatbots</strong></h2>
+<h3 data-start="4350" data-end="4366"><strong data-start="4354" data-end="4366">Question</strong></h3>
+<p data-start="4367" data-end="4413">What is the purpose of an intent in a chatbot?</p>
+<h3 data-start="4415" data-end="4439">✅ <strong data-start="4421" data-end="4439">Correct Answer</strong></h3>
+<p data-start="4440" data-end="4474">✔ <strong data-start="4442" data-end="4474">To determine the user’s goal</strong></p>
+<h3 data-start="4476" data-end="4491">💡 <strong data-start="4483" data-end="4491">Hint</strong></h3>
+<ul data-start="4492" data-end="4557">
+<li data-start="4492" data-end="4509">
+<p data-start="4494" data-end="4509">Intent ≠ entity</p>
+</li>
+<li data-start="4510" data-end="4557">
+<p data-start="4512" data-end="4557">Intent answers <strong data-start="4527" data-end="4557">“what does the user want?”</strong></p>
+</li>
+</ul>
+<hr data-start="4559" data-end="4562">
+<h2 data-start="4564" data-end="4598"><strong data-start="4567" data-end="4598">Q9. Healthcare LLM Security</strong></h2>
+<h3 data-start="4600" data-end="4616"><strong data-start="4604" data-end="4616">Question</strong></h3>
+<p data-start="4617" data-end="4685">Which strategy best ensures privacy and compliance for patient data?</p>
+<p data-start="4687" data-end="4888"><strong data-start="4687" data-end="4699">Options:</strong><br>
+a) Public API &amp; public cloud<br data-start="4728" data-end="4731">
+b) Layered security: encryption, access control, audits, private network<br data-start="4803" data-end="4806">
+c) No security changes<br data-start="4828" data-end="4831">
+d) Plaintext storage<br data-start="4851" data-end="4854">
+e) Unverified 3rd party services</p>
+<h3 data-start="4890" data-end="4914">✅ <strong data-start="4896" data-end="4914">Correct Answer</strong></h3>
+<p data-start="4915" data-end="4949">✔ <strong data-start="4917" data-end="4949">b) Layered security approach</strong></p>
+<h3 data-start="4951" data-end="4966">💡 <strong data-start="4958" data-end="4966">Hint</strong></h3>
+<ul data-start="4967" data-end="5060">
+<li data-start="4967" data-end="5002">
+<p data-start="4969" data-end="5002">Healthcare = <strong data-start="4982" data-end="5002">defense in depth</strong></p>
+</li>
+<li data-start="5003" data-end="5060">
+<p data-start="5005" data-end="5060">Accenture loves <strong data-start="5021" data-end="5060">encryption + audits + private infra</strong></p>
+</li>
+</ul>
+<hr data-start="5062" data-end="5065">
+<h2 data-start="5067" data-end="5107"><strong data-start="5070" data-end="5107">Q10. Edge AI Programming Language</strong></h2>
+<h3 data-start="5109" data-end="5125"><strong data-start="5113" data-end="5125">Question</strong></h3>
+<p data-start="5126" data-end="5194">Which language is commonly used for developing ML models in Edge AI?</p>
+<p data-start="5196" data-end="5208"><strong data-start="5196" data-end="5208">Options:</strong></p>
+<ul data-start="5209" data-end="5260">
+<li data-start="5209" data-end="5217">
+<p data-start="5211" data-end="5217">Java</p>
+</li>
+<li data-start="5218" data-end="5228">
+<p data-start="5220" data-end="5228">Python</p>
+</li>
+<li data-start="5229" data-end="5236">
+<p data-start="5231" data-end="5236">C++</p>
+</li>
+<li data-start="5237" data-end="5251">
+<p data-start="5239" data-end="5251">JavaScript</p>
+</li>
+<li data-start="5252" data-end="5260">
+<p data-start="5254" data-end="5260">Ruby</p>
+</li>
+</ul>
+<h3 data-start="5262" data-end="5286">✅ <strong data-start="5268" data-end="5286">Correct Answer</strong></h3>
+<p data-start="5287" data-end="5299">✔ <strong data-start="5289" data-end="5299">Python</strong></p>
+<h3 data-start="5301" data-end="5316">💡 <strong data-start="5308" data-end="5316">Hint</strong></h3>
+<ul data-start="5317" data-end="5389">
+<li data-start="5317" data-end="5346">
+<p data-start="5319" data-end="5346">Python dominates ML tooling</p>
+</li>
+<li data-start="5347" data-end="5389">
+<p data-start="5349" data-end="5389">C++ is used for deployment, not modeling</p>
+</li>
+</ul>
+<hr data-start="5391" data-end="5394">
+<h2 data-start="5396" data-end="5434"><strong data-start="5399" data-end="5434">Q11. Customizing METEOR Scoring</strong></h2>
+<h3 data-start="5436" data-end="5452"><strong data-start="5440" data-end="5452">Question</strong></h3>
+<p data-start="5453" data-end="5500">How do you customize METEOR’s scoring function?</p>
+<h3 data-start="5502" data-end="5526">✅ <strong data-start="5508" data-end="5526">Correct Answer</strong></h3>
+<p data-start="5527" data-end="5589">✔ <strong data-start="5529" data-end="5589">Modify tool configuration or run with command-line flags</strong></p>
+<h3 data-start="5591" data-end="5606">💡 <strong data-start="5598" data-end="5606">Hint</strong></h3>
+<ul data-start="5607" data-end="5685">
+<li data-start="5607" data-end="5645">
+<p data-start="5609" data-end="5645">METEOR supports <strong data-start="5625" data-end="5645">custom weighting</strong></p>
+</li>
+<li data-start="5646" data-end="5685">
+<p data-start="5648" data-end="5685">Not hardcoded, no paid version needed</p>
+</li>
+</ul>
+<hr data-start="5687" data-end="5690">
+<h2 data-start="5692" data-end="5727"><strong data-start="5695" data-end="5727">Q12. Bias Mitigation in LLMs</strong></h2>
+<h3 data-start="5729" data-end="5745"><strong data-start="5733" data-end="5745">Question</strong></h3>
+<p data-start="5746" data-end="5785">First step when an LLM is found biased?</p>
+<h3 data-start="5787" data-end="5811">✅ <strong data-start="5793" data-end="5811">Correct Answer</strong></h3>
+<p data-start="5812" data-end="5845">✔ <strong data-start="5814" data-end="5845">Identify the source of bias</strong></p>
+<h3 data-start="5847" data-end="5862">💡 <strong data-start="5854" data-end="5862">Hint</strong></h3>
+<ul data-start="5863" data-end="5917">
+<li data-start="5863" data-end="5892">
+<p data-start="5865" data-end="5892">Diagnosis before correction</p>
+</li>
+<li data-start="5893" data-end="5917">
+<p data-start="5895" data-end="5917">Retraining comes later</p>
+</li>
+</ul>
+<hr data-start="5919" data-end="5922">
+<h2 data-start="5924" data-end="5969"><strong data-start="5927" data-end="5969">Q13. DeepEval Tool – Advanced Features</strong></h2>
+<h3 data-start="5971" data-end="5987"><strong data-start="5975" data-end="5987">Question</strong></h3>
+<p data-start="5988" data-end="6045">Which statement is correct about DeepEval advanced usage?</p>
+<h3 data-start="6047" data-end="6071">✅ <strong data-start="6053" data-end="6071">Correct Answer</strong></h3>
+<p data-start="6072" data-end="6123">✔ <strong data-start="6074" data-end="6123">Configure advanced features in Python scripts</strong></p>
+<h3 data-start="6125" data-end="6140">💡 <strong data-start="6132" data-end="6140">Hint</strong></h3>
+<ul data-start="6141" data-end="6192">
+<li data-start="6141" data-end="6167">
+<p data-start="6143" data-end="6167">Tool-level configuration</p>
+</li>
+<li data-start="6168" data-end="6192">
+<p data-start="6170" data-end="6192">No paid version needed</p>
+</li>
+</ul>
+<hr data-start="6194" data-end="6197">
+
+
+
+
+
+
+
+
+</div>
+
+<span style="opacity: 0;">Tags: Interview Preparation,Generative AI,Large Language Models,</span>
