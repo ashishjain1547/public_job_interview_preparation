@@ -1,0 +1,982 @@
+<head>
+    <script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+    <!-- Google AdSense Using Machine Learning Code -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3071098372371409",
+            enable_page_level_ads: true
+        });
+    </script>
+  
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://raw.githubusercontent.com/ashishjain1547/pubLessonsInTechnology/main/links_to_tech_clubs.json", 
+                success: function (result) {
+                    let grouplink = JSON.parse(result)['Beta Tech Club'];
+                    $("#customWhatsAppGroupLinkWrapper").html(
+                        `
+                        <h2 class="custom_link_h2"><a href="${grouplink}" target="_blank"> 
+                            <span>Join us on:</span>
+                            <span class="customLink"><i class="fa fa-whatsapp"></i> Whatsapp </span>
+                            </a>
+                        </h2>
+                        `    
+                    );
+                }
+            });
+        });
+    </script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+  
+        .customLink {
+            background-color: #4CAF50;
+            border: none;
+            color: white !important;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+  
+        .customLink:hover {
+            text-decoration: none;
+        }
+  
+        div.code-block-decoration.footer {
+            display: none;
+        }
+  
+        button.export-sheets-button-wrapper {
+            display: none;
+        }
+    </style>
+  
+    <style>
+        .custom_link_h2 a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+  
+        .custom_link_h2 a:hover {
+            color: black;
+        }
+  
+        .custom_link_h2 a:active {
+            color: black;
+        }
+  
+        .custom_link_h2 span {
+            translate: 0px -5px;
+            display: inline-block;
+        }
+  
+        .custom_link_h2 img {
+            width: 100px;
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+    <style>
+      .customul {
+        list-style: none;
+      }
+  
+      [aria-hidden='true'] {
+        display: none;
+      }
+
+      button.ms-1 {
+        display: none;
+      }
+    </style>
+  
+</head>
+
+<div id="customWhatsAppGroupLinkWrapper"></div>
+
+<a class="customLink" href="http://survival8.blogspot.com/2024/04/index-for-job-interviews-preparation.html" target="_blank">Index For Interviews Preparation</a>
+<br>
+
+<a href="https://survival8.blogspot.com/2026/01/interviews-for-ai-engineer-role-2025-h2.html" target="_blank" class="customLink">&lt;&lt;&lt; Previously</a> &nbsp;&nbsp; <a href="https://survival8.blogspot.com/2026/03/interview-at-indian-it-services-mnc-for_18.html" target="_blank" class="customLink">Next &gt;&gt;&gt;</a>
+<br>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZOSegk2mryMuMpVLY4hPEtuitlT11BuqYNreegU0646K2FlTYYktNJx4AmKrec7K86ejLHHn_r4rcTzDesjFq3BtwCm7QGbI7cFylWqH-AbPdjgMUJ9Fu57eAIjCwb_Va1Q5uz4OjCpjsX9pXWfSBLT1A6hV3enCFF37a3AkNmzKaiZIUANl3HzRCXggI/s600/common-interview-questions.webp" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="300" data-original-width="600" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZOSegk2mryMuMpVLY4hPEtuitlT11BuqYNreegU0646K2FlTYYktNJx4AmKrec7K86ejLHHn_r4rcTzDesjFq3BtwCm7QGbI7cFylWqH-AbPdjgMUJ9Fu57eAIjCwb_Va1Q5uz4OjCpjsX9pXWfSBLT1A6hV3enCFF37a3AkNmzKaiZIUANl3HzRCXggI/s600/common-interview-questions.webp"/></a></div>
+
+<pre><i><h3>Context about this post</h3>
+...This is my way of helping others by sharing feedback I received from ChatGPT (5.4 Thinking) on an interview. I hope it can be useful to others who are preparing for interviews, especially in data science and AI/ML roles.
+
+Company: Indian IT Services MNC
+Position: Lead AI Engineer / AI Architect</i></pre>
+<br>
+<hr>
+<br>
+<pre><h3><mark>Me: Attached is one-sided call transcript of an interview. It contains just the answers of the candidate (me). 
+Can you please organize it / structure it and provide what might have been the questions asked by the interviewer (putting back into the organized structure)?
+
+AND IMPORTANTLY: Critic me and my answers.</mark></h3></pre>
+<br>
+<div class="markdown prose dark:prose-invert w-full wrap-break-word light markdown-new-styling"><p data-start="0" data-end="412">Yes. I reconstructed it into a likely interview flow and inferred the interviewer’s probable questions from your answers. Since this is one-sided and a bit noisy, the questions below are approximate, not exact. The transcript clearly shows your intro, project discussion, role/responsibilities, a system-design style answer around ServiceNow/RAG, and Azure/cloud discussion. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h2 data-section-id="1fz5py2" data-start="414" data-end="450">Reconstructed interview structure</h2>
+<h3 data-section-id="s8c9ku" data-start="452" data-end="471">1) Introduction</h3>
+<p data-start="473" data-end="537"><strong data-start="473" data-end="505">Likely interviewer question:</strong><br data-start="505" data-end="508">
+“Can you introduce yourself?”</p>
+<p data-start="539" data-end="834"><strong data-start="539" data-end="566">Your answer:</strong><br data-start="566" data-end="569">
+Good afternoon, I am Ashish. I have around 13 years of total experience, including about 11 years in data science and machine learning. Over the years, I have worked with Python, SQL, PL/SQL, JavaScript, and other technologies. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="836" data-end="839">
+<h3 data-section-id="1ci00ed" data-start="841" data-end="872">2) Current / recent project</h3>
+<p data-start="874" data-end="983"><strong data-start="874" data-end="906">Likely interviewer question:</strong><br data-start="906" data-end="909">
+“What is your current project? What kind of work are you doing right now?”</p>
+<p data-start="985" data-end="1343"><strong data-start="985" data-end="1012">Your answer:</strong><br data-start="1012" data-end="1015">
+My recent/current work is around a Text-to-SQL / analytics-agent style platform. Different teams or markets may call it by different names, but the core idea is similar: the system accepts a natural-language query, generates SQL, and supports analytics workflows. You described it as a multi-agent setup with components such as:</p>
+<ul data-start="1344" data-end="1482">
+<li data-section-id="1wuxkns" data-start="1344" data-end="1365">
+<p data-start="1346" data-end="1365">a Text-to-SQL agent</p>
+</li>
+<li data-section-id="js6e04" data-start="1366" data-end="1379">
+<p data-start="1368" data-end="1379">a RAG agent</p>
+</li>
+<li data-section-id="1jgjjn8" data-start="1380" data-end="1407">
+<p data-start="1382" data-end="1407">a general knowledge agent</p>
+</li>
+<li data-section-id="swppc2" data-start="1408" data-end="1418">
+<p data-start="1410" data-end="1418">a router</p>
+</li>
+<li data-section-id="lwllod" data-start="1419" data-end="1482">
+<p data-start="1421" data-end="1482">a visualization agent<br data-start="1442" data-end="1445">
+<span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+</li>
+</ul>
+<hr data-start="1484" data-end="1487">
+<h3 data-section-id="8ug6g1" data-start="1489" data-end="1541">3) Early career and transition into data science</h3>
+<p data-start="1543" data-end="1649"><strong data-start="1543" data-end="1575">Likely interviewer question:</strong><br data-start="1575" data-end="1578">
+“How did your career start, and how did you move into data science/ML?”</p>
+<p data-start="1651" data-end="2187"><strong data-start="1651" data-end="1678">Your answer:</strong><br data-start="1678" data-end="1681">
+You started as a software engineer after an internship period of around one to one-and-a-half years. Early on, you worked on web applications using technologies like Java Servlets and JSP. Around 2015–2016, your work shifted more toward data analytics / data science, where the stack centered around machine learning algorithms, statistics, and Python. You also mentioned the popularity of big-data platforms at that time, including Hadoop-era enterprise environments. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="2189" data-end="2192">
+<h3 data-section-id="4oq8wt" data-start="2194" data-end="2231">4) Past project / client exposure</h3>
+<p data-start="2233" data-end="2338"><strong data-start="2233" data-end="2265">Likely interviewer question:</strong><br data-start="2265" data-end="2268">
+“Have you worked on big-data or enterprise-scale client environments?”</p>
+<p data-start="2340" data-end="2715"><strong data-start="2340" data-end="2367">Your answer:</strong><br data-start="2367" data-end="2370">
+Yes. You mentioned working on a client environment where data was stored in Hadoop clusters/private cloud infrastructure, and that you built solutions around that ecosystem. Some names in the transcript are unclear due to transcription quality, so I would treat the exact client/platform names as uncertain. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="2717" data-end="2720">
+<h3 data-section-id="chsapy" data-start="2722" data-end="2762">5) Current role and responsibilities</h3>
+<p data-start="2764" data-end="2875"><strong data-start="2764" data-end="2796">Likely interviewer question:</strong><br data-start="2796" data-end="2799">
+“What is your current role? Are you an individual contributor or a manager?”</p>
+<p data-start="2877" data-end="3029"><strong data-start="2877" data-end="2904">Your answer:</strong><br data-start="2904" data-end="2907">
+You described yourself as being in a mixed role, roughly at a mid-level manager/lead level. Your responsibilities include:</p>
+<ul data-start="3030" data-end="3385">
+<li data-section-id="22gv6d" data-start="3030" data-end="3054">
+<p data-start="3032" data-end="3054">architecting solutions</p>
+</li>
+<li data-section-id="pbwh5h" data-start="3055" data-end="3080">
+<p data-start="3057" data-end="3080">owning key deliverables</p>
+</li>
+<li data-section-id="1uxpps8" data-start="3081" data-end="3120">
+<p data-start="3083" data-end="3120">assigning work to junior team members</p>
+</li>
+<li data-section-id="1cxky6z" data-start="3121" data-end="3162">
+<p data-start="3123" data-end="3162">helping resolve blockers and challenges</p>
+</li>
+<li data-section-id="1sedt34" data-start="3163" data-end="3385">
+<p data-start="3165" data-end="3385">also handling some individual deliverables yourself<br data-start="3216" data-end="3219">
+You also later mentioned working with a team of around five people and coordinating within a setup that includes a scrum master. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+</li>
+</ul>
+<hr data-start="3387" data-end="3390">
+<h3 data-section-id="cv9n73" data-start="3392" data-end="3439">6) Problem-solving / system design question</h3>
+<p data-start="3441" data-end="3586"><strong data-start="3441" data-end="3473">Likely interviewer question:</strong><br data-start="3473" data-end="3476">
+“Suppose we have ticket data in ServiceNow and want to build a solution around it. How would you approach it?”</p>
+<p data-start="3588" data-end="3789"><strong data-start="3588" data-end="3615">Your answer:</strong><br data-start="3615" data-end="3618">
+You first tried to clarify the problem, which was good. Then you formed a high-level hypothesis that the problem might be a RAG-style use case. Your proposed approach was:</p>
+<ol data-start="3790" data-end="4115">
+<li data-section-id="xsogoe" data-start="3790" data-end="3843">
+<p data-start="3793" data-end="3843">understand the available data and source systems</p>
+</li>
+<li data-section-id="46bxzq" data-start="3844" data-end="3876">
+<p data-start="3847" data-end="3876">ingest data from ServiceNow</p>
+</li>
+<li data-section-id="1cqtrea" data-start="3877" data-end="3941">
+<p data-start="3880" data-end="3941">use API-based extraction depending on what the API supports</p>
+</li>
+<li data-section-id="5js0l1" data-start="3942" data-end="4002">
+<p data-start="3945" data-end="4002">store/process the data, potentially through batch pulls</p>
+</li>
+<li data-section-id="9fzsnd" data-start="4003" data-end="4027">
+<p data-start="4006" data-end="4027">generate embeddings</p>
+</li>
+<li data-section-id="1k4qqoq" data-start="4028" data-end="4060">
+<p data-start="4031" data-end="4060">load into a vector database</p>
+</li>
+<li data-section-id="xznknh" data-start="4061" data-end="4115">
+<p data-start="4064" data-end="4115">build retrieval over that data for downstream use</p>
+</li>
+</ol>
+<p data-start="4117" data-end="4314">You also discussed alternate storage/input possibilities, such as receiving ticket exports in Excel or using something like Azure Blob Storage for convenience. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="4316" data-end="4319">
+<h3 data-section-id="p7u96z" data-start="4321" data-end="4353">7) ServiceNow / API handling</h3>
+<p data-start="4355" data-end="4458"><strong data-start="4355" data-end="4387">Likely interviewer question:</strong><br data-start="4387" data-end="4390">
+“How would you pull the data? Have you worked with ServiceNow APIs?”</p>
+<p data-start="4460" data-end="4812"><strong data-start="4460" data-end="4487">Your answer:</strong><br data-start="4487" data-end="4490">
+You were honest that you had not worked extensively with ServiceNow APIs, though you had used the interface for viewing tickets. You said the extraction strategy would depend on the API capabilities, such as whether it supports batch downloads, single-ticket fetches, or export flows. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="4814" data-end="4817">
+<h3 data-section-id="yxqfg0" data-start="4819" data-end="4842">8) Azure experience</h3>
+<p data-start="4844" data-end="4915"><strong data-start="4844" data-end="4876">Likely interviewer question:</strong><br data-start="4876" data-end="4879">
+“What Azure services have you used?”</p>
+<p data-start="4917" data-end="4990"><strong data-start="4917" data-end="4944">Your answer:</strong><br data-start="4944" data-end="4947">
+You mentioned using or being familiar with:</p>
+<ul data-start="4991" data-end="5254">
+<li data-section-id="16txnk" data-start="4991" data-end="5008">
+<p data-start="4993" data-end="5008">Azure Functions</p>
+</li>
+<li data-section-id="10lgdvb" data-start="5009" data-end="5027">
+<p data-start="5011" data-end="5027">Azure PostgreSQL</p>
+</li>
+<li data-section-id="1r5p01k" data-start="5028" data-end="5077">
+<p data-start="5030" data-end="5077">Azure Search / vector-search-related capability</p>
+</li>
+<li data-section-id="1ujyn3q" data-start="5078" data-end="5110">
+<p data-start="5080" data-end="5110">Azure Kubernetes Service (AKS)</p>
+</li>
+<li data-section-id="1a2nf0l" data-start="5111" data-end="5254">
+<p data-start="5113" data-end="5254">Azure Blob Storage<br data-start="5131" data-end="5134">
+You also noted that service choice depends on the exact use case and requirements. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+</li>
+</ul>
+<hr data-start="5256" data-end="5259">
+<h3 data-section-id="g5wdjh" data-start="5261" data-end="5296">9) Backend/frontend integration</h3>
+<p data-start="5298" data-end="5401"><strong data-start="5298" data-end="5330">Likely interviewer question:</strong><br data-start="5330" data-end="5333">
+“How would a React frontend interact with Python services on Azure?”</p>
+<p data-start="5403" data-end="5770"><strong data-start="5403" data-end="5430">Your answer:</strong><br data-start="5430" data-end="5433">
+You explained that Python code can be exposed as APIs through Azure Functions. A React-based frontend hosted on Azure Web Apps can then call those API endpoints using the function URLs configured in the frontend. You described the flow at a high level: React UI → Azure Function API → backend logic. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="5772" data-end="5775">
+<h3 data-section-id="ta5sr2" data-start="5777" data-end="5821">10) API gateway / architecture tradeoffs</h3>
+<p data-start="5823" data-end="5948"><strong data-start="5823" data-end="5855">Likely interviewer question:</strong><br data-start="5855" data-end="5858">
+“Why would you use an API gateway?” or “How would you think about cost optimization here?”</p>
+<p data-start="5950" data-end="6342"><strong data-start="5950" data-end="5977">Your answer:</strong><br data-start="5977" data-end="5980">
+Here you were less certain. You said you were not fully sure about API gateway usage in that context, and then shifted to saying cost optimization would require visibility into where the costs are coming from. You also clarified that your main strength has been engineering solutions rather than cost-governance ownership. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="6344" data-end="6347">
+<h2 data-section-id="1cd8vij" data-start="6349" data-end="6389">My critique of your interview answers</h2>
+<h3 data-section-id="an3qlw" data-start="6391" data-end="6412">What you did well</h3>
+<p data-start="6414" data-end="6632">You do come across as experienced. The transcript shows real exposure to engineering work, ML/data systems, solution architecture, and team coordination. You also did a few good things that interviewers generally like:</p>
+<ul data-start="6633" data-end="6983">
+<li data-section-id="liu0qu" data-start="6633" data-end="6685">
+<p data-start="6635" data-end="6685">you tried to clarify the question before answering</p>
+</li>
+<li data-section-id="1vc3quk" data-start="6686" data-end="6730">
+<p data-start="6688" data-end="6730">you did not bluff heavily about ServiceNow</p>
+</li>
+<li data-section-id="vxwncz" data-start="6731" data-end="6810">
+<p data-start="6733" data-end="6810">you answered from practical experience instead of purely theoretical language</p>
+</li>
+<li data-section-id="1w6t74z" data-start="6811" data-end="6983">
+<p data-start="6813" data-end="6983">you showed that you can think in systems: ingestion, APIs, embeddings, vector DB, frontend/backend integration, delivery ownership <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+</li>
+</ul>
+<h3 data-section-id="hves4o" data-start="6985" data-end="7017">Where your answers were weak</h3>
+<h4 data-start="7019" data-end="7061">1) Your answers were too unstructured</h4>
+<p data-start="7062" data-end="7369">This is the biggest issue. You know things, but your delivery sounds scattered. You start one point, branch into another, self-correct, then return halfway. An interviewer may conclude: “He has experience, but he is not crisp.” That hurts especially for senior roles. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h4 data-start="7371" data-end="7429">2) You used too many filler sounds and repair phrases</h4>
+<p data-start="7430" data-end="7681">There are a lot of “yeah,” “okay,” “I think,” “sort of,” “it depends,” “mm-hmm,” “sorry,” “not exactly sure,” and unfinished clauses. A few are fine. Too many make you sound less confident than you probably are. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h4 data-start="7683" data-end="7749">3) You often gave partial answers instead of complete answers</h4>
+<p data-start="7750" data-end="8036">Example: when asked about your background, role, Azure, or architecture, your answer often begins correctly but does not land in a clean conclusion. The interviewer is left doing the work of organizing your thoughts. That is costly in interviews. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h4 data-start="8038" data-end="8082">4) You mixed honesty with under-selling</h4>
+<p data-start="8083" data-end="8437">Being honest about not knowing ServiceNow deeply was good. But you sometimes framed uncertainty too broadly. For instance, instead of “I haven’t used ServiceNow APIs extensively, but I’d approach it through X, Y, Z,” you drifted into uncertain phrasing for too long. That can make your genuine strengths disappear. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h4 data-start="8439" data-end="8492">5) Your seniority story was not sharply packaged</h4>
+<p data-start="8493" data-end="8920">You clearly have both technical and people responsibilities, but you did not present that in a strong senior-profile way. A stronger version would have been: “I’m primarily a hands-on solution architect/lead. I own architecture and critical deliverables, mentor junior engineers, and also contribute directly to implementation.” Instead, the transcript makes it sound vague and hesitant. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h4 data-start="8922" data-end="8992">6) Some answers sounded like thinking aloud rather than answering</h4>
+<p data-start="8993" data-end="9246">Thinking aloud is useful in design rounds, but only if it is controlled. In your case, it sometimes sounds like raw internal thinking. Interviewers may interpret that as lack of clarity rather than good reasoning. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="9248" data-end="9251">
+<h2 data-section-id="qquame" data-start="9253" data-end="9300">Specific places where you likely lost points</h2>
+<h3 data-section-id="1fpb47k" data-start="9302" data-end="9318">On the intro</h3>
+<p data-start="9319" data-end="9494">Your experience is strong, but the opening was messy. You should have given a 20–30 second clean summary. Instead, the intro meandered. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h3 data-section-id="g19bnm" data-start="9496" data-end="9522">On the current project</h3>
+<p data-start="9523" data-end="9743">You mentioned many good concepts, but the explanation was not clean enough for a listener to immediately understand the product, users, business value, and your exact contribution. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<h3 data-section-id="nhut5x" data-start="9745" data-end="9778">On the ServiceNow/RAG problem</h3>
+<p data-start="9779" data-end="9993">Your first instinct was sensible, but you jumped too quickly to vector DB/embeddings before locking down the user problem, success metric, and ticket schema. For a system-design discussion, you should first define:</p>
+<ul data-start="9994" data-end="10218">
+<li data-section-id="8r3bkc" data-start="9994" data-end="10011">
+<p data-start="9996" data-end="10011">what users want</p>
+</li>
+<li data-section-id="vifcky" data-start="10012" data-end="10030">
+<p data-start="10014" data-end="10030">what data exists</p>
+</li>
+<li data-section-id="14gt1lz" data-start="10031" data-end="10066">
+<p data-start="10033" data-end="10066">structured vs unstructured fields</p>
+</li>
+<li data-section-id="1njgvi2" data-start="10067" data-end="10090">
+<p data-start="10069" data-end="10090">retrieval granularity</p>
+</li>
+<li data-section-id="26hp61" data-start="10091" data-end="10108">
+<p data-start="10093" data-end="10108">expected output</p>
+</li>
+<li data-section-id="m4p9bm" data-start="10109" data-end="10218">
+<p data-start="10111" data-end="10218">latency/accuracy expectations<br data-start="10140" data-end="10143">
+Then bring in RAG if it truly fits. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+</li>
+</ul>
+<h3 data-section-id="1pfh1af" data-start="10220" data-end="10238">On API gateway</h3>
+<p data-start="10239" data-end="10438">This was a visible weak point. “I’m not sure” is okay once. But here it may have made the interviewer question cloud-architecture depth for a senior candidate. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="10440" data-end="10443">
+<h2 data-section-id="krgaq3" data-start="10445" data-end="10471">Brutally honest summary</h2>
+<p data-start="10473" data-end="10621">My read: you sound like someone who <strong data-start="10509" data-end="10530">has done the work</strong>, but in this interview you probably did <strong data-start="10571" data-end="10620">not sound as strong as your actual experience</strong>.</p>
+<p data-start="10623" data-end="10667">The gap is not mainly knowledge. The gap is:</p>
+<ul data-start="10668" data-end="10782">
+<li data-section-id="9p9k0x" data-start="10668" data-end="10686">
+<p data-start="10670" data-end="10686">answer structure</p>
+</li>
+<li data-section-id="1q6yza0" data-start="10687" data-end="10698">
+<p data-start="10689" data-end="10698">crispness</p>
+</li>
+<li data-section-id="mx16yf" data-start="10699" data-end="10723">
+<p data-start="10701" data-end="10723">confidence in delivery</p>
+</li>
+<li data-section-id="1t197u6" data-start="10724" data-end="10782">
+<p data-start="10726" data-end="10782">turning experience into clean interview-ready narratives</p>
+</li>
+</ul>
+<p data-start="10784" data-end="11018">So the problem is less “you are weak technically” and more “you are presenting yourself below your true level.” That is exactly the kind of thing that causes interviews to feel unfair afterward. <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<hr data-start="11020" data-end="11023">
+<h2 data-section-id="11wl71o" data-start="11025" data-end="11068">What you should do differently next time</h2>
+<p data-start="11070" data-end="11112">Use this answer pattern almost everywhere:</p>
+<p data-start="11114" data-end="11220"><strong data-start="11114" data-end="11140">1. Direct answer first</strong><br data-start="11140" data-end="11143">
+“Currently I work as a hands-on lead/manager in a data/ML engineering setup.”</p>
+<p data-start="11222" data-end="11329"><strong data-start="11222" data-end="11252">2. Add 2–3 concrete points</strong><br data-start="11252" data-end="11255">
+“I own architecture, key deliverables, and mentoring of junior engineers.”</p>
+<p data-start="11331" data-end="11477"><strong data-start="11331" data-end="11358">3. Close with relevance</strong><br data-start="11358" data-end="11361">
+“My recent work has been around multi-agent analytics systems including Text-to-SQL and retrieval-based components.”</p>
+<p data-start="11479" data-end="11547">That structure alone would improve your interview performance a lot.</p>
+<p data-start="11549" data-end="11588">For design questions, use this pattern:</p>
+<p data-start="11590" data-end="11650"><strong data-start="11590" data-end="11650">Problem → assumptions → architecture → tradeoffs → risks</strong></p>
+<p data-start="11652" data-end="11656">Not:</p>
+<p data-start="11658" data-end="11725">“maybe vector DB… depends on API… maybe blob storage… maybe Excel…”</p>
+<hr data-start="11727" data-end="11730">
+<h2 data-section-id="1le2j7g" data-start="11732" data-end="11753">Overall assessment</h2>
+<p data-start="11755" data-end="12054"><strong data-start="11755" data-end="11776">Content strength:</strong> good<br data-start="11781" data-end="11784">
+<strong data-start="11784" data-end="11810">Communication clarity:</strong> below what your experience deserves<br data-start="11846" data-end="11849">
+<strong data-start="11849" data-end="11875">Technical credibility:</strong> decent to strong in your comfort areas<br data-start="11914" data-end="11917">
+<strong data-start="11917" data-end="11945">Senior interview polish:</strong> needs work<br data-start="11956" data-end="11959">
+<strong data-start="11959" data-end="11979">Main fix needed:</strong> structured speaking under pressure <span class="" data-state="closed"><span class="relative inline-flex items-center select-none"><button type="button" class="ms-1 relative flex h-[25px] select-none items-center justify-center gap-1 rounded-xl px-2 text-[10px] leading-[13px] corner-superellipse/1.1 text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-il7yfj1b.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">Pasted text</p></button></span></span></p>
+<p data-start="12056" data-end="12194" data-is-last-node="" data-is-only-node="">I can next turn this into a <strong data-start="12084" data-end="12119">clean mock interview transcript</strong> with:<br>
+<strong data-start="12126" data-end="12193">Interviewer Question → Your improved answer → my coaching notes</strong>.</p></div>
+
+<hr>
+
+<pre><h3><mark>Me: Yeah, sure, go on.</mark></h3></pre>
+
+<div class="markdown prose dark:prose-invert w-full wrap-break-word light markdown-new-styling"><p data-start="0" data-end="107">Absolutely — here’s the <strong data-start="24" data-end="56">clean mock interview version</strong> of what your call likely should have sounded like.</p>
+<p data-start="109" data-end="137">I’ve kept it in this format:</p>
+<p data-start="139" data-end="234"><strong data-start="139" data-end="163">Interviewer question</strong><br data-start="163" data-end="166">
+<strong data-start="166" data-end="190">Your improved answer</strong><br data-start="190" data-end="193">
+<strong data-start="193" data-end="234">Coaching note on your original answer</strong></p>
+<hr data-start="236" data-end="239">
+<h1 data-section-id="12sghup" data-start="241" data-end="297">Mock interview transcript — reconstructed and improved</h1>
+<h2 data-section-id="d3okne" data-start="299" data-end="328">1) Tell me about yourself.</h2>
+<p data-start="330" data-end="350"><strong data-start="330" data-end="350">Improved answer:</strong></p>
+<p data-start="352" data-end="669">Good afternoon. I’m Ashish, and I have around 13 years of total experience, with about 11 years in data science and machine learning. Over the years, I’ve worked across software engineering, analytics, and ML solution development. My technical stack includes Python, SQL, PL/SQL, JavaScript, and related technologies.</p>
+<p data-start="671" data-end="1026">I started my career in software engineering, building web applications using technologies like Java Servlets and JSP. Over time, I transitioned into data analytics and then into data science and ML, where I’ve spent most of my career. In my current role, I work in a hands-on lead capacity, where I contribute to architecture, delivery, and team guidance.</p>
+<p data-start="1028" data-end="1046"><strong data-start="1028" data-end="1046">Coaching note:</strong></p>
+<p data-start="1048" data-end="1153">Your original intro had the raw material, but it was not packaged well.<br data-start="1119" data-end="1122">
+Problems in your actual answer:</p>
+<ul data-start="1154" data-end="1296">
+<li data-section-id="8mkgde" data-start="1154" data-end="1177">
+<p data-start="1156" data-end="1177">too many filler words</p>
+</li>
+<li data-section-id="1p8bwz7" data-start="1178" data-end="1197">
+<p data-start="1180" data-end="1197">repeated yourself</p>
+</li>
+<li data-section-id="92hx3t" data-start="1198" data-end="1242">
+<p data-start="1200" data-end="1242">mixed intro with project details too early</p>
+</li>
+<li data-section-id="ogyek1" data-start="1243" data-end="1296">
+<p data-start="1245" data-end="1296">mentioned unnecessary side points like health/fever</p>
+</li>
+</ul>
+<p data-start="1298" data-end="1400">In interviews, your intro should feel like a <strong data-start="1343" data-end="1373">prepared opening statement</strong>, not spontaneous thinking.</p>
+<hr data-start="1402" data-end="1405">
+<h2 data-section-id="1xkcjxe" data-start="1407" data-end="1447">2) What are you currently working on?</h2>
+<p data-start="1449" data-end="1469"><strong data-start="1449" data-end="1469">Improved answer:</strong></p>
+<p data-start="1471" data-end="1760">My current project is an analytics platform built around natural-language-based data access. At a high level, it is a multi-agent system that can take a natural language query, route it appropriately, and generate useful outputs such as SQL queries, retrieved knowledge, or visualizations.</p>
+<p data-start="1762" data-end="1803">The platform includes components such as:</p>
+<ul data-start="1804" data-end="1925">
+<li data-section-id="1wuxkns" data-start="1804" data-end="1825">
+<p data-start="1806" data-end="1825">a Text-to-SQL agent</p>
+</li>
+<li data-section-id="g9ip4u" data-start="1826" data-end="1855">
+<p data-start="1828" data-end="1855">a RAG-based retrieval agent</p>
+</li>
+<li data-section-id="1jgjjn8" data-start="1856" data-end="1883">
+<p data-start="1858" data-end="1883">a general knowledge agent</p>
+</li>
+<li data-section-id="1e3eugm" data-start="1884" data-end="1901">
+<p data-start="1886" data-end="1901">a routing layer</p>
+</li>
+<li data-section-id="5in5je" data-start="1902" data-end="1925">
+<p data-start="1904" data-end="1925">a visualization agent</p>
+</li>
+</ul>
+<p data-start="1927" data-end="2107">So the overall goal is to make analytics and information access easier through natural language interaction, while using different agents depending on the nature of the user query.</p>
+<p data-start="2109" data-end="2127"><strong data-start="2109" data-end="2127">Coaching note:</strong></p>
+<p data-start="2129" data-end="2239">Your original answer had strong content, but you described it like someone thinking out loud.<br data-start="2222" data-end="2225">
+What hurt you:</p>
+<ul data-start="2240" data-end="2402">
+<li data-section-id="1q3jog0" data-start="2240" data-end="2270">
+<p data-start="2242" data-end="2270">“it goes by different names”</p>
+</li>
+<li data-section-id="1gyrua9" data-start="2271" data-end="2310">
+<p data-start="2273" data-end="2310">“a couple of agents... a couple more”</p>
+</li>
+<li data-section-id="1kjva5t" data-start="2311" data-end="2353">
+<p data-start="2313" data-end="2353">incomplete explanation of business value</p>
+</li>
+<li data-section-id="6isfkk" data-start="2354" data-end="2402">
+<p data-start="2356" data-end="2402">not enough clarity on your role in the project</p>
+</li>
+</ul>
+<p data-start="2404" data-end="2438">A stronger answer always includes:</p>
+<ol data-start="2439" data-end="2497">
+<li data-section-id="bwjy0h" data-start="2439" data-end="2464">
+<p data-start="2442" data-end="2464">what the system does</p>
+</li>
+<li data-section-id="1nlgnv6" data-start="2465" data-end="2484">
+<p data-start="2468" data-end="2484">key components</p>
+</li>
+<li data-section-id="8h1tr1" data-start="2485" data-end="2497">
+<p data-start="2488" data-end="2497">your role</p>
+</li>
+</ol>
+<hr data-start="2499" data-end="2502">
+<h2 data-section-id="1k04iko" data-start="2504" data-end="2548">3) What exactly is your role in the team?</h2>
+<p data-start="2550" data-end="2570"><strong data-start="2550" data-end="2570">Improved answer:</strong></p>
+<p data-start="2572" data-end="2812">My role is a mix of hands-on technical leadership and delivery ownership. I’m involved in solution architecture, defining key deliverables, assigning work to junior team members, and helping resolve blockers when they face technical issues.</p>
+<p data-start="2814" data-end="2995">At the same time, I also contribute directly as an individual contributor on important tasks. So I would describe myself as a hands-on lead rather than a purely managerial resource.</p>
+<p data-start="2997" data-end="3015"><strong data-start="2997" data-end="3015">Coaching note:</strong></p>
+<p data-start="3017" data-end="3071">This is one area where you were underselling yourself.</p>
+<p data-start="3073" data-end="3111">Your original answer sounded hesitant:</p>
+<ul data-start="3112" data-end="3196">
+<li data-section-id="1k2vkz7" data-start="3112" data-end="3143">
+<p data-start="3114" data-end="3143">“sort of a mid-level manager”</p>
+</li>
+<li data-section-id="1v5kxku" data-start="3144" data-end="3170">
+<p data-start="3146" data-end="3170">“mixed responsibilities”</p>
+</li>
+<li data-section-id="1jvehd9" data-start="3171" data-end="3196">
+<p data-start="3173" data-end="3196">“I also get some tasks”</p>
+</li>
+</ul>
+<p data-start="3198" data-end="3262">That phrasing weakens you.<br data-start="3224" data-end="3227">
+You should frame it with authority:</p>
+<ul data-start="3263" data-end="3367">
+<li data-section-id="18tezjt" data-start="3263" data-end="3280">
+<p data-start="3265" data-end="3280">“hands-on lead”</p>
+</li>
+<li data-section-id="106sjd8" data-start="3281" data-end="3330">
+<p data-start="3283" data-end="3330">“architecture + delivery ownership + mentoring”</p>
+</li>
+<li data-section-id="12u83hz" data-start="3331" data-end="3367">
+<p data-start="3333" data-end="3367">“still involved in implementation”</p>
+</li>
+</ul>
+<p data-start="3369" data-end="3414">That sounds senior without sounding inflated.</p>
+<hr data-start="3416" data-end="3419">
+<h2 data-section-id="31xway" data-start="3421" data-end="3494">4) How did you transition from software engineering into data science?</h2>
+<p data-start="3496" data-end="3516"><strong data-start="3496" data-end="3516">Improved answer:</strong></p>
+<p data-start="3518" data-end="3881">I began my career as a software engineer, primarily building web applications. Over time, especially around the 2015–2016 period, my work shifted more toward analytics and data-driven problem solving. That naturally led into machine learning and data science, where the underlying work involved Python, statistics, machine learning algorithms, and data platforms.</p>
+<p data-start="3883" data-end="4069">At that time, big data ecosystems were also becoming very common, so I also worked in environments where data was stored and processed on Hadoop-based or cloud-like enterprise platforms.</p>
+<p data-start="4071" data-end="4089"><strong data-start="4071" data-end="4089">Coaching note:</strong></p>
+<p data-start="4091" data-end="4187">This answer was present in your original transcript, but it was fragmented.<br data-start="4166" data-end="4169">
+You jumped across:</p>
+<ul data-start="4188" data-end="4255">
+<li data-section-id="17z30qo" data-start="4188" data-end="4200">
+<p data-start="4190" data-end="4200">internship</p>
+</li>
+<li data-section-id="dm63w2" data-start="4201" data-end="4211">
+<p data-start="4203" data-end="4211">Java/JSP</p>
+</li>
+<li data-section-id="1kpaves" data-start="4212" data-end="4223">
+<p data-start="4214" data-end="4223">2015/2016</p>
+</li>
+<li data-section-id="bhh15g" data-start="4224" data-end="4234">
+<p data-start="4226" data-end="4234">big data</p>
+</li>
+<li data-section-id="12bl3ic" data-start="4235" data-end="4255">
+<p data-start="4237" data-end="4255">client environment</p>
+</li>
+</ul>
+<p data-start="4257" data-end="4292">All true, but not told in sequence.</p>
+<p data-start="4294" data-end="4374">For behavioral and background questions, interviewers love <strong data-start="4353" data-end="4373">timeline clarity</strong>.</p>
+<hr data-start="4376" data-end="4379">
+<h2 data-section-id="1wj6s2q" data-start="4381" data-end="4438">5) Have you worked on enterprise-scale data platforms?</h2>
+<p data-start="4440" data-end="4460"><strong data-start="4440" data-end="4460">Improved answer:</strong></p>
+<p data-start="4462" data-end="4771">Yes. I’ve worked in enterprise environments where data was stored in large-scale distributed systems, including Hadoop-based ecosystems and private-cloud-style setups. My work in such settings involved building solutions on top of those data platforms, especially for analytics and machine learning use cases.</p>
+<p data-start="4773" data-end="4916">That exposure helped me get comfortable with enterprise constraints such as scale, integration complexity, and platform-driven solution design.</p>
+<p data-start="4918" data-end="4936"><strong data-start="4918" data-end="4936">Coaching note:</strong></p>
+<p data-start="4938" data-end="5159">In your original answer, this part was weak because you were trying to recall client/platform names while speaking. That is risky. If you are not 100% sure, don’t dig yourself into name-recall trouble during an interview.</p>
+<p data-start="5161" data-end="5177">Better approach:</p>
+<ul data-start="5178" data-end="5281">
+<li data-section-id="1jqajwn" data-start="5178" data-end="5222">
+<p data-start="5180" data-end="5222">speak confidently about the type of system</p>
+</li>
+<li data-section-id="jnazff" data-start="5223" data-end="5281">
+<p data-start="5225" data-end="5281">mention exact client/platform names only if you are sure</p>
+</li>
+</ul>
+<hr data-start="5283" data-end="5286">
+<h2 data-section-id="pg8gqp" data-start="5288" data-end="5407">6) Suppose we have ticket data in ServiceNow and want to build a solution on top of it. How would you approach that?</h2>
+<p data-start="5409" data-end="5429"><strong data-start="5409" data-end="5429">Improved answer:</strong></p>
+<p data-start="5431" data-end="5480">First, I would clarify the use case. For example:</p>
+<ul data-start="5481" data-end="5669">
+<li data-section-id="ifb8cd" data-start="5481" data-end="5554">
+<p data-start="5483" data-end="5554">Are we trying to answer natural language questions over ticket history?</p>
+</li>
+<li data-section-id="c7d19" data-start="5555" data-end="5601">
+<p data-start="5557" data-end="5601">Are we trying to retrieve similar incidents?</p>
+</li>
+<li data-section-id="1ts5gmt" data-start="5602" data-end="5669">
+<p data-start="5604" data-end="5669">Are we generating summaries, classifications, or recommendations?</p>
+</li>
+</ul>
+<p data-start="5671" data-end="5747">Once the problem is clear, I would examine the data structure in ServiceNow:</p>
+<ul data-start="5748" data-end="5885">
+<li data-section-id="x10w2s" data-start="5748" data-end="5813">
+<p data-start="5750" data-end="5813">structured fields such as ticket ID, priority, status, category</p>
+</li>
+<li data-section-id="1536rtp" data-start="5814" data-end="5885">
+<p data-start="5816" data-end="5885">unstructured fields such as issue descriptions, comments, resolutions</p>
+</li>
+</ul>
+<p data-start="5887" data-end="6009">If the use case is knowledge retrieval or question answering over ticket text, then a RAG-based solution could make sense.</p>
+<p data-start="6011" data-end="6042">A high-level approach would be:</p>
+<ol data-start="6043" data-end="6466">
+<li data-section-id="180nww6" data-start="6043" data-end="6127">
+<p data-start="6046" data-end="6127">extract ticket data from ServiceNow through available APIs or export mechanisms</p>
+</li>
+<li data-section-id="11m23xm" data-start="6128" data-end="6191">
+<p data-start="6131" data-end="6191">clean and normalize the structured and unstructured fields</p>
+</li>
+<li data-section-id="1hiraln" data-start="6192" data-end="6229">
+<p data-start="6195" data-end="6229">chunk relevant text where needed</p>
+</li>
+<li data-section-id="1w5t2b" data-start="6230" data-end="6282">
+<p data-start="6233" data-end="6282">generate embeddings for searchable text content</p>
+</li>
+<li data-section-id="17z0veg" data-start="6283" data-end="6328">
+<p data-start="6286" data-end="6328">store those embeddings in a vector store</p>
+</li>
+<li data-section-id="nw6lz5" data-start="6329" data-end="6385">
+<p data-start="6332" data-end="6385">retrieve relevant tickets or passages at query time</p>
+</li>
+<li data-section-id="1qc0va3" data-start="6386" data-end="6466">
+<p data-start="6389" data-end="6466">use an LLM to produce the final response, grounded in retrieved ticket data</p>
+</li>
+</ol>
+<p data-start="6468" data-end="6627">If needed, structured filtering can also be combined with vector retrieval, for example filtering by date, product, severity, or status before semantic search.</p>
+<p data-start="6629" data-end="6647"><strong data-start="6629" data-end="6647">Coaching note:</strong></p>
+<p data-start="6649" data-end="6779">This was the single most important technical answer in your transcript, and honestly, your original version was not strong enough.</p>
+<p data-start="6781" data-end="6800">What you did right:</p>
+<ul data-start="6801" data-end="6885">
+<li data-section-id="iholh8" data-start="6801" data-end="6841">
+<p data-start="6803" data-end="6841">you tried to clarify the problem first</p>
+</li>
+<li data-section-id="eub3sc" data-start="6842" data-end="6885">
+<p data-start="6844" data-end="6885">you recognized it might be a RAG use case</p>
+</li>
+</ul>
+<p data-start="6887" data-end="6901">What hurt you:</p>
+<ul data-start="6902" data-end="7136">
+<li data-section-id="slp4wb" data-start="6902" data-end="6947">
+<p data-start="6904" data-end="6947">you jumped too fast to embeddings/vector DB</p>
+</li>
+<li data-section-id="3xab4i" data-start="6948" data-end="7002">
+<p data-start="6950" data-end="7002">you did not first define the actual business problem</p>
+</li>
+<li data-section-id="13uziu1" data-start="7003" data-end="7060">
+<p data-start="7005" data-end="7060">you were visibly uncertain about ServiceNow integration</p>
+</li>
+<li data-section-id="1bk1onr" data-start="7061" data-end="7136">
+<p data-start="7063" data-end="7136">you sounded like you were constructing the answer live, without structure</p>
+</li>
+</ul>
+<p data-start="7138" data-end="7183">For system design, use this order every time:</p>
+<p data-start="7185" data-end="7245"><strong data-start="7185" data-end="7245">Use case → data understanding → architecture → tradeoffs</strong></p>
+<p data-start="7247" data-end="7272">Not the other way around.</p>
+<hr data-start="7274" data-end="7277">
+<h2 data-section-id="mukh3z" data-start="7279" data-end="7322">7) Have you worked with ServiceNow APIs?</h2>
+<p data-start="7324" data-end="7344"><strong data-start="7324" data-end="7344">Improved answer:</strong></p>
+<p data-start="7346" data-end="7744">I’ve interacted with ServiceNow more from the usage side than from deep API integration, so I would not claim extensive hands-on expertise with its APIs specifically. However, the general integration pattern would be familiar: I would first review the available API capabilities, understand the data model, check whether bulk extraction is supported, and then design the ingestion flow accordingly.</p>
+<p data-start="7746" data-end="7907">So while ServiceNow itself is not one of my strongest direct hands-on areas, building ingestion pipelines from enterprise APIs is something I’m comfortable with.</p>
+<p data-start="7909" data-end="7927"><strong data-start="7909" data-end="7927">Coaching note:</strong></p>
+<p data-start="7929" data-end="7982">This is how you should express partial unfamiliarity.</p>
+<p data-start="7984" data-end="8104">Your original answer was honest, which was good.<br data-start="8032" data-end="8035">
+But it became too shaky because you kept circling around uncertainty.</p>
+<p data-start="8106" data-end="8150">This version is much better because it says:</p>
+<ul data-start="8151" data-end="8225">
+<li data-section-id="694bpq" data-start="8151" data-end="8175">
+<p data-start="8153" data-end="8175">what you have not done</p>
+</li>
+<li data-section-id="eseak7" data-start="8176" data-end="8194">
+<p data-start="8178" data-end="8194">what you do know</p>
+</li>
+<li data-section-id="1eskj0b" data-start="8195" data-end="8225">
+<p data-start="8197" data-end="8225">how you would handle the gap</p>
+</li>
+</ul>
+<p data-start="8227" data-end="8255">That is senior and credible.</p>
+<hr data-start="8257" data-end="8260">
+<h2 data-section-id="hbsjz5" data-start="8262" data-end="8345">8) What if the data comes as files, like Excel exports, or sits in Blob Storage?</h2>
+<p data-start="8347" data-end="8367"><strong data-start="8347" data-end="8367">Improved answer:</strong></p>
+<p data-start="8369" data-end="8657">If the data is delivered as files such as Excel exports, then the ingestion path becomes simpler. We can build a batch ingestion process to read those files, validate schema consistency, transform the contents, and then push the relevant text and metadata into downstream storage systems.</p>
+<p data-start="8659" data-end="8978">If the files are stored in Azure Blob Storage, then we can use Blob Storage APIs or SDKs to fetch the files, process them in code, and feed them into the next stages of the pipeline. In that case, the design becomes more of a storage-ingestion-processing flow rather than a direct source-system API integration problem.</p>
+<p data-start="8980" data-end="8998"><strong data-start="8980" data-end="8998">Coaching note:</strong></p>
+<p data-start="9000" data-end="9044">Your original answer here wandered too much:</p>
+<ul data-start="9045" data-end="9112">
+<li data-section-id="171ry3j" data-start="9045" data-end="9052">
+<p data-start="9047" data-end="9052">Excel</p>
+</li>
+<li data-section-id="137qhki" data-start="9053" data-end="9067">
+<p data-start="9055" data-end="9067">Blob Storage</p>
+</li>
+<li data-section-id="1crgvfu" data-start="9068" data-end="9081">
+<p data-start="9070" data-end="9081">Google APIs</p>
+</li>
+<li data-section-id="g8bije" data-start="9082" data-end="9097">
+<p data-start="9084" data-end="9097">documentation</p>
+</li>
+<li data-section-id="9mvlf6" data-start="9098" data-end="9112">
+<p data-start="9100" data-end="9112">binary files</p>
+</li>
+</ul>
+<p data-start="9114" data-end="9158">You were not fully in control of the answer.</p>
+<p data-start="9160" data-end="9249">You need to avoid this pattern:<br>
+<strong data-start="9192" data-end="9249">new idea → another idea → correction → another branch</strong></p>
+<p data-start="9251" data-end="9283">That makes interviewers nervous.</p>
+<hr data-start="9285" data-end="9288">
+<h2 data-section-id="yqssbi" data-start="9290" data-end="9331">9) Which Azure services have you used?</h2>
+<p data-start="9333" data-end="9353"><strong data-start="9333" data-end="9353">Improved answer:</strong></p>
+<p data-start="9355" data-end="9406">I’ve worked with several Azure services, including:</p>
+<ul data-start="9407" data-end="9707">
+<li data-section-id="57evdl" data-start="9407" data-end="9459">
+<p data-start="9409" data-end="9459">Azure Functions for exposing backend logic as APIs</p>
+</li>
+<li data-section-id="1h4obtc" data-start="9460" data-end="9505">
+<p data-start="9462" data-end="9505">Azure PostgreSQL for relational persistence</p>
+</li>
+<li data-section-id="16l64fs" data-start="9506" data-end="9579">
+<p data-start="9508" data-end="9579">Azure Search / vector-search-related capability for retrieval scenarios</p>
+</li>
+<li data-section-id="zf2sbv" data-start="9580" data-end="9649">
+<p data-start="9582" data-end="9649">Azure Kubernetes Service in broader application deployment contexts</p>
+</li>
+<li data-section-id="14aw982" data-start="9650" data-end="9707">
+<p data-start="9652" data-end="9707">Azure Blob Storage for file-based storage and ingestion</p>
+</li>
+</ul>
+<p data-start="9709" data-end="9892">My choice of service usually depends on the use case, for example whether the need is lightweight API hosting, structured data persistence, document retrieval, or scalable deployment.</p>
+<p data-start="9894" data-end="9912"><strong data-start="9894" data-end="9912">Coaching note:</strong></p>
+<p data-start="9914" data-end="9969">Your original answer had the list, but not the clarity.</p>
+<p data-start="9971" data-end="9992">The mistake you made:</p>
+<ul data-start="9993" data-end="10105">
+<li data-section-id="7lfcpy" data-start="9993" data-end="10023">
+<p data-start="9995" data-end="10023">you started listing services</p>
+</li>
+<li data-section-id="z9d8e3" data-start="10024" data-end="10072">
+<p data-start="10026" data-end="10072">then backed off with “depends on the use case”</p>
+</li>
+<li data-section-id="kti1vb" data-start="10073" data-end="10090">
+<p data-start="10075" data-end="10090">then apologized</p>
+</li>
+<li data-section-id="z7ex4j" data-start="10091" data-end="10105">
+<p data-start="10093" data-end="10105">then drifted</p>
+</li>
+</ul>
+<p data-start="10107" data-end="10208">You need to list them cleanly, then say one line on how you use them. That makes the answer complete.</p>
+<hr data-start="10210" data-end="10213">
+<h2 data-section-id="85g6nt" data-start="10215" data-end="10291">10) How would a React frontend interact with Python code hosted on Azure?</h2>
+<p data-start="10293" data-end="10313"><strong data-start="10293" data-end="10313">Improved answer:</strong></p>
+<p data-start="10315" data-end="10507">A common pattern is to host the frontend separately, for example as a React application on Azure Web Apps, and expose Python backend logic through Azure Functions or another API-hosting layer.</p>
+<p data-start="10509" data-end="10775">In that setup, the Python code is wrapped as API endpoints. Those endpoints have URLs, and the React frontend calls them over HTTP. So the frontend handles user interaction, and the backend APIs handle business logic, processing, model calls, or database operations.</p>
+<p data-start="10777" data-end="10816">So the interaction flow is essentially:</p>
+<p data-start="10818" data-end="10896"><strong data-start="10818" data-end="10896">React frontend → backend API endpoint → Python logic → response back to UI</strong></p>
+<p data-start="10898" data-end="10916"><strong data-start="10898" data-end="10916">Coaching note:</strong></p>
+<p data-start="10918" data-end="11010">You knew the answer. But in the actual interview, you took too long to say something simple.</p>
+<p data-start="11012" data-end="11070">That signals a communication issue, not a technical issue.</p>
+<p data-start="11072" data-end="11134">The clean version above would have made you sound far sharper.</p>
+<hr data-start="11136" data-end="11139">
+<h2 data-section-id="2epsin" data-start="11141" data-end="11181">11) Why would you use an API gateway?</h2>
+<p data-start="11183" data-end="11203"><strong data-start="11183" data-end="11203">Improved answer:</strong></p>
+<p data-start="11205" data-end="11405">An API gateway can be useful when there are multiple backend services and you want centralized handling for concerns such as routing, authentication, rate limiting, monitoring, and request management.</p>
+<p data-start="11407" data-end="11671">For example, if multiple APIs are exposed to a frontend or external consumers, an API gateway can provide a unified entry point and improve control, security, and observability. Whether to use it depends on the architecture complexity and operational requirements.</p>
+<p data-start="11673" data-end="11691"><strong data-start="11673" data-end="11691">Coaching note:</strong></p>
+<p data-start="11693" data-end="11732">This was a weak spot in your interview.</p>
+<p data-start="11734" data-end="11840">You said you were not sure, and then moved toward cost optimization without really answering the question.</p>
+<p data-start="11842" data-end="11868">A better senior answer is:</p>
+<ul data-start="11869" data-end="11964">
+<li data-section-id="975tk1" data-start="11869" data-end="11906">
+<p data-start="11871" data-end="11906">define what API gateway is used for</p>
+</li>
+<li data-section-id="oha2co" data-start="11907" data-end="11926">
+<p data-start="11909" data-end="11926">say when it helps</p>
+</li>
+<li data-section-id="1s6ncr2" data-start="11927" data-end="11964">
+<p data-start="11929" data-end="11964">mention tradeoff: not always needed</p>
+</li>
+</ul>
+<p data-start="11966" data-end="12071">Even if you haven’t owned API gateway setup directly, you should still be able to answer it conceptually.</p>
+<hr data-start="12073" data-end="12076">
+<h2 data-section-id="wqlbj3" data-start="12078" data-end="12146">12) How would you think about cost optimization in such a system?</h2>
+<p data-start="12148" data-end="12168"><strong data-start="12148" data-end="12168">Improved answer:</strong></p>
+<p data-start="12170" data-end="12304">Cost optimization starts with identifying where the major costs are coming from. In a system like this, the major areas are typically:</p>
+<ul data-start="12305" data-end="12444">
+<li data-section-id="gyyxnb" data-start="12305" data-end="12327">
+<p data-start="12307" data-end="12327">model inference cost</p>
+</li>
+<li data-section-id="1izogbh" data-start="12328" data-end="12360">
+<p data-start="12330" data-end="12360">vector search / retrieval cost</p>
+</li>
+<li data-section-id="1op8rpo" data-start="12361" data-end="12396">
+<p data-start="12363" data-end="12396">compute or container hosting cost</p>
+</li>
+<li data-section-id="1uzvit6" data-start="12397" data-end="12411">
+<p data-start="12399" data-end="12411">storage cost</p>
+</li>
+<li data-section-id="iwcr0q" data-start="12412" data-end="12444">
+<p data-start="12414" data-end="12444">data transfer / API usage cost</p>
+</li>
+</ul>
+<p data-start="12446" data-end="12508">Once the cost drivers are clear, optimization options include:</p>
+<ul data-start="12509" data-end="12752">
+<li data-section-id="18yauzn" data-start="12509" data-end="12540">
+<p data-start="12511" data-end="12540">choosing the right model size</p>
+</li>
+<li data-section-id="5hs0ct" data-start="12541" data-end="12587">
+<p data-start="12543" data-end="12587">caching repeated responses where appropriate</p>
+</li>
+<li data-section-id="6apbu1" data-start="12588" data-end="12639">
+<p data-start="12590" data-end="12639">reducing unnecessary embedding or inference calls</p>
+</li>
+<li data-section-id="yhh0e8" data-start="12640" data-end="12660">
+<p data-start="12642" data-end="12660">batching workloads</p>
+</li>
+<li data-section-id="of475q" data-start="12661" data-end="12717">
+<p data-start="12663" data-end="12717">selecting the right hosting model for expected traffic</p>
+</li>
+<li data-section-id="1rjqx4w" data-start="12718" data-end="12752">
+<p data-start="12720" data-end="12752">archiving infrequently used data</p>
+</li>
+</ul>
+<p data-start="12754" data-end="12892">In my roles, I’ve primarily been focused on engineering and delivery, but this is the framework I would use to evaluate cost optimization.</p>
+<p data-start="12894" data-end="12912"><strong data-start="12894" data-end="12912">Coaching note:</strong></p>
+<p data-start="12914" data-end="12936">This answer saves you.</p>
+<p data-start="12938" data-end="13005">Your original answer here basically said:<br>
+“I don’t have that view.”</p>
+<p data-start="13007" data-end="13051">That is too weak for a senior-ish candidate.</p>
+<p data-start="13053" data-end="13161">Even if you were not the direct owner, you should still be able to speak about cost drivers at a high level.</p>
+<hr data-start="13163" data-end="13166">
+<h1 data-section-id="1fdg6xe" data-start="13168" data-end="13221">Brutal but useful criticism of your interview style</h1>
+<p data-start="13223" data-end="13252">Here is the straight version.</p>
+<h2 data-section-id="12yjx9a" data-start="13254" data-end="13294">1) You sound less senior than you are</h2>
+<p data-start="13296" data-end="13405">You likely have more real experience than the interview reflected.<br data-start="13362" data-end="13365">
+But the way you answered made you sound:</p>
+<ul data-start="13406" data-end="13483">
+<li data-section-id="1qtgu4a" data-start="13406" data-end="13418">
+<p data-start="13408" data-end="13418">less crisp</p>
+</li>
+<li data-section-id="zk70jb" data-start="13419" data-end="13435">
+<p data-start="13421" data-end="13435">less confident</p>
+</li>
+<li data-section-id="1yo1dsg" data-start="13436" data-end="13453">
+<p data-start="13438" data-end="13453">less structured</p>
+</li>
+<li data-section-id="185x3mb" data-start="13454" data-end="13483">
+<p data-start="13456" data-end="13483">less architecturally mature</p>
+</li>
+</ul>
+<p data-start="13485" data-end="13543">That is not a knowledge problem. It is a delivery problem.</p>
+<hr data-start="13545" data-end="13548">
+<h2 data-section-id="1lqof21" data-start="13550" data-end="13617">2) You think while speaking instead of speaking from a structure</h2>
+<p data-start="13619" data-end="13652">Your natural pattern seems to be:</p>
+<ul data-start="13654" data-end="13759">
+<li data-section-id="1lnpqj8" data-start="13654" data-end="13668">
+<p data-start="13656" data-end="13668">start answer</p>
+</li>
+<li data-section-id="1w10xeq" data-start="13669" data-end="13685">
+<p data-start="13671" data-end="13685">recall context</p>
+</li>
+<li data-section-id="1iow5qi" data-start="13686" data-end="13711">
+<p data-start="13688" data-end="13711">branch into side detail</p>
+</li>
+<li data-section-id="14djgx3" data-start="13712" data-end="13726">
+<p data-start="13714" data-end="13726">self-correct</p>
+</li>
+<li data-section-id="nixsr6" data-start="13727" data-end="13745">
+<p data-start="13729" data-end="13745">partially answer</p>
+</li>
+<li data-section-id="ejqs9d" data-start="13746" data-end="13759">
+<p data-start="13748" data-end="13759">circle back</p>
+</li>
+</ul>
+<p data-start="13761" data-end="13793">That is dangerous in interviews.</p>
+<p data-start="13795" data-end="13900">Interviewers are not scoring your internal thought process.<br data-start="13854" data-end="13857">
+They are scoring your <strong data-start="13879" data-end="13899">delivered answer</strong>.</p>
+<hr data-start="13902" data-end="13905">
+<h2 data-section-id="fm8c8h" data-start="13907" data-end="13951">3) You use too many fillers and softeners</h2>
+<p data-start="13953" data-end="13989">You repeatedly rely on phrases like:</p>
+<ul data-start="13990" data-end="14074">
+<li data-section-id="1fu1oy8" data-start="13990" data-end="14001">
+<p data-start="13992" data-end="14001">“I think”</p>
+</li>
+<li data-section-id="1153hbu" data-start="14002" data-end="14013">
+<p data-start="14004" data-end="14013">“sort of”</p>
+</li>
+<li data-section-id="1m1zyk5" data-start="14014" data-end="14022">
+<p data-start="14016" data-end="14022">“okay”</p>
+</li>
+<li data-section-id="1lpkuxo" data-start="14023" data-end="14031">
+<p data-start="14025" data-end="14031">“yeah”</p>
+</li>
+<li data-section-id="xl55pv" data-start="14032" data-end="14052">
+<p data-start="14034" data-end="14052">“not exactly sure”</p>
+</li>
+<li data-section-id="zb9lus" data-start="14053" data-end="14064">
+<p data-start="14055" data-end="14064">“depends”</p>
+</li>
+<li data-section-id="1kbnm30" data-start="14065" data-end="14074">
+<p data-start="14067" data-end="14074">“sorry”</p>
+</li>
+</ul>
+<p data-start="14076" data-end="14152">Used occasionally, these are fine.<br data-start="14110" data-end="14113">
+Used repeatedly, they damage authority.</p>
+<p data-start="14154" data-end="14230">You do not need to sound aggressive.<br data-start="14190" data-end="14193">
+But you do need to sound <strong data-start="14218" data-end="14229">settled</strong>.</p>
+<hr data-start="14232" data-end="14235">
+<h2 data-section-id="141cymq" data-start="14237" data-end="14295">4) You sometimes answer the wrong layer of the question</h2>
+<p data-start="14297" data-end="14309">For example:</p>
+<ul data-start="14310" data-end="14467">
+<li data-section-id="i2jiic" data-start="14310" data-end="14370">
+<p data-start="14312" data-end="14370">asked about ServiceNow use case → you jumped to embeddings</p>
+</li>
+<li data-section-id="gm22vd" data-start="14371" data-end="14416">
+<p data-start="14373" data-end="14416">asked about API gateway → you moved to cost</p>
+</li>
+<li data-section-id="1nvseyk" data-start="14417" data-end="14467">
+<p data-start="14419" data-end="14467">asked about role → you spoke vaguely about tasks</p>
+</li>
+</ul>
+<p data-start="14469" data-end="14556">This creates an impression that you know pieces, but not how to frame answers properly.</p>
+<hr data-start="14558" data-end="14561">
+<h2 data-section-id="skz87b" data-start="14563" data-end="14597">5) You leave answers unfinished</h2>
+<p data-start="14599" data-end="14646">This is one of your biggest interview problems.</p>
+<p data-start="14648" data-end="14674">A good answer has a shape:</p>
+<ul data-start="14675" data-end="14736">
+<li data-section-id="1o52ly5" data-start="14675" data-end="14693">
+<p data-start="14677" data-end="14693">opening sentence</p>
+</li>
+<li data-section-id="py3gb1" data-start="14694" data-end="14717">
+<p data-start="14696" data-end="14717">2–4 supporting points</p>
+</li>
+<li data-section-id="pi9kpm" data-start="14718" data-end="14736">
+<p data-start="14720" data-end="14736">closing sentence</p>
+</li>
+</ul>
+<p data-start="14738" data-end="14768">Many of your real answers had:</p>
+<ul data-start="14769" data-end="14833">
+<li data-section-id="1o52ly5" data-start="14769" data-end="14787">
+<p data-start="14771" data-end="14787">opening sentence</p>
+</li>
+<li data-section-id="h36sxz" data-start="14788" data-end="14801">
+<p data-start="14790" data-end="14801">side branch</p>
+</li>
+<li data-section-id="5b32la" data-start="14802" data-end="14814">
+<p data-start="14804" data-end="14814">correction</p>
+</li>
+<li data-section-id="caxho" data-start="14815" data-end="14833">
+<p data-start="14817" data-end="14833">unfinished drift</p>
+</li>
+</ul>
+<p data-start="14835" data-end="14891">That makes the interviewer work harder than they should.</p>
+<hr data-start="14893" data-end="14896">
+<h2 data-section-id="1sxcjs0" data-start="14898" data-end="14945">6) You are too transparent about uncertainty</h2>
+<p data-start="14947" data-end="14997">Honesty is good.<br data-start="14963" data-end="14966">
+Overexposed uncertainty is not.</p>
+<p data-start="14999" data-end="15003">Bad:</p>
+<blockquote data-start="15004" data-end="15109">
+<p data-start="15006" data-end="15109">“I haven’t worked extensively... not exactly sure... depends on the API... maybe this... maybe that...”</p>
+</blockquote>
+<p data-start="15111" data-end="15118">Better:</p>
+<blockquote data-start="15119" data-end="15256">
+<p data-start="15121" data-end="15256">“I haven’t worked deeply with ServiceNow APIs specifically, but I’d approach it using the standard enterprise API integration pattern…”</p>
+</blockquote>
+<p data-start="15258" data-end="15295">That is honest without sounding weak.</p>
+<hr data-start="15297" data-end="15300">
+<h1 data-section-id="rb6w55" data-start="15302" data-end="15343">What the interviewer may have concluded</h1>
+<p data-start="15345" data-end="15377">Most likely something like this:</p>
+<ul data-start="15379" data-end="15662">
+<li data-section-id="kemyxa" data-start="15379" data-end="15415">
+<p data-start="15381" data-end="15415">“He has real industry experience.”</p>
+</li>
+<li data-section-id="1r1cd7r" data-start="15416" data-end="15457">
+<p data-start="15418" data-end="15457">“He has touched relevant technologies.”</p>
+</li>
+<li data-section-id="131f1uq" data-start="15458" data-end="15496">
+<p data-start="15460" data-end="15496">“He has some architecture exposure.”</p>
+</li>
+<li data-section-id="67depp" data-start="15497" data-end="15532">
+<p data-start="15499" data-end="15532">“But his communication is messy.”</p>
+</li>
+<li data-section-id="1qxk9p2" data-start="15533" data-end="15593">
+<p data-start="15535" data-end="15593">“He is not giving confident, clean, senior-level answers.”</p>
+</li>
+<li data-section-id="1knt261" data-start="15594" data-end="15662">
+<p data-start="15596" data-end="15662">“I’m not fully convinced of his depth in some cloud/design areas.”</p>
+</li>
+</ul>
+<p data-start="15664" data-end="15697">That is probably the honest read.</p>
+<hr data-start="15699" data-end="15702">
+<h1 data-section-id="te4iqz" data-start="15704" data-end="15751">What you should do before your next interview</h1>
+<p data-start="15753" data-end="15815">Practice these 5 answer templates until they become automatic.</p>
+<h2 data-section-id="12jv1io" data-start="15817" data-end="15837">Template 1: Intro</h2>
+<p data-start="15838" data-end="15941">“I’m X, with Y years of experience. My background spans A, B, and C. In my current role, I focus on D.”</p>
+<h2 data-section-id="gwcm5k" data-start="15943" data-end="15965">Template 2: Project</h2>
+<p data-start="15966" data-end="16050">“The project solves X problem. The architecture includes A, B, and C. My role is D.”</p>
+<h2 data-section-id="iphstn" data-start="16052" data-end="16080">Template 3: System design</h2>
+<p data-start="16081" data-end="16220">“First I’d clarify the use case. Then I’d inspect the data. Based on that, I’d design the ingestion, storage, retrieval, and serving flow.”</p>
+<h2 data-section-id="1xnobs2" data-start="16222" data-end="16258">Template 4: Partial unfamiliarity</h2>
+<p data-start="16259" data-end="16385">“I haven’t worked deeply with that specific tool, but I’ve handled adjacent integration patterns, and my approach would be X.”</p>
+<h2 data-section-id="2jatf" data-start="16387" data-end="16412">Template 5: Leadership</h2>
+<p data-start="16413" data-end="16552">“I’m a hands-on lead. I handle architecture, critical deliverables, and support junior team members, while also contributing individually.”</p>
+<hr data-start="16554" data-end="16557">
+<h1 data-section-id="1r3ff4y" data-start="16559" data-end="16604">Your strongest improved answers to memorize</h1>
+<p data-start="16606" data-end="16665">These are the three you should literally rehearse out loud.</p>
+<h2 data-section-id="x97bcz" data-start="16667" data-end="16678">A) Intro</h2>
+<p data-start="16679" data-end="16940">“I’m Ashish, with 13 years of total experience, including around 11 years in data science and machine learning. I started in software engineering and later moved into analytics and ML. My work spans solution architecture, delivery, and hands-on implementation.”</p>
+<h2 data-section-id="f3vcr7" data-start="16942" data-end="16960">B) Current role</h2>
+<p data-start="16961" data-end="17148">“I work in a hands-on lead capacity. I’m responsible for solution design, key technical deliverables, and guiding junior team members, while also contributing directly to implementation.”</p>
+<h2 data-section-id="113joy5" data-start="17150" data-end="17177">C) ServiceNow/RAG design</h2>
+<p data-start="17178" data-end="17520">“First I’d clarify the use case and inspect the ticket schema. If the goal is semantic retrieval or question answering over ticket history, then I’d design an ingestion pipeline from ServiceNow, transform the relevant text and metadata, generate embeddings, store them in a vector index, and use retrieval plus an LLM to answer user queries.”</p>
+<hr data-start="17522" data-end="17525">
+<h1 data-section-id="1d2kqsx" data-start="17527" data-end="17542">Final verdict</h1>
+<p data-start="17544" data-end="17620">You are <strong data-start="17552" data-end="17565">not blank</strong>.<br data-start="17566" data-end="17569">
+You are <strong data-start="17577" data-end="17589">not weak</strong>.<br data-start="17590" data-end="17593">
+You are <strong data-start="17601" data-end="17619">under-packaged</strong>.</p>
+<p data-start="17622" data-end="17743">Your biggest problem is not lack of experience.<br data-start="17669" data-end="17672">
+It is that your answers do not come out in an interview-friendly shape.</p>
+<p data-start="17745" data-end="17843">Fix that, and your performance can improve sharply without learning a huge amount of new material.</p>
+<!--<p data-start="17845" data-end="17999" data-is-last-node="" data-is-only-node="">I can do one more useful step: turn this into a <strong data-start="17893" data-end="17916">full practice sheet</strong> with <strong data-start="17922" data-end="17998">20 likely interviewer questions and model answers in your speaking style</strong>.</p>--></div>
