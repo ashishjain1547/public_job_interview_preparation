@@ -1,0 +1,176 @@
+
+<h3>1:</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKUftskpdz9yKm-XNTaQO0qZMP-2bXydBlY4iDRBKTYpguj1ei93doK3VdkX15EZx1Y3JvpUU0hAY_nac71gvGfINtB4Moh59XDX6XeGslxIeCyKVjFVBMlpOvyO0K4b9QoTZDNY5ztsegfJgDhLqBtV_3mZgKLfSSndMLG_jKypVc2h9yrv9dp3OgvFPi/s661/1.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="661" data-original-width="491" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKUftskpdz9yKm-XNTaQO0qZMP-2bXydBlY4iDRBKTYpguj1ei93doK3VdkX15EZx1Y3JvpUU0hAY_nac71gvGfINtB4Moh59XDX6XeGslxIeCyKVjFVBMlpOvyO0K4b9QoTZDNY5ztsegfJgDhLqBtV_3mZgKLfSSndMLG_jKypVc2h9yrv9dp3OgvFPi/s600/1.png"/></a></div>
+
+
+<pre>
+>>> import numpy as np
+>>> l1 = [12.5, 11.5, 11.0, 24.0, 13.0]
+>>> mean1 = np.mean(l1)
+>>> median1 = np.median(l1)
+>>> 
+>>> l2 = [12.5, 11.5, 11.0, 13.0]
+>>> mean2 = np.mean(l2)
+>>> median2 = np.median(l2)
+>>> 
+>>> mean2 - mean1
+-2.4000000000000004
+>>> median2 - median1
+-0.5
+>>> 
+>>> print(mean1, median1, mean2, median2)
+14.4 12.5 12.0 12.0
+
+</pre>
+
+<h3>2:</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhYd_yv6AmkCyA62a7O-pJePVE0qBLWP1Fm6uov_mgJK0mOUsdyr1IE9nOajizlr4Ti2agenQamtLjySY_G5jf3XQx8FmF-_TZM62kHF8-Tk2Dwlt5NtgXZ8W0SoHytEnbJw2n3G1wap4kLsQym9HEHDcI0tptTM73mq7c9Gbh5qHCKmR4b724-M9OTpHT/s565/2.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="565" data-original-width="490" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjhYd_yv6AmkCyA62a7O-pJePVE0qBLWP1Fm6uov_mgJK0mOUsdyr1IE9nOajizlr4Ti2agenQamtLjySY_G5jf3XQx8FmF-_TZM62kHF8-Tk2Dwlt5NtgXZ8W0SoHytEnbJw2n3G1wap4kLsQym9HEHDcI0tptTM73mq7c9Gbh5qHCKmR4b724-M9OTpHT/s600/2.png"/></a></div>
+
+<pre>
+import numpy as np
+
+l = [4, 5, 7, 7, 7, 8, 10, 11, 11, 13, 13, 14]
+
+q1 = np.percentile(l, 25)
+q3 = np.percentile(l, 75)
+
+print("q1, q3:", q1, q3) # 7.0, 11.5
+
+import numpy as np
+
+l = [4, 5, 7, 7, 7, 8, 10, 11, 11, 13, 13, 14]
+
+# NumPy >= 1.22.0 (using the 'method' parameter)
+q3_nearest = np.percentile(l, 75, method='nearest')  # Returns 11
+q3_lower   = np.percentile(l, 75, method='lower')    # Returns 11
+q3_higher  = np.percentile(l, 75, method='higher')   # Returns 13
+
+print("q3_nearest, q3_lower, q3_higher:")
+print(q3_nearest, q3_lower, q3_higher)
+
+
+# # NumPy < 1.22.0 (using the older 'interpolation' parameter)
+# q3_nearest = np.percentile(l, 75, interpolation='nearest')  # Returns 11
+
+print("---  CALCULATION AS PER KHAN ACADEMY ---")
+
+median = np.median(l)
+print("Median:", median) # 8.0
+
+lower_half = [x for x in l if x <= median]
+upper_half = [x for x in l if x >= median]
+
+q1 = np.median(lower_half)
+q3 = np.median(upper_half)
+print("Q1:", q1) # 7.0
+print("Q3:", q3) # 11.0
+</pre>
+
+<b>Output</b>
+<pre>
+q1, q3: 7.0 11.5
+q3_nearest, q3_lower, q3_higher:
+11 11 13
+---  CALCULATION AS PER KHAN ACADEMY ---
+Median: 9.0
+Q1: 7.0
+Q3: 12.0
+</pre>
+
+<h3>3:</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8TguwYxEhcKl1q9TJxsUMCDz2-orJ5TUA8n2Q967rcqCgnpzz_swHFgjADsxZvUhQmGz-st4kJDjM2Kph_B3DA_3rW3-B7tuVSV8K1oxiZRxMc-HavFJ5es-yEBU4XirRKZaUdDTt40fsFtBi5JLr9PO5n9xQ0t4GiwH98Du5_mnHw87CVpvg4av363FM/s471/ques3.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="471" data-original-width="471" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8TguwYxEhcKl1q9TJxsUMCDz2-orJ5TUA8n2Q967rcqCgnpzz_swHFgjADsxZvUhQmGz-st4kJDjM2Kph_B3DA_3rW3-B7tuVSV8K1oxiZRxMc-HavFJ5es-yEBU4XirRKZaUdDTt40fsFtBi5JLr9PO5n9xQ0t4GiwH98Du5_mnHw87CVpvg4av363FM/s600/ques3.png"/></a></div>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz0jWMbTnfKlcQxllbZMDy5IDfXnufe_vh7uKzLJalGEDtJCe0n8e7W5rB8wPH5GZN5aZ0Kp5CL4YwTmgZxofufXZOmHTbc-DJgXbt-6Kvg5Z5pQjKSHiwSeDF6N8UWBjWzK8EEBLc1npD8x7r1q3kolwkNatqhJthauw2bk7mewo6U4FGEAEvHj2IShZJ/s471/sol3.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="471" data-original-width="471" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz0jWMbTnfKlcQxllbZMDy5IDfXnufe_vh7uKzLJalGEDtJCe0n8e7W5rB8wPH5GZN5aZ0Kp5CL4YwTmgZxofufXZOmHTbc-DJgXbt-6Kvg5Z5pQjKSHiwSeDF6N8UWBjWzK8EEBLc1npD8x7r1q3kolwkNatqhJthauw2bk7mewo6U4FGEAEvHj2IShZJ/s600/sol3.png"/></a></div>
+
+
+
+<h3>4:</h3>
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiolemG5sDSorIG5CErAEAL9AvKkL3CwF-U64fi01fbx5zp0OciEGsDtbi1D89ShotjorVQf65OACi7mEVSH3g3AKA_wC3N9PSn5lWMqmDr82DxLl5HFEFHu45HQMLejXduB4jWS9e8zG71aw_JgmlALWVER-9dyUUxF_2AcNwe4bXOGQ70JroqdU1desyy/s493/4.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="397" data-original-width="493" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiolemG5sDSorIG5CErAEAL9AvKkL3CwF-U64fi01fbx5zp0OciEGsDtbi1D89ShotjorVQf65OACi7mEVSH3g3AKA_wC3N9PSn5lWMqmDr82DxLl5HFEFHu45HQMLejXduB4jWS9e8zG71aw_JgmlALWVER-9dyUUxF_2AcNwe4bXOGQ70JroqdU1desyy/s600/4.png"/></a></div>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfo58-37QTYrqRjs8LaQcWVZ424kQgHbVX8d8eu4yZcor-XFM3_x2MF6yS1K3J9gJBhjG_wpSb-CpHJIJirXJCtCo3RVDvZncUvUk8dEVesOC71dN2n68T9An0lUCeLK1ooHNc2FvACryld190YH419LFcQLlDyKzx6Hkw-cXuH6D20XvjJZTy7Gln1lP_/s493/sol4.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="397" data-original-width="493" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfo58-37QTYrqRjs8LaQcWVZ424kQgHbVX8d8eu4yZcor-XFM3_x2MF6yS1K3J9gJBhjG_wpSb-CpHJIJirXJCtCo3RVDvZncUvUk8dEVesOC71dN2n68T9An0lUCeLK1ooHNc2FvACryld190YH419LFcQLlDyKzx6Hkw-cXuH6D20XvjJZTy7Gln1lP_/s600/sol4.png"/></a></div>
+
+
+<h3>5:</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjktRiVlQUgxxRT-r4AZqEBL6nnVuaAOxp_JgIAXTPIlOaHXYLXHIkd26w15y3ElqQxqWGTLjI-KZ8dDsuAIeqXHCHPiUPXVdizbc_fwMOmn55Ge3KjeF5k0bf8FZziP1lB8VdjpYbe1R35KydPIS_4mBbPeO1zdkeJMOYNn29DkwK6z1qxIZ2yylE-l_TS/s416/5.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="277" data-original-width="416" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjktRiVlQUgxxRT-r4AZqEBL6nnVuaAOxp_JgIAXTPIlOaHXYLXHIkd26w15y3ElqQxqWGTLjI-KZ8dDsuAIeqXHCHPiUPXVdizbc_fwMOmn55Ge3KjeF5k0bf8FZziP1lB8VdjpYbe1R35KydPIS_4mBbPeO1zdkeJMOYNn29DkwK6z1qxIZ2yylE-l_TS/s600/5.png"/></a></div>
+
+
+<pre>
+import numpy as np 
+
+l = [35, 39, 39, 43, 43, 44]
+
+print(np.mean(l)) 
+</pre>
+
+<h3>6:</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkyPg1B6gb0OSyTuvv2dLP5jtWaIRXsLaFySZlollKAipFM2Z8NhyphenhypheneuNHQ_DR4785ly6pax_CVQRRX9kdRqoUiD1KzlYljcAa9B9b7ZphyH30UFp-E99aaU3BDUTuu8FL42p-4IF8ZAjm8hUXbmwFJxyBRDfPQYHzmr1Q3l2LK7FiMHSr6tg0K2-0SGMWa/s416/6.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="600" data-original-height="277" data-original-width="416" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkyPg1B6gb0OSyTuvv2dLP5jtWaIRXsLaFySZlollKAipFM2Z8NhyphenhypheneuNHQ_DR4785ly6pax_CVQRRX9kdRqoUiD1KzlYljcAa9B9b7ZphyH30UFp-E99aaU3BDUTuu8FL42p-4IF8ZAjm8hUXbmwFJxyBRDfPQYHzmr1Q3l2LK7FiMHSr6tg0K2-0SGMWa/s600/6.png"/></a></div>
+
+
+<pre>
+import numpy as np
+
+l = [1, 2, 3, 3, 4, 4, 4, 6]
+
+q1 = np.percentile(l, 25)
+q3 = np.percentile(l, 75)
+
+print(q1, q3)
+
+iqr = q3 - q1
+print(iqr)
+
+
+print("--- CALCULATION AS PER KHAN ACADEMY ---")
+
+m = np.median(l)
+
+lower = [x for x in l if x <= m]
+upper = [x for x in l if x >= m]
+
+print(lower, upper)
+q1 = np.median(lower)
+q3 = np.median(upper)
+print(q1, q3)
+
+iqr = q3 - q1
+print(iqr)
+</pre>
+
+<h3>7:</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRFPZMMewzHha4IikSPPYWIyz6Rc3olLUyhbhiRsdUFzzRre7GQ3nqrAd70GcS6fTf2cKm02nfMMDvsqctOz61wE9F5jijeIYSRIGmQQLXnRvZLvgY9M-j9Q8L8WRFIj8u4_curbOcEv-c111XwPPhl8rpbjcYnuwR_Llvo1x9ugkK-AxpPbOBI5vYS3kh/s709/7.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="709" data-original-width="424" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRFPZMMewzHha4IikSPPYWIyz6Rc3olLUyhbhiRsdUFzzRre7GQ3nqrAd70GcS6fTf2cKm02nfMMDvsqctOz61wE9F5jijeIYSRIGmQQLXnRvZLvgY9M-j9Q8L8WRFIj8u4_curbOcEv-c111XwPPhl8rpbjcYnuwR_Llvo1x9ugkK-AxpPbOBI5vYS3kh/s600/7.png"/></a></div>
+
+
+
+<h3>8:</h3>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTNU9354fxoo7NiYz1P4oLSy5V6teQP58-atOk53jFRGHTG1CCC_SNBNDW6H5kKhCJwzvTN_IyV5O04eVZIBCxEMz8TWFFsVm8R-0I6H99VDi4bd0tIIasHrokLb9_iXwaE40rKDPO73A9Od3y-b6n1Vjs4iZISCwti7TbGans2AA8xn2edlj5ArN8KY4W/s697/8.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="697" data-original-width="481" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTNU9354fxoo7NiYz1P4oLSy5V6teQP58-atOk53jFRGHTG1CCC_SNBNDW6H5kKhCJwzvTN_IyV5O04eVZIBCxEMz8TWFFsVm8R-0I6H99VDi4bd0tIIasHrokLb9_iXwaE40rKDPO73A9Od3y-b6n1Vjs4iZISCwti7TbGans2AA8xn2edlj5ArN8KY4W/s600/8.png"/></a></div>
+
+<div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6KAfXf2Npf0YgFuBUYU_ZnksZ30Ih6wWcEj1TXzkiVt-WOTrjcdW0mvASvJAOioDu3Z1oJ5WdO0AKbc4f5BSea5VrybgOP9E0eEcrzAuN0brY_OKjHRWPqiXL9yxqUV9eiYMlyKiry21EjTfBL-m8xGIsZrEeuZHpKFcwB8uuPOO99aY94TxmxigwF1cN/s697/sol8.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" height="600" data-original-height="697" data-original-width="481" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6KAfXf2Npf0YgFuBUYU_ZnksZ30Ih6wWcEj1TXzkiVt-WOTrjcdW0mvASvJAOioDu3Z1oJ5WdO0AKbc4f5BSea5VrybgOP9E0eEcrzAuN0brY_OKjHRWPqiXL9yxqUV9eiYMlyKiry21EjTfBL-m8xGIsZrEeuZHpKFcwB8uuPOO99aY94TxmxigwF1cN/s600/sol8.png"/></a></div>
+
+<pre>
+q1 = 2
+q3 = 5
+iqr = q3 - q1
+print(iqr)
+
+l = [1] + [2] * 7 + [3] * 5 + [5] * 3 + [6] * 2 + [7, 9]
+
+print(l)
+
+lower_bound = q1 - 1.5 * iqr
+upper_bound = q3 + 1.5 * iqr
+
+print(lower_bound, upper_bound)
+
+outliers = [x for x in l if x < lower_bound or x > upper_bound]
+print(outliers)
+print(len(outliers))
+</pre>
+
+<span style="opacity: 0;">Tags: Data Analytics,Mathematical Foundations for Data Science,</span>
