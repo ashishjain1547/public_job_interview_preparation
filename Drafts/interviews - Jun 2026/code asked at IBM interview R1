@@ -1,0 +1,42 @@
+
+import pandas as pd
+
+A = pd.DataFrame({"ID" : list(range(1,11)), "Age" : list(range(21,31)), "Monthly Blood Requirement" : list(range(51,61)), "city" : ["Delhi", "Delhi", "Mumbai", "Delhi", "Mumbai", "Mumbai", "Mumbai", "Delhi", "Mumbai", "Delhi"]})
+ 
+B = pd.DataFrame({"Blood Group" : ["A+", "A+", "B+", "B+", "B+", "AB+", "O+", "AB-", "A+", "O+"], "ID" : list(range(1,11)), "Monthly Blood Donation" : [49, 61, 57, 53, 52, 63, 47, 55, 58, 60]})
+
+print(A.head())
+print("----------------------")
+print(B.head())
+
+df = pd.merge(A, B, on="ID", how="inner")
+
+# print("----------------------")
+# print(df.head())
+
+# print("A: ", A.shape)
+# print("B: ", B.shape)
+# print("df: ", df.shape)
+
+df_temp = df.groupby(['city', 'Blood Group'])[['Monthly Blood Donation', 'Monthly Blood Requirement']].sum().reset_index()
+# print(df_temp)
+
+df_temp['surplus'] = df_temp['Monthly Blood Donation'] - df_temp['Monthly Blood Requirement']
+# print(df_temp)
+# print("----------------------")
+# print("Highest")
+# df_sorted = df_temp.sort_values(by=['surplus'], ascending=False)
+# print(df_sorted.head())
+
+# print("Lowest")
+# df_sorted = df_temp.sort_values(by=['surplus'], ascending=True)
+# print(df_sorted.head())
+
+print(df_temp.columns)
+# print(df_temp[['Age', 'Monthly Blood Donation', 'Monthly Blood Requirement]].corr())
+
+df_avg_age = df.groupby(['city', 'Blood Group'])[['Age']].mean().reset_index()
+print(df_avg_age)
+
+final_df = pd.merge(df_temp, df_avg_age, on=['city', 'Blood Group'], how='inner')
+

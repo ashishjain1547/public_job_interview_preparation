@@ -1,0 +1,25 @@
+<pre>
+"""
+Problem: Given a list, remove duplicates while preserving order.
+Keep the first instance.
+Input: [4, 5, 6, 4, 5, 7]
+Output: [4, 5, 6, 7]
+"""
+from typing import List
+def remove_duplicates(l: List) -> List:
+    c = {} # c: counter dictionary
+    out_l = [] # output list
+    for i in l:
+        occ = c.get(i, 0)
+        if occ == 0:
+            c[i] = 1
+            out_l.append(i)
+    return out_l
+
+l = [7, 4, 5, 6, 4, 5, 7]
+print(remove_duplicates(l))
+
+7: occ = 0, c[7] = 1
+4: occ = 0, c[4] = 1
+
+</pre>

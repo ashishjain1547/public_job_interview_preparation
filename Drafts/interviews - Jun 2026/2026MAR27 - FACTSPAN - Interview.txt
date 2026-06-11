@@ -1,0 +1,79 @@
+# Write pseudocode for a function that takes a user query, retrieves relevant documents, and generates an answer
+
+q = input("Enter your query:")
+
+
+# We are using FAISS (Open source / Free to use / Good for smaller usecases)
+# Other options: Weaviate / Azure AI Search / PostGRE with pgvector 
+# Documents are already present there
+
+import openai
+
+# We initialize a client for making API calls to OpenAI models - ADA in this case for embedding
+
+embedding = call_to_ada()
+
+retrieved_chunk = get_top_matching_chunk_with_highest_cosine_similarity_with_input_embedding() # Greedy Approach
+
+answer = call_to_gpt5_4(prompt=""" 
+# TASK: Generate a response for an NLQ based on a text/chunk
+# INPUT DESCRIPTION: {'nlq': '', 'chunk': ''}
+# OUTPUT DESCRIPTION: {'response': '<your response>'}
+# DOS/DONTS: Do not mention you are reading from some chunk, just respond as if it is coming from your knowledge.
+""", nlq="", chunk="")
+
+
+
+
+
+
+
+
+# “Design pseudocode for a production RAG pipeline with semantic caching, re-ranking, LLM fallback, and logging
+
+# LLM Fallback: fallback on generic knowledge / internet if no chunk...
+
+import logging
+import datetime
+
+def log_deco(args**, func):
+	# Logging logic
+	logging.log("Calling func: " + func_name + " at: " + datetime.datetime.now())
+	func(args**)
+	logging.log("Ended func:" + func_name + " at: " + datetime.datetime.now()))
+	
+@log_deco
+def get_answer():
+	# logic from question (1)
+	# return {
+		'nlq': '',
+		'answer': '',
+		'chunk'
+	}
+
+@log_deco
+def insert_question_answer_into_db:
+	# Insertion into a SQL table maintained in PostGRE with pgvector
+	
+	# cnt = Query to count number of occurances of: similar question/answer 
+	
+	# if cnt > 2: insert_into_redis_based_cache
+	
+	
+retrieved_chunks_based_on_keyword_presence = get_top_3_matching_chunks_based_on_keyword_presence()
+retrieved_chunks_based_on_semantic_similarity = get_top_3_matching_chunks_based_on_semantic_similarity()
+retrieved_chunks_based_on_metadata_filters = get_top_3_matching_chunks_based_on_metadata_filters()
+
+# If semantic sim. based chunks (N = 6) are not passed Evals/QA for retriever
+# Then: return top_3 sem-sim based chunks + top_3 kw_based_chunks
+# If the returned chunks fail Retriever Evals: apply metadata_filter
+
+# Then, if retrieved_chunks still fail retriever evals: then make LLM call to the Foundational model (GPT 5.4) with some guardrails for hallucinations / PII / ETC.
+
+
+
+
+
+
+
+

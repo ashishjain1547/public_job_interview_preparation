@@ -1,0 +1,13 @@
+[4:46 pm, 6/2/2026] Ashish Jain: Tell about yourself
+[4:47 pm, 6/2/2026] Ashish Jain: Your work experience
+[4:48 pm, 6/2/2026] Ashish Jain: Talk more about RAG project.
+[4:51 pm, 6/2/2026] Ashish Jain: What was the use case? About the solution architecture.
+[5:04 pm, 6/2/2026] Ashish Jain: Let's say you are getting some hallucination during the development phase. What steps would you take to fix that? 
+
+What would be your strategy to mitigate hallucinations?
+[5:07 pm, 6/2/2026] Ashish Jain: What was your chunking strategy? And what are other chunking strategies?
+[5:19 pm, 6/2/2026] Ashish Jain: How do you use tool calling in an Agentic AI solution? Describe how do you implement tool calling.
+[5:31 pm, 6/2/2026] Ashish Jain: What's your experience of deploying Agentic AI solutions? Have you worked with AI Foundry?
+[5:34 pm, 6/2/2026] Ashish Jain: Have you worked on creating APIs?
+[5:43 pm, 6/2/2026] Ashish Jain: In an ML Classification project, how do you decide what to optimize between precision and recall?
+[6:04 pm, 6/2/2026] Ashish Jain: In a Regression use case, what assumptions do you make about the model and the data?

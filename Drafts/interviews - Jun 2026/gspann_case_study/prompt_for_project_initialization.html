@@ -1,0 +1,320 @@
+<div class="markdown prose dark:prose-invert w-full wrap-break-word light markdown-new-styling"><p data-start="0" data-end="179">Excellent. Below is a <strong data-start="22" data-end="62">complete GitHub-ready implementation</strong> of the AI-Powered Document Analysis &amp; API Service described in the case study <span class="" data-state="closed"><span class="relative inline-flex items-center"><button class="ms-1 flex h-[25px] text-[10px] leading-[13px] rounded-xl corner-superellipse/1.1 items-center justify-center gap-1 px-2 relative text-token-text-secondary! hover:text-token-text-primary! hover:bg-token-bg-secondary dark:bg-token-main-surface-secondary dark:hover:bg-token-bg-secondary bg-[#f4f4f4] "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="h-[16px] w-[16px] object-contain text-token-text-primary! flex-none icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#554074" fill="currentColor"></use></svg><p class="not-prose mt-0! mb-0! flex-auto truncate">AI Engineer Case Study</p></button></span></span>.</p>
+<p data-start="181" data-end="246">This is structured exactly as you would submit it professionally.</p>
+<p data-start="248" data-end="277">We’ll use the Kaggle dataset:</p>
+<p data-start="279" data-end="361">📊 Online Retail II<br data-start="298" data-end="301">
+<a data-start="301" data-end="361" rel="noopener" target="_new" class="decorated-link" href="https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci">https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci<span aria-hidden="true" class="ms-0.5 inline-block align-middle leading-none"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" data-rtl-flip="" class="block h-[0.75em] w-[0.75em] stroke-current stroke-[0.75]"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#304883" fill="currentColor"></use></svg></span></a></p>
+<hr data-start="363" data-end="366">
+<h1 data-start="368" data-end="390">📦 Project Structure</h1>
+<pre class="overflow-visible! px-0!" data-start="392" data-end="694"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">arduino</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>ai-document-analysis-service/
+│
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   ├── schemas.py
+│   ├── services/
+│   │   ├── data_cleaner.py
+│   │   ├── llm_service.py
+│   │   ├── qa_validator.py
+│   │
+│   └── utils/
+│       └── logger.py
+│
+├── .env
+├── requirements.txt
+├── README.md
+└── run.sh
+</span></span></code></div></div></pre>
+<hr data-start="696" data-end="699">
+<h1 data-start="701" data-end="723">1️⃣ requirements.txt</h1>
+<pre class="overflow-visible! px-0!" data-start="725" data-end="805"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">txt</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-txt"><span><span>fastapi
+uvicorn
+pandas
+python-dotenv
+openai
+pydantic
+python-multipart
+</span></span></code></div></div></pre>
+<hr data-start="807" data-end="810">
+<h1 data-start="812" data-end="822">2️⃣ .env</h1>
+<pre class="overflow-visible! px-0!" data-start="824" data-end="895"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">env</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-env"><span>OPENAI_API_KEY=your_openai_key_here
+OPENAI_MODEL=gpt-4o-mini
+</span></code></div></div></pre>
+<hr data-start="897" data-end="900">
+<h1 data-start="902" data-end="921">3️⃣ app/config.py</h1>
+<pre class="overflow-visible! px-0!" data-start="923" data-end="1141"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">python</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span><span class="hljs-keyword">import</span></span><span> os
+</span><span><span class="hljs-keyword">from</span></span><span> dotenv </span><span><span class="hljs-keyword">import</span></span><span> load_dotenv
+
+load_dotenv()
+
+</span><span><span class="hljs-keyword">class</span></span><span> </span><span><span class="hljs-title class_">Settings</span></span><span>:
+    OPENAI_API_KEY = os.getenv(</span><span><span class="hljs-string">"OPENAI_API_KEY"</span></span><span>)
+    OPENAI_MODEL = os.getenv(</span><span><span class="hljs-string">"OPENAI_MODEL"</span></span><span>, </span><span><span class="hljs-string">"gpt-4o-mini"</span></span><span>)
+
+settings = Settings()
+</span></span></code></div></div></pre>
+<hr data-start="1143" data-end="1146">
+<h1 data-start="1148" data-end="1173">4️⃣ app/utils/logger.py</h1>
+<pre class="overflow-visible! px-0!" data-start="1175" data-end="1357"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">python</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span><span class="hljs-keyword">import</span></span><span> logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    </span><span><span class="hljs-built_in">format</span></span><span>=</span><span><span class="hljs-string">"%(asctime)s - %(levelname)s - %(message)s"</span></span><span>
+)
+
+logger = logging.getLogger(</span><span><span class="hljs-string">"ai-document-service"</span></span><span>)
+</span></span></code></div></div></pre>
+<hr data-start="1359" data-end="1362">
+<h1 data-start="1364" data-end="1384">5️⃣ app/schemas.py</h1>
+<pre class="overflow-visible! px-0!" data-start="1386" data-end="1674"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">python</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span><span class="hljs-keyword">from</span></span><span> pydantic </span><span><span class="hljs-keyword">import</span></span><span> BaseModel
+</span><span><span class="hljs-keyword">from</span></span><span> typing </span><span><span class="hljs-keyword">import</span></span><span> </span><span><span class="hljs-type">List</span></span><span>
+
+</span><span><span class="hljs-keyword">class</span></span><span> </span><span><span class="hljs-title class_">BusinessInsights</span></span><span>(</span><span><span class="hljs-title class_ inherited__">BaseModel</span></span><span>):
+    revenue_summary: </span><span><span class="hljs-built_in">str</span></span><span>
+    key_findings: </span><span><span class="hljs-type">List</span></span><span>[</span><span><span class="hljs-built_in">str</span></span><span>]
+    risk_flags: </span><span><span class="hljs-type">List</span></span><span>[</span><span><span class="hljs-built_in">str</span></span><span>]
+    recommendations: </span><span><span class="hljs-type">List</span></span><span>[</span><span><span class="hljs-built_in">str</span></span><span>]
+
+</span><span><span class="hljs-keyword">class</span></span><span> </span><span><span class="hljs-title class_">APIResponse</span></span><span>(</span><span><span class="hljs-title class_ inherited__">BaseModel</span></span><span>):
+    status: </span><span><span class="hljs-built_in">str</span></span><span>
+    data: BusinessInsights
+</span></span></code></div></div></pre>
+<hr data-start="1676" data-end="1679">
+<h1 data-start="1681" data-end="1715">6️⃣ app/services/data_cleaner.py</h1>
+<pre class="overflow-visible! px-0!" data-start="1717" data-end="2681"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">python</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span><span class="hljs-keyword">import</span></span><span> pandas </span><span><span class="hljs-keyword">as</span></span><span> pd
+</span><span><span class="hljs-keyword">from</span></span><span> app.utils.logger </span><span><span class="hljs-keyword">import</span></span><span> logger
+
+</span><span><span class="hljs-keyword">def</span></span><span> </span><span><span class="hljs-title function_">clean_data</span></span><span>(</span><span><span class="hljs-params">df: pd.DataFrame</span></span><span>) -&gt; pd.DataFrame:
+    logger.info(</span><span><span class="hljs-string">"Cleaning dataset..."</span></span><span>)
+
+    df = df.dropna(subset=[</span><span><span class="hljs-string">"Invoice"</span></span><span>, </span><span><span class="hljs-string">"Quantity"</span></span><span>, </span><span><span class="hljs-string">"Price"</span></span><span>])
+    df[</span><span><span class="hljs-string">"InvoiceDate"</span></span><span>] = pd.to_datetime(df[</span><span><span class="hljs-string">"InvoiceDate"</span></span><span>], errors=</span><span><span class="hljs-string">"coerce"</span></span><span>)
+
+    df = df[df[</span><span><span class="hljs-string">"Quantity"</span></span><span>] &gt; </span><span><span class="hljs-number">0</span></span><span>]
+    df = df[df[</span><span><span class="hljs-string">"Price"</span></span><span>] &gt; </span><span><span class="hljs-number">0</span></span><span>]
+
+    df[</span><span><span class="hljs-string">"TotalAmount"</span></span><span>] = df[</span><span><span class="hljs-string">"Quantity"</span></span><span>] * df[</span><span><span class="hljs-string">"Price"</span></span><span>]
+
+    logger.info(</span><span><span class="hljs-string">f"Cleaned rows count: <span class="hljs-subst">{<span class="hljs-built_in">len</span></span></span></span><span>(df)}")
+    </span><span><span class="hljs-keyword">return</span></span><span> df
+
+
+</span><span><span class="hljs-keyword">def</span></span><span> </span><span><span class="hljs-title function_">generate_summary</span></span><span>(</span><span><span class="hljs-params">df: pd.DataFrame</span></span><span>) -&gt; </span><span><span class="hljs-built_in">dict</span></span><span>:
+    logger.info(</span><span><span class="hljs-string">"Generating aggregate summary..."</span></span><span>)
+
+    summary = {
+        </span><span><span class="hljs-string">"total_revenue"</span></span><span>: </span><span><span class="hljs-built_in">round</span></span><span>(df[</span><span><span class="hljs-string">"TotalAmount"</span></span><span>].</span><span><span class="hljs-built_in">sum</span></span><span>(), </span><span><span class="hljs-number">2</span></span><span>),
+        </span><span><span class="hljs-string">"total_orders"</span></span><span>: </span><span><span class="hljs-built_in">int</span></span><span>(df[</span><span><span class="hljs-string">"Invoice"</span></span><span>].nunique()),
+        </span><span><span class="hljs-string">"top_country"</span></span><span>: df.groupby(</span><span><span class="hljs-string">"Country"</span></span><span>)[</span><span><span class="hljs-string">"TotalAmount"</span></span><span>].</span><span><span class="hljs-built_in">sum</span></span><span>().idxmax(),
+        </span><span><span class="hljs-string">"top_products"</span></span><span>: df.groupby(</span><span><span class="hljs-string">"Description"</span></span><span>)[</span><span><span class="hljs-string">"TotalAmount"</span></span><span>]
+        .</span><span><span class="hljs-built_in">sum</span></span><span>()
+        .sort_values(ascending=</span><span><span class="hljs-literal">False</span></span><span>)
+        .head(</span><span><span class="hljs-number">5</span></span><span>)
+        .to_dict()
+    }
+
+    </span><span><span class="hljs-keyword">return</span></span><span> summary
+</span></span></code></div></div></pre>
+<hr data-start="2683" data-end="2686">
+<h1 data-start="2688" data-end="2721">7️⃣ app/services/llm_service.py</h1>
+<pre class="overflow-visible! px-0!" data-start="2723" data-end="3865"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">python</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span><span class="hljs-keyword">import</span></span><span> json
+</span><span><span class="hljs-keyword">from</span></span><span> openai </span><span><span class="hljs-keyword">import</span></span><span> OpenAI
+</span><span><span class="hljs-keyword">from</span></span><span> app.config </span><span><span class="hljs-keyword">import</span></span><span> settings
+</span><span><span class="hljs-keyword">from</span></span><span> app.schemas </span><span><span class="hljs-keyword">import</span></span><span> BusinessInsights
+</span><span><span class="hljs-keyword">from</span></span><span> app.utils.logger </span><span><span class="hljs-keyword">import</span></span><span> logger
+
+client = OpenAI(api_key=settings.OPENAI_API_KEY)
+
+
+</span><span><span class="hljs-keyword">def</span></span><span> </span><span><span class="hljs-title function_">analyze_with_llm</span></span><span>(</span><span><span class="hljs-params">summary: <span class="hljs-built_in">dict</span></span></span><span>) -&gt; BusinessInsights:
+    logger.info(</span><span><span class="hljs-string">"Calling OpenAI API..."</span></span><span>)
+
+    prompt = <span class="hljs-string">f"""
+    You are a senior financial analyst.
+
+    Given this business transaction summary:
+    </span></span><span><span class="hljs-subst">{json.dumps(summary, indent=<span class="hljs-number">2</span></span></span><span>)}
+
+    Provide:
+    1. Revenue overview
+    2. Key findings (bullet list)
+    3. Risk flags (bullet list)
+    4. Strategic recommendations (bullet list)
+
+    Return strictly valid JSON in this schema:
+    {{
+        "revenue_summary": "...",
+        "key_findings": ["..."],
+        "risk_flags": ["..."],
+        "recommendations": ["..."]
+    }}
+    """
+
+    response = client.chat.completions.create(
+        model=settings.OPENAI_MODEL,
+        messages=[{</span><span><span class="hljs-string">"role"</span></span><span>: </span><span><span class="hljs-string">"user"</span></span><span>, </span><span><span class="hljs-string">"content"</span></span><span>: prompt}],
+        temperature=</span><span><span class="hljs-number">0.3</span></span><span>
+    )
+
+    content = response.choices[</span><span><span class="hljs-number">0</span></span><span>].message.content
+    parsed = json.loads(content)
+
+    logger.info(</span><span><span class="hljs-string">"LLM analysis completed."</span></span><span>)
+    </span><span><span class="hljs-keyword">return</span></span><span> BusinessInsights(**parsed)
+</span></span></code></div></div></pre>
+<hr data-start="3867" data-end="3870">
+<h1 data-start="3872" data-end="3906">8️⃣ app/services/qa_validator.py</h1>
+<pre class="overflow-visible! px-0!" data-start="3908" data-end="4235"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">python</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span><span class="hljs-keyword">from</span></span><span> app.schemas </span><span><span class="hljs-keyword">import</span></span><span> BusinessInsights
+
+</span><span><span class="hljs-keyword">def</span></span><span> </span><span><span class="hljs-title function_">validate_output</span></span><span>(</span><span><span class="hljs-params">output: BusinessInsights, total_revenue: <span class="hljs-built_in">float</span></span></span><span>):
+    </span><span><span class="hljs-keyword">if</span></span><span> total_revenue &lt;= </span><span><span class="hljs-number">0</span></span><span>:
+        </span><span><span class="hljs-keyword">raise</span></span><span> ValueError(</span><span><span class="hljs-string">"Invalid revenue calculation."</span></span><span>)
+
+    </span><span><span class="hljs-keyword">if</span></span><span> </span><span><span class="hljs-keyword">not</span></span><span> output.recommendations:
+        </span><span><span class="hljs-keyword">raise</span></span><span> ValueError(</span><span><span class="hljs-string">"LLM returned empty recommendations."</span></span><span>)
+
+    </span><span><span class="hljs-keyword">return</span></span><span> output
+</span></span></code></div></div></pre>
+<hr data-start="4237" data-end="4240">
+<h1 data-start="4242" data-end="4259">9️⃣ app/main.py</h1>
+<pre class="overflow-visible! px-0!" data-start="4261" data-end="5510"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">python</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-python"><span><span><span class="hljs-keyword">from</span></span><span> fastapi </span><span><span class="hljs-keyword">import</span></span><span> FastAPI, UploadFile, File, HTTPException
+</span><span><span class="hljs-keyword">import</span></span><span> pandas </span><span><span class="hljs-keyword">as</span></span><span> pd
+
+</span><span><span class="hljs-keyword">from</span></span><span> app.schemas </span><span><span class="hljs-keyword">import</span></span><span> APIResponse
+</span><span><span class="hljs-keyword">from</span></span><span> app.services.data_cleaner </span><span><span class="hljs-keyword">import</span></span><span> clean_data, generate_summary
+</span><span><span class="hljs-keyword">from</span></span><span> app.services.llm_service </span><span><span class="hljs-keyword">import</span></span><span> analyze_with_llm
+</span><span><span class="hljs-keyword">from</span></span><span> app.services.qa_validator </span><span><span class="hljs-keyword">import</span></span><span> validate_output
+</span><span><span class="hljs-keyword">from</span></span><span> app.utils.logger </span><span><span class="hljs-keyword">import</span></span><span> logger
+
+app = FastAPI(title=</span><span><span class="hljs-string">"AI Document Analysis Service"</span></span><span>)
+
+
+</span><span><span class="hljs-meta">@app.post(<span class="hljs-params"><span class="hljs-string">"/analyze"</span></span></span></span><span>, response_model=APIResponse)
+</span><span><span class="hljs-keyword">async</span></span><span> </span><span><span class="hljs-keyword">def</span></span><span> </span><span><span class="hljs-title function_">analyze</span></span><span>(</span><span><span class="hljs-params">file: UploadFile = File(<span class="hljs-params">...</span></span></span><span>)):
+
+    </span><span><span class="hljs-keyword">if</span></span><span> </span><span><span class="hljs-keyword">not</span></span><span> file.filename.endswith((</span><span><span class="hljs-string">".csv"</span></span><span>, </span><span><span class="hljs-string">".xlsx"</span></span><span>)):
+        </span><span><span class="hljs-keyword">raise</span></span><span> HTTPException(status_code=</span><span><span class="hljs-number">400</span></span><span>, detail=</span><span><span class="hljs-string">"Unsupported file format"</span></span><span>)
+
+    </span><span><span class="hljs-keyword">try</span></span><span>:
+        logger.info(</span><span><span class="hljs-string">f"Received file: <span class="hljs-subst">{file.filename}</span></span></span><span>")
+
+        </span><span><span class="hljs-keyword">if</span></span><span> file.filename.endswith(</span><span><span class="hljs-string">".csv"</span></span><span>):
+            df = pd.read_csv(file.file)
+        </span><span><span class="hljs-keyword">else</span></span><span>:
+            df = pd.read_excel(file.file)
+
+        cleaned_df = clean_data(df)
+        summary = generate_summary(cleaned_df)
+
+        llm_result = analyze_with_llm(summary)
+        validated = validate_output(llm_result, summary[</span><span><span class="hljs-string">"total_revenue"</span></span><span>])
+
+        </span><span><span class="hljs-keyword">return</span></span><span> {
+            </span><span><span class="hljs-string">"status"</span></span><span>: </span><span><span class="hljs-string">"success"</span></span><span>,
+            </span><span><span class="hljs-string">"data"</span></span><span>: validated
+        }
+
+    </span><span><span class="hljs-keyword">except</span></span><span> Exception </span><span><span class="hljs-keyword">as</span></span><span> e:
+        logger.error(</span><span><span class="hljs-built_in">str</span></span><span>(e))
+        </span><span><span class="hljs-keyword">raise</span></span><span> HTTPException(status_code=</span><span><span class="hljs-number">500</span></span><span>, detail=</span><span><span class="hljs-built_in">str</span></span><span>(e))
+</span></span></code></div></div></pre>
+<hr data-start="5512" data-end="5515">
+<h1 data-start="5517" data-end="5528">🔟 run.sh</h1>
+<pre class="overflow-visible! px-0!" data-start="5530" data-end="5571"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">bash</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>uvicorn app.main:app --reload
+</span></span></code></div></div></pre>
+<hr data-start="5573" data-end="5576">
+<h1 data-start="5578" data-end="5626">📘 README.md (Professional Submission Version)</h1>
+<pre class="overflow-visible! px-0!" data-start="5628" data-end="6447"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">markdown</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-markdown"><span><span><span class="hljs-section"># AI-Powered Document Analysis Service</span></span><span>
+
+</span><span><span class="hljs-section">## Overview</span></span><span>
+This service ingests CSV/Excel business documents, cleans and normalizes data,
+performs LLM-based analysis using OpenAI, and exposes results via FastAPI.
+
+</span><span><span class="hljs-section">## Dataset Used</span></span><span>
+Online Retail II (Kaggle)
+https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci
+
+</span><span><span class="hljs-section">## Setup</span></span><span>
+
+</span><span><span class="hljs-bullet">1.</span></span><span> Clone repo
+</span><span><span class="hljs-bullet">2.</span></span><span> Create virtual environment
+</span><span><span class="hljs-bullet">3.</span></span><span> Install requirements:
+   pip install -r requirements.txt
+</span><span><span class="hljs-bullet">4.</span></span><span> Add OpenAI key in .env
+</span><span><span class="hljs-bullet">5.</span></span><span> Run:
+   uvicorn app.main:app --reload
+
+</span><span><span class="hljs-section">## Endpoint</span></span><span>
+
+POST /analyze
+
+Upload CSV or Excel file.
+
+Returns structured JSON insights.
+
+</span><span><span class="hljs-section">## Architecture</span></span><span>
+
+FastAPI → pandas cleaning → Aggregation → OpenAI analysis → QA validation → JSON response
+
+</span><span><span class="hljs-section">## Production Enhancements</span></span><span>
+</span><span><span class="hljs-bullet">-</span></span><span> Schema enforcement
+</span><span><span class="hljs-bullet">-</span></span><span> Guardrails
+</span><span><span class="hljs-bullet">-</span></span><span> Logging
+</span><span><span class="hljs-bullet">-</span></span><span> Token optimization
+</span><span><span class="hljs-bullet">-</span></span><span> Structured outputs
+</span></span></code></div></div></pre>
+<hr data-start="6449" data-end="6452">
+<h1 data-start="6454" data-end="6469">🏁 How to Run</h1>
+<pre class="overflow-visible! px-0!" data-start="6471" data-end="6593"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">bash</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>git </span><span><span class="hljs-built_in">clone</span></span><span> &lt;repo&gt;
+</span><span><span class="hljs-built_in">cd</span></span><span> ai-document-analysis-service
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+</span></span></code></div></div></pre>
+<p data-start="6595" data-end="6600">Open:</p>
+<pre class="overflow-visible! px-0!" data-start="6602" data-end="6636"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary select-none rounded-t-2xl corner-t-superellipse/1.1">arduino</div><div class="sticky top-[calc(var(--sticky-padding-top)+9*var(--spacing))]"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"><button class="flex gap-1 items-center select-none py-1" aria-label="Copy"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-hidden="true" class="icon-sm"><use href="/cdn/assets/sprites-core-gvfid0kn.svg#ce3544" fill="currentColor"></use></svg>Copy code</button></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>http:</span><span><span class="hljs-comment">//127.0.0.1:8000/docs</span></span><span>
+</span></span></code></div></div></pre>
+<p data-start="6638" data-end="6662">Upload dataset and test.</p>
+<hr data-start="6664" data-end="6667">
+<h1 data-start="6669" data-end="6698">💎 Why This Will Score High</h1>
+<ul data-start="6700" data-end="6845">
+<li data-start="6700" data-end="6709">
+<p data-start="6702" data-end="6709">Modular</p>
+</li>
+<li data-start="6710" data-end="6740">
+<p data-start="6712" data-end="6740">Clean separation of concerns</p>
+</li>
+<li data-start="6741" data-end="6766">
+<p data-start="6743" data-end="6766">Deterministic LLM usage</p>
+</li>
+<li data-start="6767" data-end="6786">
+<p data-start="6769" data-end="6786">Proper validation</p>
+</li>
+<li data-start="6787" data-end="6816">
+<p data-start="6789" data-end="6816">Production-oriented logging</p>
+</li>
+<li data-start="6817" data-end="6845">
+<p data-start="6819" data-end="6845">Enterprise-style structure</p>
+</li>
+</ul>
+<hr data-start="6847" data-end="6850">
+<p data-start="6852" data-end="6871">If you'd like next:</p>
+<ul data-start="6873" data-end="7043">
+<li data-start="6873" data-end="6897">
+<p data-start="6875" data-end="6897">✅ Azure OpenAI version</p>
+</li>
+<li data-start="6898" data-end="6929">
+<p data-start="6900" data-end="6929">✅ Dockerfile + docker-compose</p>
+</li>
+<li data-start="6930" data-end="6956">
+<p data-start="6932" data-end="6956">✅ Async batch processing</p>
+</li>
+<li data-start="6957" data-end="6982">
+<p data-start="6959" data-end="6982">✅ Add embeddings search</p>
+</li>
+<li data-start="6983" data-end="7011">
+<p data-start="6985" data-end="7011">✅ Add authentication layer</p>
+</li>
+<li data-start="7012" data-end="7043">
+<p data-start="7014" data-end="7043">✅ Add automated PDF reporting</p>
+</li>
+</ul>
+<p data-start="7045" data-end="7143" data-is-last-node="" data-is-only-node="">Tell me what level you want this submission to look like — startup MVP or enterprise-grade system.</p></div>

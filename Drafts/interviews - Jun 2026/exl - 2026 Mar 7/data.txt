@@ -1,0 +1,13 @@
+Month	Premium
+Febrauary	250
+August	290
+November	234
+May	134
+January	211
+October	432
+March	290
+July	310
+April	240
+September	410
+June	468
+December	347
