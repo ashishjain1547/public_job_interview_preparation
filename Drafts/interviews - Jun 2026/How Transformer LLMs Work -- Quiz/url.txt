@@ -1,1 +1,0 @@
-https://learn.deeplearning.ai/courses/how-transformer-llms-work/
