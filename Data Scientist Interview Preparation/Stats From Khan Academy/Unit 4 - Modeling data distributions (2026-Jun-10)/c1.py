@@ -1,20 +1,12 @@
-mean = 170.4
-sd = 10
+"""
+Revenue:
+Mean: 500
+Stdev: 125
 
-l = 145
-lz = (l - mean) / sd
-print(lz)
+Fixed Monthly Costs: 225
 
-import statistics
-lz_area = statistics.NormalDist(mu=0, sigma=1).cdf(lz)
-print(lz_area)
+Profit = Revenue - Fixed Monthly Costs
+So MeanProfit = MeanRevenue - Fixed Monthly Costs = 500 - 225 = 275
+StdevProfit = StdevRevenue = 125
 
-h = 171
-hz = (h - mean) / sd
-print(hz)
-
-hz_area = statistics.NormalDist().cdf(hz)
-
-area_req = round(hz_area - lz_area,4)
-print(area_req)
-
+"""
