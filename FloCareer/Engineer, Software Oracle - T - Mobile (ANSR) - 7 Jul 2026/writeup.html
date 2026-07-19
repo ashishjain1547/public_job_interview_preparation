@@ -17,8 +17,9 @@ A strong answer includes simplifying jargon, using analogies, visual aids, and c
 
 Performance: Walk me through a real issue where you identified a bottleneck and tuned the system or SQL?
 
-
-The candidate demonstrated a solid understanding of performance bottlenecks, including indexing problems, outdated statistics, and queries causing full table scans. They are familiar with tools like the SQL Tuning Advisor and the EXPLAIN command to diagnose and optimize queries effectively.
+<div>
+<i>Feedback: The candidate demonstrated a solid understanding of performance bottlenecks, including indexing problems, outdated statistics, and queries causing full table scans. They are familiar with tools like the SQL Tuning Advisor and the EXPLAIN command to diagnose and optimize queries effectively.
+</i>
 
 ...
 
@@ -59,12 +60,11 @@ To be safe, I ran the query through the SQL Tuning Advisor—which is like a spe
 "The impact was immediate and measurable. The query execution time dropped from 45 seconds down to under 200 milliseconds.
 
 For the business, it meant the dashboard now loaded instantly. The VP could refresh the screen during the meeting without awkward silences, and we eliminated that morning bottleneck entirely. More importantly, I documented this fix and set up an automatic job to update the statistics weekly, ensuring the database never gets lost again in the future."
-</i>
+</i></div>
 
 ~~~
-
 <b>#3</b>
-
+<div>
 Data Guard: A standby database is consistently 20 minutes behind. What steps do you take to investigate and eliminate the lag?
 
 The candidate demonstrated a solid understanding of Data Guard and the general causes of lag in a standby database. They showed awareness of potential factors contributing to a consistent 20-minute delay and outlined relevant investigation steps. 
@@ -129,53 +129,42 @@ Most importantly, I check the Data Guard Protection Mode. If the business agrees
 
 The business impact is massive: We restore our Recovery Point Objective (RPO). In plain English, that means if the main server dies at 2:00 PM, the replacement server is now up-to-date to 2:00 PM, not 1:40 PM. We just saved the company from losing 20 minutes' worth of critical transaction data—which, depending on the business, could be millions of dollars or thousands of customer orders."
 </i>
+</div>
+~~~
+
+<b>#4</b>
+<div>
+Goldengate: What is the main difference between Integrated Extract and Classic Extract?
+
+</div>
+~~~
+
+<b>#5</b>
+<div>
+RMAN: You must recover a dropped table from 2 hours ago. Database is in ARCHIVELOG mode and backups are available. How do you recover?
+
+</div>
+
+...Candidate also showed awareness of SYSOPS tablespace as a location for Oracle tools. 
 
 ~~~
 
-<b></b>
-
-Goldengate: What is the main difference between Integrated Extract and Classic Extract?
-The candidate demonstrated a strong understanding of GoldenGate and clearly explained the differences between Integrated Extract and Classic Extract, showing good knowledge of extract types.
-
-
-
-
-
-
-
-
-
-RMAN: You must recover a dropped table from 2 hours ago. Database is in ARCHIVELOG mode and backups are available. How do you recover?
-
-
-The candidate demonstrated a basic understanding of RMAN recovery concepts, including the role of backups and archivelogs. They also showed awareness of SYSOPS tablespace as a location for Oracle tools. However, their explanation had some details on the specific steps to recover a dropped table using RMAN in an ARCHIVELOG mode database.
-
-
-
-
-
-
-
-
-
-
+<b>#6</b>
+<div>
 Describe how you would implement automated backup and disaster recovery for a database hosted on AWS, Azure, or GCP. What native services would you use and how would you test recovery procedures?
 
+5-STAR ANSWER:
 I would use native managed database services (e.g., AWS RDS, Azure SQL Database, GCP Cloud SQL) with automated backup features enabled. I’d configure backup retention and cross-region replication. For disaster recovery, I’d define recovery point and time objectives, regularly test failover to a standby or replica, and document recovery steps.
 
+FEEDBACK:
+The candidate demonstrated solid knowledge of retention policies and recovery scenarios relevant to automated backup and disaster recovery for AWS-hosted databases. They showed familiarity with Oracle-specific tools like RMAN and Data Guard and have extensive experience with Oracle Cloud Infrastructure (OCI). Additionally, the candidate is comfortable working across all three major cloud platformsAWS, Azure, and GCP which adds versatility to their skill set.
+</div>
 
-The candidate demonstrated solid knowledge of retention policies and recovery scenarios relevant to automated backup and disaster recovery for AWS-hosted databases. They showed familiarity with Oracle-specific tools like RMAN and Data Guard and have extensive experience with Oracle Cloud Infrastructure (OCI). Additionally, the candidate is comfortable working across all three major cloud platformsAWS, Azure, and GCPwhich adds versatility to their skill set.
+~~~
+<b>#7</b>
 
-
-
-
-
-
-
+<div>
 RAC: Intermittent node evictions occur in a 2-node RAC environment. What’s your diagnostic plan?
 
-The candidate was able to effectively outline a diagnostic plan for intermittent node evictions in a 2 Node RAC environment.
-
-
-
+</div>
 </pre>

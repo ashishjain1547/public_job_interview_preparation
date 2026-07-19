@@ -1,0 +1,82 @@
+<pre>
+Q1:
+How does Isolation Forest algorithm work?
+   
+Q2:
+Contamination is a parameter or hyperparameter in Isolation Forest algorithm?
+   
+Q3:
+How do you find the contamination factor for isolation forest?
+
+Q4:
+Difference between a decision tree and a random forest.
+
+Q5:
+Have you worked on any time series based project?
+
+Q6:
+When can you use LSTM in a time series forecasting project? What are some prerequisites for using LSTM in time series forecasting?
+
+Q7:
+What is Group By in SQL?
+
+Q8:
+You are given few queries which are about 40 pages long. These queries differ in only a few places like where part or the select part or the group by part. How would you make use of NLP to figure out how do these queries differ?
+
+
+
+
+Q8:
+Contamination is a parameter or hyperparameter in Isolation Forest algorithm?
+
+<p data-sourcepos="1:1-1:72"><span class="first-token">Contamination is a </span><strong>hyperparameter</strong><span> in the Isolation Forest algorithm.</span></p><span>
+</span><p data-sourcepos="3:1-3:11"><span>Here's why:</span></p><span>
+</span><ul data-sourcepos="5:1-7:193"><span>
+</span><li data-sourcepos="5:1-6:0"><span>
+</span><p data-sourcepos="5:3-5:272"><strong>Definition:</strong><span> Hyperparameters are parameters that control the learning process of a machine learning model.</span><span> They are set before the model is trained and are not learned from the data itself.</span><span> In contrast,</span><span> parameters are learned by the model during the training process.</span></p><span>
+</span></li><span>
+</span><li data-sourcepos="7:1-7:193"><span>
+</span><p data-sourcepos="7:3-7:193"><strong>Functionality of Contamination:</strong><span> Contamination sets the expected proportion of anomalies (outliers) in the data.</span><span> This parameter helps the Isolation Forest algorithm determine the isolation score threshold for classifying a data point as an anomaly.</span><span> By adjusting contamination,</span><span> you can control the sensitivity of the model in detecting anomalies.</span></p><span>
+</span></li><span>
+</span><li data-sourcepos="9:1-9:14"><span>
+</span><p data-sourcepos="9:3-9:14"><strong>Tuning vs. Learning:</strong><span> Contamination is not learned from the data.</span><span> You,</span><span> as the data scientist,</span><span> need to set it based on your understanding of the data and the expected anomaly rate.</span><span> This tuning process is a crucial step in optimizing the Isolation Forest model's performance.</span></p><span>
+</span></li><span>
+</span></ul><span>
+</span><p data-sourcepos="11:1-11:193"><span>In summary,</span><span> contamination is a hyperparameter in Isolation Forest because it controls the learning process by influencing the anomaly detection behavior but is not learned from the data itself.</span></p><span>
+</span>
+
+<h2><i>Q9: How do you find the contamination factor for isolation forest?</i></h2>
+
+<!----><!----><skeleton-loader _ngcontent-ng-c2892812740="" class="skeleton-loader-container ng-tns-c672170142-105 ng-tns-c2892812740-104 ng-star-inserted" _nghost-ng-c672170142=""><!----></skeleton-loader><!----><!----><!----><div _ngcontent-ng-c3188186580="" class="response-content ng-tns-c2892812740-104"><!----><!----><message-content _ngcontent-ng-c3188186580="" class="model-response-text ng-star-inserted" _nghost-ng-c1256280514="" id="message-content-id-r_2e65866908ac100a" style="height: auto;"><div _ngcontent-ng-c1256280514="" class="markdown markdown-main-panel" style="--animation-duration: 600ms; --fade-animation-function: linear; --first-token-animation-duration: 600ms;" dir="ltr"><p data-sourcepos="1:1-1:151"><span class="first-token">There isn't a single,</span><span> universally perfect way to find the optimal contamination factor for Isolation Forest.</span><span> Here are some approaches you can consider:</span></p><span>
+</span><p data-sourcepos="3:1-3:24"><strong>1. Domain Knowledge:</strong></p><span>
+</span><ul data-sourcepos="5:1-6:0"><span>
+</span><li data-sourcepos="5:1-6:0"><span>If you have a good understanding of the expected proportion of anomalies in your data,</span><span> you can use that information to set the contamination factor.</span><span> For example,</span><span> if you believe 2% of your data points are likely to be anomalies,</span><span> you can set the contamination to 0.</span><span>02.</span></li><span>
+</span></ul><span>
+</span><p data-sourcepos="7:1-7:30"><strong>2. Statistical Techniques:</strong></p><span>
+</span><ul data-sourcepos="9:1-9:153"><span>
+</span><li data-sourcepos="9:1-9:153"><span>In some cases,</span><span> you might be able to estimate the anomaly rate using statistical techniques like outlier detection methods on a separate validation set.</span><span> This estimated value can then be used as the contamination factor.</span></li><span>
+</span></ul><span>
+</span><p data-sourcepos="11:1-11:40"><strong>3. Grid Search or Randomized Search:</strong></p><span>
+</span><ul data-sourcepos="13:1-14:0"><span>
+</span><li data-sourcepos="13:1-14:0"><span>You can perform a grid search or randomized search over a range of possible contamination values.</span><span> For each value,</span><span> train the Isolation Forest model and evaluate its performance on a validation set using metrics like precision,</span><span> recall,</span><span> or F1 score for anomaly detection.</span><span> The contamination value that leads to the best performance on the validation set can be chosen.</span></li><span>
+</span></ul><span>
+</span><p data-sourcepos="15:1-15:33"><strong>4. Plotting Isolation Scores:</strong></p><span>
+</span><ul data-sourcepos="17:1-17:1"><span>
+</span><li data-sourcepos="17:1-17:1"><span>Train the Isolation Forest model with a range of contamination values.</span><span> For each value,</span><span> plot the distribution of the isolation scores obtained from the model.</span><span> Look for a clear separation between the scores of normal data points and anomalies.</span><span> The contamination value that results in a good separation between these distributions might be a good choice.</span></li><span>
+</span></ul><span>
+</span><p data-sourcepos="19:1-19:37"><strong>5. Experimentation and Iteration:</strong></p><span>
+</span><ul data-sourcepos="21:1-22:0"><span>
+</span><li data-sourcepos="21:1-22:0"><span>Often,</span><span> the best approach involves some experimentation and iteration.</span><span> You can start with a reasonable guess based on domain knowledge or a preliminary analysis,</span><span> then evaluate the model performance and adjust the contamination factor as needed.</span></li><span>
+</span></ul><span>
+</span><p data-sourcepos="23:1-23:48"><strong>Here are some additional points to consider:</strong></p><span>
+</span><ul data-sourcepos="25:1-27:0"><span>
+</span><li data-sourcepos="25:1-25:267"><span>The choice of contamination factor can impact the trade-off between precision and recall in anomaly detection.</span><span> A lower contamination factor might lead to more false positives (normal points identified as anomalies),</span><span> while a higher value might miss actual anomalies.</span></li><span>
+</span><li data-sourcepos="26:1-27:0"><span>There's no guarantee that a single optimal contamination value exists for all datasets.</span><span> The best value might depend on the specific characteristics of your data and the desired balance between precision and recall.</span></li><span>
+</span></ul><span>
+</span><p data-sourcepos="28:1-28:148"><span>By employing these approaches and considering your specific data and task requirements,</span><span> you can effectively find a suitable contamination factor for your Isolation Forest model.</span></p><span>
+</span></div></message-content><!----><!----><!----><!----><div _ngcontent-ng-c3188186580="" class="response-footer gap complete"><!----><!----><!----><!----><!----><sources-list _ngcontent-ng-c3188186580="" class="sources-list ng-star-inserted" _nghost-ng-c2396999784=""><!----><!----><div _ngcontent-ng-c2396999784="" class="sources-list-container ng-star-inserted"><!----></div><!----><!----><!----><!----><!----></sources-list><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></div></div><!----><!----><!----><!---->
+
+
+
+How is gini index in a decision tree calculated?
+</pre>

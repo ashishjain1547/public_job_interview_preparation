@@ -1,0 +1,40 @@
+1:
+
+SELECT
+  col1,
+  exploded_value
+FROM
+  my_table
+LATERAL VIEW EXPLODE(SPLIT(csv_column, ',')) myTable AS exploded_value;
+
+2:
+
+df["state"] = ""
+df["city"] = ""
+df["area"] = ""
+
+def appl (in_row):
+    arr = in_row['place'].split(";")
+    
+    if len(arr) == 3:
+        in_row['state'] = arr[0] 
+        in_row['city'] = arr[1] 
+        in_row['area'] = arr[2] 
+
+    elif len(arr) == 2:
+        in_row['state'] = arr[0] 
+        in_row['city'] = arr[1] 
+        in_row['area'] = "" 
+    
+    else:
+        in_row['state'] = arr[0] 
+        in_row['city'] = "" 
+        in_row['area'] = "" 
+    return in_row  
+
+df = df.apply(appl, axis=1)
+
+
+3:
+
+$ cat dates.csv | sed -E 's/([0-9]{4})-([0-9]{2})-([0-9]{2})/\1-\3-\2/' > output.txt
